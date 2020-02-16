@@ -14,3 +14,7 @@ yarn-error.log*
 /.changelog
 .npm/
 yarn.lock
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
