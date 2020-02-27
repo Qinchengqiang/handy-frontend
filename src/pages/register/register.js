@@ -19,32 +19,32 @@ import {
   
   const residences = [
     {
-      value: 'zhejiang',
-      label: 'Zhejiang',
+      value: 'NSW',
+      label: 'NSW',
       children: [
         {
-          value: 'hangzhou',
-          label: 'Hangzhou',
+          value: 'Sydney',
+          label: 'Sydney',
           children: [
             {
-              value: 'xihu',
-              label: 'West Lake',
+              value: 'Rhodes',
+              label: 'Rhodes',
             },
           ],
         },
       ],
     },
     {
-      value: 'jiangsu',
-      label: 'Jiangsu',
+      value: 'VIC',
+      label: 'VIC',
       children: [
         {
-          value: 'nanjing',
-          label: 'Nanjing',
+          value: 'Melbourn',
+          label: 'Melbourn',
           children: [
             {
-              value: 'zhonghuamen',
-              label: 'Zhong Hua Men',
+              value: 'Queen',
+              label: 'Queen',
             },
           ],
         },
@@ -106,11 +106,11 @@ import {
       const formItemLayout = {
         labelCol: {
           xs: { span: 24 },
-          sm: { span: 8 },
+          sm: { span: 9 },
         },
         wrapperCol: {
           xs: { span: 24 },
-          sm: { span: 16 },
+          sm: { span: 14 },
         },
       };
       const tailFormItemLayout = {
@@ -126,11 +126,11 @@ import {
         },
       };
       const prefixSelector = getFieldDecorator('prefix', {
-        initialValue: '86',
+        initialValue: '61',
       })(
         <Select style={{ width: 70 }}>
+          <Option value="61">+61</Option>
           <Option value="86">+86</Option>
-          <Option value="87">+87</Option>
         </Select>,
       );
   
@@ -155,7 +155,7 @@ import {
                   message: 'Please input your E-mail!',
                 },
               ],
-            })(<Input />)}
+            })(<Input style={{width: 250}}/>)}
           </Form.Item>
           <Form.Item label="Password" hasFeedback>
             {getFieldDecorator('password', {
@@ -168,7 +168,7 @@ import {
                   validator: this.validateToNextPassword,
                 },
               ],
-            })(<Input.Password />)}
+            })(<Input.Password style={{width: 250}}/>)}
           </Form.Item>
           <Form.Item label="Confirm Password" hasFeedback>
             {getFieldDecorator('confirm', {
@@ -181,21 +181,21 @@ import {
                   validator: this.compareToFirstPassword,
                 },
               ],
-            })(<Input.Password onBlur={this.handleConfirmBlur} />)}
+            })(<Input.Password onBlur={this.handleConfirmBlur} style={{width: 250}}/>)}
           </Form.Item>
        
-          <Form.Item label="Habitual Residence">
+          <Form.Item label="Address">
             {getFieldDecorator('residence', {
-              initialValue: ['zhejiang', 'hangzhou', 'xihu'],
+              initialValue: ['NSW', 'Sydney', 'Ryde'],
               rules: [
                 { type: 'array', required: true, message: 'Please select your habitual residence!' },
               ],
-            })(<Cascader options={residences} />)}
+            })(<Cascader options={residences} style={{width: 250,}}/>)}
           </Form.Item>
           <Form.Item label="Phone Number">
             {getFieldDecorator('phone', {
               rules: [{ required: true, message: 'Please input your phone number!' }],
-            })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
+            })(<Input addonBefore={prefixSelector} style={{width: 250}} />)}
           </Form.Item>
           <Form.Item label="Captcha" extra="We must make sure that your are a human.">
             <Row gutter={8}>
@@ -205,7 +205,7 @@ import {
                 })(<Input />)}
               </Col>
               <Col span={12}>
-                <Button>Get captcha</Button>
+                <Button style={{width:120}}>Get captcha</Button>
               </Col>
             </Row>
           </Form.Item>
@@ -219,7 +219,7 @@ import {
             )}
           </Form.Item>
           <Form.Item {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">
+            <Button type="primary" htmlType="submit" style={{width: 200}}>
               Register
             </Button>
           </Form.Item>
