@@ -1,0 +1,117 @@
+.ul-button_layout
+{
+margin:2.5em auto 3.5em auto;
+padding:0em;
+list-style-type:none;
+-webkit-backface-visibility: hidden; backface-visibility: hidden;  
+
+}
+@media (min-width: 600px){
+    .ul-button_layout{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+ }
+.var_nav
+{
+position:relative;
+background:#ccc; 
+width:18.75em;
+height:4.375em;
+margin-bottom:0.3125em;
+margin-right: 2em;
+-webkit-box-shadow: 5px 4px 16px -5px rgba(0,0,0,0.68); 
+box-shadow: 5px 4px 16px -5px rgba(0,0,0,0.68);
+/* flex: 1 */
+}
+.link_bg
+{
+ width:4.375em;
+ height:4.375em;
+ position:absolute;
+ /* background:#E01B6A; */
+ color:#fff;
+ z-index:2;
+}
+.link_bg:nth-child(1){
+    background: #84ffe8;
+}
+.link_bg:nth-child(2){
+    background: #849bff;
+}
+.link_bg:nth-child(3){
+    background: #8eff84;
+}
+.link_bg i
+{
+ position:relative;
+}
+.link_title
+{
+position:absolute;
+width:100%;
+z-index:3;
+color:#fff;
+}
+.link_title:hover .icon
+{
+-webkit-transform:rotate(360deg);
+-moz-transform:rotate(360deg);
+-o-transform:rotate(360deg);
+-ms-transform:rotate(360deg);
+transform:rotate(360deg);  
+}
+.var_nav:hover .link_bg
+{
+width:100%;
+/* background:#E01B6A; */
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;  
+}
+.var_nav:hover a
+{
+font-weight:bold;
+-webkit-transition:all .5s ease-in-out;
+-moz-transition:all .5s ease-in-out; 
+-o-transition:all .5s ease-in-out; 
+-ms-transition:all .5s ease-in-out;
+ transition:all .5s ease-in-out;  
+}
+.icon
+{
+position:relative;
+width:4.375em;
+height:4.375em;
+text-align:center;
+color:#fff;
+-webkit-transition:all .5s ease-in-out;
+-moz-transition:all .5s ease-in-out; 
+-o-transition:all .5s ease-in-out; 
+-ms-transition:all .5s ease-in-out;   
+float:left;
+transition:all .5s ease-in-out;   
+float:left;  
+}
+.icon i{top:22px;position:relative;}
+a{
+display:block;
+position:absolute;
+float:left;
+font-family:arial;
+color:#fff;
+text-decoration:none;
+width:100%;
+height:4.375em;
+text-align:center;
+}
+span
+{
+margin-top:1.5625em;
+display:inline-block;
+}

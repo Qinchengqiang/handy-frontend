@@ -1,0 +1,15 @@
+.list_layout {
+    height: 12em;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: start;
+    list-style: none;
+}
+.li-container_flex { 
+    width: 12em;
+    border: black solid;
+    margin-right: 4em;
+}
+.img-container{
+    height:10em
+}

@@ -1,5 +1,5 @@
 import React from "react"
-import "./GurranteeSection.scss"
+import "./GurranteeSection.css"
 
 
 export default function GurranteeSection(props) {

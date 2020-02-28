@@ -7,13 +7,21 @@ class App extends Component {
   render() {
     return (
      <Router>
-       <div>
+      
+      <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+         
+        </Switch>
          {/* <Navigation /> */}
-         <Switch>
-         <Route path="/" Component={Home} exact/>
+         {/* <Switch>
+        
          {/* <Route component={Error}/> */}
-         </Switch>
-       </div>
+         {/* </Switch> */}
+         
+         
+       
      </Router>
     );
   }
