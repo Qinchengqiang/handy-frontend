@@ -14,7 +14,7 @@ class App extends Component {
             <CleaningIndex />
           </Route>
           <Route exact path="/">
-            <div className="test">
+            <div >
               <h2>Welcome</h2>
               <Home />
             </div>

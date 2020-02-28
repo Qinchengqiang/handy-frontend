@@ -1,8 +1,9 @@
 import React from "react";
 import {Layout, Menu, Icon} from "antd";
-import "./CleaningIndex.css";
+import "./main.scss";
 import './CleaningLanding';
 import CleaningLanding from "./CleaningLanding";
+import CleaningHow from "./CleaningHow";
 
 const { Header, Content, Footer } = Layout;
 
@@ -67,6 +68,9 @@ const CleaningIndex = function() {
         <div style={{ background: "white", padding: 0, minHeight: 500 }}>
             <CleaningLanding/>
         </div>
+          <div style={{ background: "white", padding: 0, minHeight: 500 }}>
+              <CleaningHow/>
+          </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>
         Handy App ©2020 JR Academy{" "}
