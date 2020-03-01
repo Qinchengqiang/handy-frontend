@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
+import './App.scss';
 import Home from './pages/home/Home'
 
 class App extends Component {
   render() {
     return (
-      <div className="FakeApp">
-          <h1>{` ~.~ `}</h1>
+      <div className="test">
+          <h2>Welcome</h2>
           <Home/>
       </div>
     );
