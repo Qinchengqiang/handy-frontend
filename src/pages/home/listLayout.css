@@ -1,15 +1,24 @@
 .list_layout {
-    height: 12em;
     display:flex;
     flex-wrap: wrap;
-    flex-direction: start;
+    justify-content: start;
     list-style: none;
+    border: black solid;
+    box-sizing: border-box;
 }
 .li-container_flex { 
-    width: 12em;
+    width: 14.55em;
+    height:  13.9758em;
     border: black solid;
     margin-right: 4em;
+    display:flex;
+    flex-direction: column;
 }
 .img-container{
-    height:10em
+    height:12em;
+}
+.task_description {
+    flex:1;
+    border: black solid;
+    text-align: center;
 }
