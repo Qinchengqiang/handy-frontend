@@ -9,7 +9,8 @@
 
 	padding: 0;
 	margin: auto;
-	display: inline-flex;
+	display: flex;
+
 
 	.service__container{
 
@@ -46,10 +47,12 @@
 					text-align: center;
 					justify-content: center;
 					text-shadow: 0.2px 0.2px gray;
-					margin: 0;
+					margin: auto;
 					padding: 0;
 					max-width: 266px;
-					line-height: 3vw;
+					line-height: 3vmax;
+					min-height: 20px;
+
 					
 				}
 
@@ -61,6 +64,7 @@
 				}
 
 				img{
+					
 					height: 169px;
 					width: 266px;
 				}

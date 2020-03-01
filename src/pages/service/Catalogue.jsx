@@ -6,6 +6,7 @@ class Catalogue extends Component {
 
   componentDidMount() {
     //get data from the store when the first render
+
   }
 
   scrollToAnchor = (anchorName) => {
@@ -17,7 +18,7 @@ class Catalogue extends Component {
     }
   }
 
-  
+
 
   render() {
     return (

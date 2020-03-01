@@ -35,6 +35,7 @@ class Service extends Component {
             windowPics: [],
 
             serviceItems : {
+                
                 'popular' : {
                     'Interior Painting': 'https://farm66.staticflickr.com/65535/49584899833_5bd6926830.jpg',
                     'Moving Help': 'https://farm66.staticflickr.com/65535/49585627667_1ba201a0ab.jpg',
