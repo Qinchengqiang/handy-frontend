@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./home.css";
-import Nav from "../../components/nav/Nav";
+// import Nav from "../../components/nav/Nav";
 import GurranteeSection from "./GurranteeSection";
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
@@ -31,9 +31,8 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div></div>
-        <Nav />
+      <div className="home">
+        {/* <Nav /> */}
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink/>
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
