@@ -20,29 +20,38 @@ class Home extends Component {
 
   }
 
-  renderTask =(taskImgUrl,taskName)=>{
+  renderTask = (taskImgUrl, taskName) => {
     return (
-        <li key={taskName} className="li-container_flex"> 
-            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-            <div className="task_description">{taskName}</div>
-        </li>
+      <li key={taskName} className="li-container_flex">
+        <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+        <div className="task_description">{taskName}</div>
+      </li>
     )
-}
+  }
 
   render() {
     return (
       <div className="home">
         {/* <Nav /> */}
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
-        <QuickLink/>
+        <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
-        <TaskList renderTask={this.renderTask}/>
+        <div className="container-description-flex">
+          <div className="left_align left_align-space">Instantly book highly rated pros for cleaning and handyman tasks at a fixed price.</div>
+          <a href="./"  className="right-align-jump">See All ></a>
+        </div>
+        <TaskList renderTask={this.renderTask} />
         <h2 className="left_align">Home Furniture with Assembly Included</h2>
-        <FurnitureList renderTask={this.renderTask}/>
+        <div className="container-description-flex">
+          <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
+          <a href="./" className="right-align-jump">See All ></a>
+          
+        </div>
+        <FurnitureList renderTask={this.renderTask} />
 
-        <GurranteeSection/>
-        
-        
+        <GurranteeSection />
+
+
         <div></div>
         {/* footer (global)*/}
 
