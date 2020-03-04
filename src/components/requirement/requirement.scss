@@ -1,0 +1,14 @@
+.requirement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    ul {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+        width: 500px;
+        font-size: 18px;
+    }
+}

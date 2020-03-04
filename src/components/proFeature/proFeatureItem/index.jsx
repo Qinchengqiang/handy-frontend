@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './proFeatureItem.module.css';
+import './proFeatureItem.scss'
 
 
 export default class ProFeatureItem extends Component {
@@ -13,9 +13,9 @@ export default class ProFeatureItem extends Component {
     }
     render() {
         return (
-            <div className={styles.container}>
+            <div className="item-container">
                 <img src={this.state.image} alt=""/>
-                <h3 className={styles.title}>{this.state.title}</h3>
+                <h3 className="title">{this.state.title}</h3>
                 <p>{this.state.description}</p>
             </div>
         )

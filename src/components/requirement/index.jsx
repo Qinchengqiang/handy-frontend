@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import './requirement.scss'
 
 export default class Requirement extends Component {
     render() {
         return (
-            <div>
+            <div className="requirement">
                 <h1>Requirements</h1>
                 <ul>
                     <li>Must have paid experience in cleaning or handyman services</li>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProFeatureItem from './proFeatureItem';
-import styles from './proFeature.module.css';
+import './proFeature.scss'
 
 const features = [
     {image: "https://cache.hbfiles.com/assets/apply/icon-earn-bbe84715ecee99f978cd0ae76f981a81.png", title:"GREAT PAY", description: "Make up to $22/hour/job as a cleaner or $45/hour/job as a handyman. Our top professionals make more than $1,000 a week."},
@@ -11,7 +11,7 @@ const features = [
 export default class ProFeature extends Component {
     render() {
         return (
-            <div className={styles.container}>
+            <div className="container">
                 {features.map((feature, i) => (
                     <ProFeatureItem key={i} 
                                     image={feature.image} 

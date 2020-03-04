@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Home from './pages/home/Home'
 import Apply from './pages/apply'
+import Footer from './components/footer'
 
 class App extends Component {
   render() {
@@ -9,7 +10,8 @@ class App extends Component {
       <div className="test">
           <h2>Welcome</h2>
           <Home/>
-          <Apply />
+          {/* <Apply /> */}
+          {/* <Footer /> */}
       </div>
     );
   }

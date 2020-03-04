@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
-import styles from './applyForm.module.css'
+import './applyForm.scss'
 
 export default class ApplyForm extends Component {
   render() {
     return (
-      <div className={styles.apply_form}>
-        <form action="" method="post" className={styles.form_style}>
-          <ul>
-            <li>
-          <input className={styles.input} type="text" name="First Name" id="" placeholder="First Name" />
-          <input type="text" name="Last Name" id="" placeholder="Last Name" />
-          </li>
-          <li>
-          <input type="email" name="Emmail" id="" placeholder="Email" />
-          <input type="number" name="ZIP Code" id="" placeholder="ZIP Code" />
-          </li>
-          <li>  
+      <div className="apply-form">
+        <form action="" method="post" className="form">
+          <div className="name">
+            <input type="text" name="First Name" id="" placeholder="First Name" />
+            <input type="text" name="Last Name" id="" placeholder="Last Name" />
+          </div>
+          <div className="contact">
+            <input type="email" name="Emmail" id="" placeholder="Email" />
+            <input type="number" name="ZIP Code" id="" placeholder="ZIP Code" />
+          </div>
+
           <select name="pro" id="">
             <option value="Your Primary Service" hidden="hidden">Your Primary Service</option>
               <option value="appliance_repair">Appliance Repair</option>
@@ -30,17 +29,14 @@ export default class ApplyForm extends Component {
               <option value="smart_home_parent">Smart Home</option>
               <option value="Technology">Technology Services</option>
           </select>
-          </li>
-          <li>
-          <input type="submit" value="Get Started"/>
-          </li>
-          <li>
-          <div >
+        
+            <input type="submit" value="Get Started"/>
+
+          
+          <div className="hint">
             Already applied?
             <a href="/apply">Check your application status here.</a>
           </div>
-          </li>
-          </ul>
         </form>
       </div>
     )

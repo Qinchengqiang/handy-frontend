@@ -1,0 +1,20 @@
+.customer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .avatar-container{
+        width: 80px;
+            height: 80px;
+        border-radius: 50%;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    .name-brief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}

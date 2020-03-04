@@ -1,33 +1,36 @@
-import React, { Component } from 'react';
-import styles from './apply.module.css';
-import ApplyProForm from '../../components/applyForm';
-import ProHeader from '../../assets/images/apply/pro-header.png';
-import ProFeature from '../../components/proFeature';
-import Comment from '../../components/comment';
-import Requirement from '../../components/requirement'
+import React, { Component } from "react";
+import "./apply.scss";
+import ApplyProForm from "../../components/applyForm";
+import ProHeader from "../../assets/images/apply/pro-header.png";
+import ProFeature from "../../components/proFeature";
+import Comment from "../../components/comment";
+import Requirement from "../../components/requirement";
 
 export default class Apply extends Component {
-    render() {
-        return (
-            <div className={styles.apply}>
-                <div className={styles.pro_header}>
-                    <div className={styles.pro_header_text}>
-                        <h1>Start earning money this week!</h1>
-                    </div>
-                    <div className={styles.pro_content_container}>
-                        <div className={styles.pro_content_wrapper}>
-                            <p className={styles.pro_header_subtext_mobile}>
-                                Gain access to hundreds of jobs in your city and build your own schedule.
-                            </p>
-                        </div>
-                        <ApplyProForm />
-                        <img src={ProHeader} alt=""/>
-                    </div>
-                </div>
-                <ProFeature />
-                <Comment />
-                <Requirement />
+  render() {
+    return (
+      <div className="apply">
+        <div className="pro-header">
+        <div className="pro-content-container">
+          <div className="title">
+            <h1>Start earning money this week!</h1>
+            <h3 className="desc">
+              Gain access to hundreds of jobs in your city and build your own
+              schedule.
+            </h3>
+          </div>
+            <ApplyProForm />
             </div>
-        )
-    }
+        <div className="image-container">
+          <img src={ProHeader} alt="" />
+        </div>
+        </div>
+        <ProFeature />
+        <div className="pro-headline"><span className="pro-headline-text">“</span></div>
+        <Comment />
+        <div className="pro-headline"><span className="pro-headline-text">“</span></div>
+        <Requirement />
+      </div>
+    );
+  }
 }

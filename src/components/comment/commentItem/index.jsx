@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Customer from './customer';
-import styles from './commentItem.module.css';
+import './commentItem.scss'
 
 
 export default class CommentItem extends Component {
@@ -15,7 +15,7 @@ export default class CommentItem extends Component {
     
     render() {
         return (
-            <div>
+            <div className="commentItem">
                 <p>{this.state.statement}</p>
                 <Customer avatar={this.state.customer.avatar} 
                 username={this.state.customer.username}
