@@ -54,6 +54,13 @@
     .pro_img_container-right{
        display: none;
     }
+    .pro_img_container_slogan{
+        margin-right: 10%;
+    }
+    .pro_img_container{
+        background-image: url(https://irp-cdn.multiscreensite.com/0446adb6/handy_man.png);
+        width: 100%;
+    }
 }
 @media(min-width:768px){
     .pro_img{display: flex;}
