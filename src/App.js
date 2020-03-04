@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import './App.scss';
-import Home from './pages/home/Home'
-import WrappedNormalLoginForm from './pages/login/login';
-import WrappedRegistrationForm from './pages/register/register';
+import React, { Component } from "react";
+import "./App.scss";
+import Home from "./pages/home/Home";
+import WrappedNormalLoginForm from "./pages/login/login";
+import WrappedRegistrationForm from "./pages/register/register";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MyAccount from "../src/pages/myAccount/myAccount";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-         
-          
-          <h2>Welcome</h2>
-          <Home/>
-          <WrappedRegistrationForm/>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<Router>
+				<div className="App">
+					<Switch>
+						<Route path="/login" exact component={WrappedNormalLoginForm} />
+						<Route path="/register" component={WrappedRegistrationForm} />
+						<Route path="/myaccount" component={MyAccount} />
+					</Switch>
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;
