@@ -1,0 +1,102 @@
+@import "../../bootstrap/bootstrap.min.css";
+.service__landing {
+  //background-image: url("../../img/cleaning--landing.jpg");
+  //background-position: center;
+  //background-size: cover;
+  height: 45vh;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: end;
+  .formContainer {
+    background: white;
+    padding: 5%;
+    transform: translateY(40%);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (min-width: 768px) {
+  .service__landing {
+    background-image: url("../../img/cleaning--landing.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+.service__intro {
+  margin-top: 30vh;
+  .heading--primary {
+    text-align: center;
+  }
+
+  .service__sellingpoint {
+    text-align: center;
+    margin: 2rem 0;
+    h3 {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.service__how {
+  margin: 15vh 0;
+  .how__box {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    .heading--box {
+      margin-top: 10vh;
+      text-align: center;
+    }
+    .paddingBox {
+      padding: 15%;
+      text-align: center;
+      h4 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+.service__what {
+  .heading--primary {
+    text-align: center;
+  }
+  [class*="service__what--"] {
+    height: 20vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .service__what--bedroom {
+    background-position: left top;
+    background-image: url("../../img/bedroom.jpg");
+    .points--card{
+      transform: translateX(20%);
+    }
+  }
+  .service__what--bathroom{
+    background-position: right top;
+    background-image: url("../../img/bathroom.jpg");
+    .points--card{
+      transform: translateX(-20%);
+    }
+  }
+  .service__what--kitchen{
+    background-position: left top;
+    background-image: url("../../img/kitchen.jpg");
+    .points--card{
+      transform: translateX(20%);
+    }
+  }
+  .service__what--extras{
+    background-image: url("../../img/extras.jpg");
+    background-position: right top;
+    .points--card{
+      transform: translateX(-20%);
+    }
+  }
+  .points--card{
+    flex: 0 0 40%;
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+  }
+}

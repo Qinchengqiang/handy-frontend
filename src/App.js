@@ -3,7 +3,9 @@ import "./App.scss";
 import Home from "./pages/home/Home";
 import { Switch, Route } from "react-router-dom";
 import "./pages/Service-Entrypoint/CleaningIndex";
-import CleaningIndex from "./pages/Service-Entrypoint/CleaningIndex";
+//import CleaningIndex from "./pages/Service-Entrypoint/CleaningIndex";
+import Cleaning from './pages/Service-Entrypoint/Cleaning.js';
+
 
 class App extends Component {
   render() {
@@ -11,7 +13,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path="/cleaning">
-            <CleaningIndex />
+            <Cleaning />
           </Route>
           <Route exact path="/">
             <div >
