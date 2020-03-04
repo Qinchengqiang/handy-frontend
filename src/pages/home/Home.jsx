@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import "./home.css";
 // import Nav from "../../components/nav/Nav";
-import GurranteeSection from "./GurranteeSection";
+// import GurranteeSection from "./GurranteeSection";
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
 import FurnitureList from "./FurnitureList"
+import ProfessionalIntro from './ProfessionalIntro'
+import GurranteePic from './GurranteePic'
+import ShopPic from './ShopPic'
+import YouPro from './YouPro'
 
 class Home extends Component {
   constructor(props) {
@@ -44,15 +48,17 @@ class Home extends Component {
         <h2 className="left_align">Home Furniture with Assembly Included</h2>
         <div className="container-description-flex">
           <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
-          <a href="./" className="right-align-jump">See All ></a>
-          
+          <a href="./" className="right-align-jump">See All ></a>     
         </div>
         <FurnitureList renderTask={this.renderTask} />
+        <ProfessionalIntro/>
+        <GurranteePic/>
+        <ShopPic/>
+        <YouPro/>
 
-        <GurranteeSection />
+        {/* <GurranteeSection /> */}
 
 
-        <div></div>
         {/* footer (global)*/}
 
       </div>

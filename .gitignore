@@ -16,3 +16,5 @@ yarn-error.log*
 yarn.lock
 LinkButton.scss
 LinkButton.jsx
+GurranteeSection.scss
+GurranteeSection.jsx
