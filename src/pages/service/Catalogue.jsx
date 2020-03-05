@@ -11,9 +11,7 @@ class Catalogue extends Component {
 
   scrollToAnchor = (anchorName) => {
     if (anchorName) {
-      // 找到锚点
       let anchorElement = document.getElementById(anchorName);
-      // 如果对应id的锚点存在，就跳转到锚点
       if (anchorElement) { anchorElement.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
     }
   }
@@ -24,7 +22,7 @@ class Catalogue extends Component {
     return (
 
       <div className="col-3 categories__bar">
-        <div className="sticky__top">
+        <div className="bar__sticky">
           <h2>All Categories</h2>
           <ul>
             <li>

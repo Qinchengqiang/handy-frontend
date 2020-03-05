@@ -115,7 +115,7 @@ class Service extends Component {
                 },
 
                 'electrical': {
-                    'Ceiling & Bath Fans' : 'https://farm66.staticflickr.com/65535/49573568896_9b50d9b558.jpg',
+                    'Ceiling & Bath Fans' : 'https://farm66.staticflickr.com/65535/49555735273_194e25cf92.jpg',
                     'Garbage Disposal' : 'https://farm66.staticflickr.com/65535/49537325861_57918de50a.jpg',
                     'Light Switch Installation' : 'https://farm66.staticflickr.com/65535/49587140517_8117095c79.jpg',
                     'Smart Security Cam Installation' : 'https://farm66.staticflickr.com/65535/49537556267_3d872347e1.jpg',

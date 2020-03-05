@@ -30,7 +30,7 @@ class SearchBar extends Component {
         // set state Tag to currentValue
 
         this.setState({
-            // [..] 就可以不用写 username 和 password 两遍了
+            
             text: e.target.value,
         },()=>{
             console.log('Change');
