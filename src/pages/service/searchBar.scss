@@ -250,3 +250,14 @@
 		}
 	}
 }
+
+@media screen and (max-width: 374px) {
+
+	.search__container{		
+		.search__banner{
+			h2{
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
