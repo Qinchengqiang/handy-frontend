@@ -1,5 +1,5 @@
 import React from 'react'
-import "./listLayout.css"
+import "./listLayout.scss"
 
 export default function FurnitureList({renderTask}) {
     

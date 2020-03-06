@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./home.css";
+import "./home.scss";
 // import Nav from "../../components/nav/Nav";
 // import GurranteeSection from "./GurranteeSection";
 import QuickLink from "./QuickLink"
@@ -55,9 +55,6 @@ class Home extends Component {
         <GurranteePic/>
         <ShopPic/>
         <YouPro/>
-
-        {/* <GurranteeSection /> */}
-
 
         {/* footer (global)*/}
 
