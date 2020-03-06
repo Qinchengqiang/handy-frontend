@@ -437,7 +437,6 @@ class Service extends Component {
                                 })}
                         </div>
                     </div>
-                    
                 </div>
                 {/* <div>Service with description and images</div> */}
             </div>
