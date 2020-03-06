@@ -313,11 +313,11 @@ class Service extends Component {
 
     render() {
         return (
-            <div className="col-9 container">
+            <div className="container">
 
                 <div className="row service__container">
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="popular"></a>
                         <h4>Popular</h4>
                         <div className="service__item">
@@ -328,7 +328,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="cleaning"></a>
                         <h4>Cleaning</h4>
                         <div className="service__item">
@@ -339,7 +339,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="tv_electronics"></a>
                         <h4>TV and Electronics</h4>
                         <div className="service__item">
@@ -350,7 +350,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="assembly"></a>
                         <h4>Assembly</h4>
                         <div className="service__item">
@@ -361,7 +361,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="handyman"></a>
                         <h4>General Handyman</h4>
                         <div className="service__item">
@@ -372,7 +372,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="plumbing"></a>
                         <h4>Plumbing</h4>
                         <div className="service__item">
@@ -383,7 +383,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="electrical"></a>
                         <h4>Electrical</h4>
                         <div className="service__item">
@@ -394,7 +394,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="painting"></a>
                         <h4>Painting</h4>
                         <div className="service__item">
@@ -405,7 +405,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="moving"></a>
                         <h4>Moving</h4>
                         <div className="service__item">
@@ -416,7 +416,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="smart_home"></a>
                         <h4>Smart Home</h4>
                         <div className="service__item">
@@ -427,7 +427,7 @@ class Service extends Component {
                         </div>
                     </div>
 
-                    <div className="col-12 service__content">
+                    <div className="service__content">
                         <a id="window_treatments"></a>
                         <h4>Window Treatments</h4>
                         <div className="service__item">
