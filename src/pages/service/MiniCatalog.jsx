@@ -24,37 +24,37 @@ class MiniCatalog extends Component {
             <div className="mini__cata__bar">
                 <ul>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('popular')}>Popular</a>
+                        <a onClick={() => this.scrollToAnchor('Popular')}>Popular</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('cleaning')}>Cleaning</a>
+                        <a onClick={() => this.scrollToAnchor('Cleaning')}>Cleaning</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('tv_electronics')}>TV and Electronics</a>
+                        <a onClick={() => this.scrollToAnchor('TV_and_Electronics')}>TV and Electronics</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('assembly')}>Assembly</a>
+                        <a onClick={() => this.scrollToAnchor('Assembly')}>Assembly</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('handyman')}>General Handyman</a>
+                        <a onClick={() => this.scrollToAnchor('General_Handyman')}>General Handyman</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('plumbing')}>Plumbing</a>
+                        <a onClick={() => this.scrollToAnchor('Plumbing')}>Plumbing</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('electrical')}>Electrical</a>
+                        <a onClick={() => this.scrollToAnchor('Electrical')}>Electrical</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('painting')}>Painting</a>
+                        <a onClick={() => this.scrollToAnchor('Painting')}>Painting</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('moving')}>Moving</a>
+                        <a onClick={() => this.scrollToAnchor('Moving')}>Moving</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('smart_home')}>Smart Home</a>
+                        <a onClick={() => this.scrollToAnchor('Smart_Home')}>Smart Home</a>
                     </li>
                     <li>
-                        <a onClick={() => this.scrollToAnchor('window_treatments')}>Window Treatments</a>
+                        <a onClick={() => this.scrollToAnchor('Window_Treatments')}>Window Treatments</a>
                     </li>
                 </ul>
             </div>

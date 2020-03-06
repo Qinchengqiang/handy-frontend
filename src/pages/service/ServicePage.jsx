@@ -26,27 +26,19 @@ class ServicePage extends Component {
       <div>
 
         <SearchBar />
-
         <MiniCatalog />
-        
-        <div className="service__center">
 
+        <div className="service__center">
           <div className="service__page">
-              
             <div className="cata__spacing">
               <Catalogue />
             </div>
-            
+
             <Service />
-
-            {/* task part */}
-
-            {/* footer (global)*/}
             
           </div>
         </div>
       </div>
-
     );
   }
 }
