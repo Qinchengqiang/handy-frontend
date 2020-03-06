@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 // import Nav from "../../components/nav/Nav";
-// import HomeView from "./HomeView"
+
 import './servicePage.scss';
 
 import Service from "./Service"
 import Catalogue from "./Catalogue"
 import SearchBar from "./SearchBar";
+import MiniCatalog from "./MiniCatalog";
 
 class ServicePage extends Component {
   constructor(props) {
@@ -26,17 +27,22 @@ class ServicePage extends Component {
 
         <SearchBar />
 
-        <div className="container service__center">
-          <div className="row service__page">
+        <MiniCatalog />
+        
+        <div className="service__center">
 
-            {/* <HomeView /> */}
-
-            <Catalogue />
+          <div className="service__page">
+              
+            <div className="cata__spacing">
+              <Catalogue />
+            </div>
+            
             <Service />
 
             {/* task part */}
 
             {/* footer (global)*/}
+            
           </div>
         </div>
       </div>

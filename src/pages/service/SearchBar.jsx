@@ -69,7 +69,6 @@ class SearchBar extends Component {
                                 </button>
                             </span>
                         </form>
-
                     </div>
                 </div>
             </div>

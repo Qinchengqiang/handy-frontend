@@ -7,7 +7,7 @@
 
 
 @media screen and (min-width: 1220px) {
-    .categories__bar{
+    .catagories__bar{
 
         .bar__sticky{
             position: sticky;
@@ -17,13 +17,9 @@
             max-width: 220px;
         }
 
-
         box-sizing: border-box;
         outline: none;
         display: inline;
-
-        // margin: 0;
-        padding: 3rem 0 0 1rem;
 
         font-family: Arial, Helvetica, sans-serif;
         color: #333333;
@@ -76,7 +72,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1219px) {
 
-    .categories__bar{
+    .catagories__bar{
 
         .bar__sticky{
             position: sticky;
@@ -90,9 +86,6 @@
         box-sizing: border-box;
         outline: none;
         display: inline;
-    
-        // margin: 0;
-        padding: 1rem 0 0 3rem;
     
         font-family: Arial, Helvetica, sans-serif;
         color: #333333;
@@ -140,71 +133,7 @@
 
 @media screen and (max-width: 767px) {
 
-    .categories__bar{
-
+    .catagories__bar{
         display: none;
-        
-        .bar__sticky{
-            position: sticky;
-            top: 20px;
-            // min-width: 150px;
-            width: 100%;
-            // max-width: 180px;
-        }
-    
-    
-        float: left;
-        box-sizing: border-box;
-        outline: none;
-        
-    
-        // margin: 0;
-        padding: 1rem 0 0 3rem;
-    
-        font-family: Arial, Helvetica, sans-serif;
-        color: #333333;
-        text-align: left;
-    
-    
-        a{
-            color: #333333;
-        }
-    
-        h2{
-            display: none;
-        }
-    
-        ul{
-            margin: 0;
-            padding: 0;
-
-            display: block;
-            overflow: hidden;
-            white-space:nowrap;
-    
-            li{
-
-                list-style: none;
-                display: inline-block;
-                margin-left: 15px;
-                width: 130px;
-
-                // list-style-type: none;
-                border: white;
-                background-color: white;
-                padding: 3.5px 0 3.5px 0;
-                text-align: left;
-                letter-spacing: 0px;
-    
-                a{
-                    width: min-content;
-                    background-color: white;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 0.8rem;
-                    text-shadow: 0px 0px white;
-                }
-            }
-        }
     }
 }
-
