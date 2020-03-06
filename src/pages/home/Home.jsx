@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 import "./home.css";
-import Nav from "../../components/nav/Nav";
-import GurranteeSection from "./GurranteeSection";
+// import Nav from "../../components/nav/Nav";
+// import GurranteeSection from "./GurranteeSection";
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
 import FurnitureList from "./FurnitureList"
+import ProfessionalIntro from './ProfessionalIntro'
+import GurranteePic from './GurranteePic'
+import ShopPic from './ShopPic'
+import YouPro from './YouPro'
 
 class Home extends Component {
   constructor(props) {
@@ -20,31 +24,41 @@ class Home extends Component {
 
   }
 
-  renderTask =(taskImgUrl,taskName)=>{
+  renderTask = (taskImgUrl, taskName) => {
     return (
-        <li key={taskName} className="li-container_flex"> 
-            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-            <div className="task_description">{taskName}</div>
-        </li>
+      <li key={taskName} className="li-container_flex">
+        <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+        <div className="task_description">{taskName}</div>
+      </li>
     )
-}
+  }
 
   render() {
     return (
-      <div className="App">
-        <div></div>
-        <Nav />
+      <div className="home">
+        {/* <Nav /> */}
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
-        <QuickLink/>
+        <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
-        <TaskList renderTask={this.renderTask}/>
+        <div className="container-description-flex">
+          <div className="left_align left_align-space">Instantly book highly rated pros for cleaning and handyman tasks at a fixed price.</div>
+          <a href="./"  className="right-align-jump">See All ></a>
+        </div>
+        <TaskList renderTask={this.renderTask} />
         <h2 className="left_align">Home Furniture with Assembly Included</h2>
-        <FurnitureList renderTask={this.renderTask}/>
+        <div className="container-description-flex">
+          <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
+          <a href="./" className="right-align-jump">See All ></a>     
+        </div>
+        <FurnitureList renderTask={this.renderTask} />
+        <ProfessionalIntro/>
+        <GurranteePic/>
+        <ShopPic/>
+        <YouPro/>
 
-        <GurranteeSection/>
-        
-        
-        <div></div>
+        {/* <GurranteeSection /> */}
+
+
         {/* footer (global)*/}
 
       </div>

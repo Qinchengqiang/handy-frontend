@@ -1,0 +1,59 @@
+.shop_img{
+    height: 35em;
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    box-sizing: border-box;
+   
+    // border: solid yellow;
+    .shop_img_container{
+        flex-basis: 60%;
+        // border: solid red;
+       height: 100%;
+       background-image: url(https://cdn.homedsgn.com/wp-content/uploads/2012/11/Soldati-House-Interior-01.jpg);
+        background-size: cover;
+        padding-top: 7em;
+        &_slogan{
+            margin-left:10%;
+            margin-bottom: 0%;
+            height: 10%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 29px;
+        }
+        &_subtitle{
+            width: 17em;
+            margin-left: 10%;
+            text-align: left;
+            margin-top: 4em;
+            line-height: 1.7em;
+        }
+        &_button{
+            border: solid 1px #00308F;
+            border-radius: 8px;
+            height: 4em;
+            width: 15em;
+            background-color: #00308F ;
+            color: white;
+            padding-top: 1.5em;
+            text-align: center;
+            margin-left: 10%;
+            margin-top: 4em;
+
+        }
+    }
+    .shop_img_container-right{
+        flex: 1;
+        background-image: url(https://cdn.shopify.com/s/files/1/0064/3796/1801/files/TheModernFurnitureStore21_1_1400x.progressive.jpg?v=1560324018);
+        background-size:cover;
+        
+    }
+}
+
+@media(min-width: 375px) and (max-width:767px) {
+    .shop_img_container-right{
+       display: none;
+    }
+}
+@media(min-width:768px){
+    .shop_img{display: flex;}
+}
