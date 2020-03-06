@@ -5,15 +5,47 @@
 
 }
 
-.service__page{
-	
-	// font-size: 16px;
-	display: flex;
-	box-sizing: border-box;
-	outline: none;
-	padding: 0;
-	
-	// justify-content: center;
-	// align-items: center;
 
+	.service__center{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.service__page{
+
+			padding: 1px;
+		
+			display: flex;
+			box-sizing: border-box;
+			outline: none;
+			padding: 0;
+			
+			justify-content: center;
+			
+		}
+	}
+
+
+
+@media screen and (min-width: 1220px) {
+
+	.service__center{
+		// background-color: red;
+		.service__page{
+			// width: 65vw;
+			max-width: 1220px;
+		}
+	}
 }
+
+@media screen and (max-width: 1219px) {
+
+	.service__center{
+		// background-color: red;
+		.service__page{
+			// width: 65vw;
+			
+		}
+	}
+}
+

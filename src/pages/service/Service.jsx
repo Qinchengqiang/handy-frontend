@@ -35,6 +35,7 @@ class Service extends Component {
             windowPics: [],
 
             serviceItems : {
+                
                 'popular' : {
                     'Interior Painting': 'https://farm66.staticflickr.com/65535/49584899833_5bd6926830.jpg',
                     'Moving Help': 'https://farm66.staticflickr.com/65535/49585627667_1ba201a0ab.jpg',
@@ -114,7 +115,7 @@ class Service extends Component {
                 },
 
                 'electrical': {
-                    'Ceiling & Bath Fans' : 'https://farm66.staticflickr.com/65535/49573568896_9b50d9b558.jpg',
+                    'Ceiling & Bath Fans' : 'https://farm66.staticflickr.com/65535/49555735273_194e25cf92.jpg',
                     'Garbage Disposal' : 'https://farm66.staticflickr.com/65535/49537325861_57918de50a.jpg',
                     'Light Switch Installation' : 'https://farm66.staticflickr.com/65535/49587140517_8117095c79.jpg',
                     'Smart Security Cam Installation' : 'https://farm66.staticflickr.com/65535/49537556267_3d872347e1.jpg',
@@ -198,6 +199,7 @@ class Service extends Component {
                         popularItems : items,
                         popularPics : pics,
                     })
+                    break;
                 }
                 case 'cleaning':{
                     let items = Object.keys(cataItem[1])
@@ -206,6 +208,7 @@ class Service extends Component {
                         cleaningItems : items,
                         cleaningPics : pics,
                     })
+                    break;
                 }
                 case 'tv':{
                     let items = Object.keys(cataItem[2])
@@ -214,6 +217,7 @@ class Service extends Component {
                         tvItems : items,
                         tvPics : pics,
                     })
+                    break;
                 }
                 case 'assembly':{
                     let items = Object.keys(cataItem[3])
@@ -222,6 +226,7 @@ class Service extends Component {
                         assemblyItems : items,
                         assemblyPics : pics,
                     })
+                    break;
                 }
                 case 'handyman':{
                     let items = Object.keys(cataItem[4])
@@ -230,6 +235,7 @@ class Service extends Component {
                         handymanItems : items,
                         handymanPics : pics,
                     })
+                    break;
                 }
                 case 'plumbing':{
                     let items = Object.keys(cataItem[5])
@@ -238,6 +244,7 @@ class Service extends Component {
                         plumbingItems : items,
                         plumbingPics : pics,
                     })
+                    break;
                 }
                 case 'electrical':{
                     let items = Object.keys(cataItem[6])
@@ -246,6 +253,7 @@ class Service extends Component {
                         electricalItems : items,
                         electricalPics : pics,
                     })
+                    break;
                 }
                 case 'painting':{
                     let items = Object.keys(cataItem[7])
@@ -254,6 +262,7 @@ class Service extends Component {
                         paintingItems : items,
                         paintingPics : pics,
                     })
+                    break;
                 }
                 case 'moving':{
                     let items = Object.keys(cataItem[8])
@@ -262,6 +271,7 @@ class Service extends Component {
                         movingItems : items,
                         movingPics : pics,
                     })
+                    break;
                 }
                 case 'home':{
                     let items = Object.keys(cataItem[9])
@@ -270,6 +280,7 @@ class Service extends Component {
                         homeItems : items,
                         homePics : pics,
                     })
+                    break;
                 }
                 case 'window':{
                     let items = Object.keys(cataItem[10])
@@ -278,14 +289,13 @@ class Service extends Component {
                         windowItems : items,
                         windowPics : pics,
                     })
+                    break;
                 }
                 default:{
                    break;
                 }
             }
         })
-
-
 
         // this.setState({
         //     serviceItems: items,

@@ -26,20 +26,21 @@ class ServicePage extends Component {
 
         <SearchBar />
 
-        <div className="container">
+        <div className="container service__center">
           <div className="row service__page">
 
-          {/* <HomeView /> */}
+            {/* <HomeView /> */}
 
-          <Catalogue />
-          <Service />
+            <Catalogue />
+            <Service />
 
-          {/* task part */}
+            {/* task part */}
 
-          {/* footer (global)*/}
+            {/* footer (global)*/}
           </div>
         </div>
       </div>
+
     );
   }
 }
