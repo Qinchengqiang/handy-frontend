@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css";
+import "./login.scss";
 import { Form, Icon, Input, Button, Checkbox, Row, Col, Divider } from "antd";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
@@ -19,11 +19,9 @@ class NormalLoginForm extends React.Component {
 		return (
 			<div className="content">
 				<div className="container">
-					<Row style={{ color: "black", fontSize: "20px", marginTop: "-15%" }}>
-						Login to handy
-					</Row>
+					<Row className="form-header">Login to handy</Row>
 					<div className="login-item">
-						<Form onSubmit={this.handleSubmit} className="login-form">
+						<Form onSubmit={this.handleSubmit} className="form">
 							<Form.Item>
 								{getFieldDecorator("username", {
 									rules: [
@@ -31,6 +29,7 @@ class NormalLoginForm extends React.Component {
 									]
 								})(
 									<Input
+										className="form-input"
 										prefix={
 											<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />
 										}
@@ -45,6 +44,7 @@ class NormalLoginForm extends React.Component {
 									]
 								})(
 									<Input
+										className="form-input"
 										prefix={
 											<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
 										}
@@ -63,6 +63,11 @@ class NormalLoginForm extends React.Component {
 									<Row>
 										<Link to="/myaccount">
 											<Button
+												style={{
+													width: "300px",
+													height: "40px",
+													marginTop: "30px"
+												}}
 												type="primary"
 												htmlType="submit"
 												className="login-form-button"

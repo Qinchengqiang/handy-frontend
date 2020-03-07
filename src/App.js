@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import Home from "./pages/home/Home";
-import WrappedNormalLoginForm from "./pages/login/login";
+import WrappedNormalLoginForm from "./pages/login/loginPage";
 import WrappedRegistrationForm from "./pages/register/register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyAccount from "../src/pages/myAccount/myAccount";

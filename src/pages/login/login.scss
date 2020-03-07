@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
 body {
 	min-height: 100%;
 	font-family: "lato", sans-serif;
@@ -31,6 +33,7 @@ body {
 }
 
 .container {
+	font-family: "Montserrat", sans-serif;
 	margin-top: 3rem;
 	width: 100%;
 	display: -webkit-box;
@@ -45,6 +48,18 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	border-radius: 10px;
+	.form-header {
+		font-weight: bold;
+		margin-top: -15%;
+		color: black;
+		font-size: 30px;
+	}
+	.form-input {
+		border: none;
+		height: 40px;
+		width: 300px;
+	}
 }
 
 .logo {
@@ -105,18 +120,4 @@ input {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 2rem;
-}
-.button {
-	background-color: #4caf50; /* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	width: 15rem;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	-webkit-transition-duration: 0.4s; /* Safari */
-	transition-duration: 0.4s;
-	border-radius: 8px;
 }
