@@ -15,7 +15,7 @@
 
 .img-container{
     height:12em;
-    max-width: 17.55em;
+    width: 17.55em;
     object-fit: cover;
     
 }
@@ -23,6 +23,7 @@
     flex:1;
     text-align: center;
     padding-top: 0.4em;
+    color: black;
 }
 @media (min-width:375px) and (max-width:767px) {
     .li-container_flex{
@@ -38,14 +39,12 @@
 
 @media(min-width:768px) and (max-width:1219px){
     .list_layout {
-        justify-content: flex-start;
+        justify-content: space-around;
     }
-    .li-container_flex{
-        margin: 0em 4em 2em 0em;
+    .li-container_flex:last-child{
+        justify-self: start;
     } 
-    .li-container_flex:nth-child(4){
-        margin-right: 0em;
-    } 
+
 }
 @media(min-width: 1220px){
     .list_layout {

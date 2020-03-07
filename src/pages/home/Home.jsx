@@ -9,6 +9,7 @@ import ProfessionalIntro from './ProfessionalIntro'
 import GurranteePic from './GurranteePic'
 import ShopPic from './ShopPic'
 import YouPro from './YouPro'
+import {Link} from 'react-router-dom'
 
 class Home extends Component {
   constructor(props) {
@@ -24,11 +25,13 @@ class Home extends Component {
 
   }
 
-  renderTask = (taskImgUrl, taskName) => {
+  renderTask = (taskImgUrl, taskName, linkTo) => {
     return (
       <li key={taskName} className="li-container_flex">
+        <Link to={linkTo} style={{textDecoration:"none"}}>
         <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
         <div className="task_description">{taskName}</div>
+        </Link>
       </li>
     )
   }
@@ -42,13 +45,13 @@ class Home extends Component {
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
           <div className="left_align left_align-space">Instantly book highly rated pros for cleaning and handyman tasks at a fixed price.</div>
-          <a href="./"  className="right-align-jump">See All ></a>
+          <Link to="./services"  className="right-align-jump">See All ></Link>
         </div>
         <TaskList renderTask={this.renderTask} />
         <h2 className="left_align">Home Furniture with Assembly Included</h2>
         <div className="container-description-flex">
           <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
-          <a href="./" className="right-align-jump">See All ></a>     
+          <Link to='./shop' className="right-align-jump">See All ></Link>     
         </div>
         <FurnitureList renderTask={this.renderTask} />
         <ProfessionalIntro/>

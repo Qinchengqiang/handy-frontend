@@ -1,8 +1,10 @@
 .home {
   margin: 2.5em auto;
   padding: 0.8em;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
-  
+  box-sizing: border-box;
 }
 @media (max-width:1439px){
   .home {
