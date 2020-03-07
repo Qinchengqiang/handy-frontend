@@ -163,7 +163,9 @@ class RegistrationForm extends React.Component {
 								rules: [
 									{
 										required: true,
-										message: "Please input your password!"
+										message:
+											"Should be combination of numbers & alphabets and more than 8 characters",
+										pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
 									},
 									{
 										validator: this.validateToNextPassword
@@ -171,6 +173,7 @@ class RegistrationForm extends React.Component {
 								]
 							})(<Input.Password style={{ width: 250 }} />)}
 						</Form.Item>
+
 						<Form.Item label="Confirm Password" hasFeedback>
 							{getFieldDecorator("confirm", {
 								rules: [
