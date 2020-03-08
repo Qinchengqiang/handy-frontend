@@ -1,5 +1,5 @@
 import React from "react";
-import "./register.css";
+import "./register.scss";
 import {
 	Form,
 	Input,
@@ -29,6 +29,22 @@ const residences = [
 					{
 						value: "Rhodes",
 						label: "Rhodes"
+					},
+					{
+						value: "Ryde",
+						label: "Ryde"
+					},
+					{
+						value: "Zetlend",
+						label: "Zetlend"
+					},
+					{
+						value: "Hurstvill",
+						label: "Hurstvill"
+					},
+					{
+						value: "Eastwood",
+						label: "Eastwood"
 					}
 				]
 			}
@@ -143,6 +159,9 @@ class RegistrationForm extends React.Component {
 		return (
 			<div className="content">
 				<div className="container">
+					<h3>
+						<Row className="reg-form-header">CREATE ACCOUNT</Row>
+					</h3>
 					<Form {...formItemLayout} onSubmit={this.handleSubmit}>
 						<Form.Item label="E-mail">
 							{getFieldDecorator("email", {
@@ -203,7 +222,12 @@ class RegistrationForm extends React.Component {
 										message: "Please select your habitual residence!"
 									}
 								]
-							})(<Cascader options={residences} style={{ width: 250 }} />)}
+							})(
+								<Cascader
+									options={residences}
+									style={{ width: 250, color: "black" }}
+								/>
+							)}
 						</Form.Item>
 						<Form.Item label="Phone Number">
 							{getFieldDecorator("phone", {
@@ -242,7 +266,15 @@ class RegistrationForm extends React.Component {
 							)}
 						</Form.Item>
 						<Form.Item {...tailFormItemLayout}>
-							<Button type="primary" htmlType="submit" style={{ width: 200 }}>
+							<Button
+								type="primary"
+								htmlType="submit"
+								style={{
+									width: "250px",
+									alignItems: "center",
+									marginLeft: "0px"
+								}}
+							>
 								Register
 							</Button>
 						</Form.Item>
