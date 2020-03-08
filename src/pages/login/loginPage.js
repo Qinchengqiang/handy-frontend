@@ -94,7 +94,7 @@ class NormalLoginForm extends React.Component {
 						</div>
 
 						<Link to="/register" style={{ marginTop: "-10%" }}>
-							<a href="">Register now!</a>
+							<a href="">Sign up</a>
 						</Link>
 					</div>
 				</Form>
