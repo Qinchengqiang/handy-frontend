@@ -1,5 +1,6 @@
 import React from "react";
 import "./register.scss";
+import { Link } from "react-router-dom";
 import {
 	Form,
 	Input,
@@ -11,7 +12,8 @@ import {
 	Col,
 	Checkbox,
 	Button,
-	AutoComplete
+	AutoComplete,
+	Divider
 } from "antd";
 
 const { Option } = Select;
@@ -157,130 +159,146 @@ class RegistrationForm extends React.Component {
 		));
 
 		return (
-			<div className="content">
-				<div className="container">
-					<h3>
-						<Row className="reg-form-header">CREATE ACCOUNT</Row>
-					</h3>
-					<Form {...formItemLayout} onSubmit={this.handleSubmit}>
-						<Form.Item label="E-mail">
-							{getFieldDecorator("email", {
-								rules: [
-									{
-										type: "email",
-										message: "The input is not valid E-mail!"
-									},
-									{
-										required: true,
-										message: "Please input your E-mail!"
-									}
-								]
-							})(<Input style={{ width: 250 }} />)}
-						</Form.Item>
-						<Form.Item label="Password" hasFeedback>
-							{getFieldDecorator("password", {
-								rules: [
-									{
-										required: true,
-										message:
-											"Should be combination of numbers & alphabets and more than 8 characters",
-										pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-									},
-									{
-										validator: this.validateToNextPassword
-									}
-								]
-							})(<Input.Password style={{ width: 250 }} />)}
-						</Form.Item>
+			<section className="reg-form">
+				<Form {...formItemLayout} onSubmit={this.handleSubmit}>
+					<div className="box">
+						<div className="reg-heading">
+							<h2>CREATE ACCOUNT</h2>
+						</div>
+						<div className="reg-form-fields">
+							<Form.Item label="E-mail" className="reg-input-box">
+								{getFieldDecorator("email", {
+									rules: [
+										{
+											type: "email",
+											message: "The input is not valid E-mail!"
+										},
+										{
+											required: true,
+											message: "Please input your E-mail!"
+										}
+									]
+								})(<Input style={{ width: 250 }} />)}
+							</Form.Item>
+							<Form.Item label="Password" className="reg-input-box" hasFeedback>
+								{getFieldDecorator("password", {
+									rules: [
+										{
+											required: true,
+											message:
+												"Should be combination of numbers & alphabets and more than 8 characters",
+											pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+										},
+										{
+											validator: this.validateToNextPassword
+										}
+									]
+								})(<Input.Password style={{ width: 250 }} />)}
+							</Form.Item>
 
-						<Form.Item label="Confirm Password" hasFeedback>
-							{getFieldDecorator("confirm", {
-								rules: [
-									{
-										required: true,
-										message: "Please confirm your password!"
-									},
-									{
-										validator: this.compareToFirstPassword
-									}
-								]
-							})(
-								<Input.Password
-									onBlur={this.handleConfirmBlur}
-									style={{ width: 250 }}
-								/>
-							)}
-						</Form.Item>
-
-						<Form.Item label="Address">
-							{getFieldDecorator("residence", {
-								initialValue: ["NSW", "Sydney", "Ryde"],
-								rules: [
-									{
-										type: "array",
-										required: true,
-										message: "Please select your habitual residence!"
-									}
-								]
-							})(
-								<Cascader
-									options={residences}
-									style={{ width: 250, color: "black" }}
-								/>
-							)}
-						</Form.Item>
-						<Form.Item label="Phone Number">
-							{getFieldDecorator("phone", {
-								rules: [
-									{ required: true, message: "Please input your phone number!" }
-								]
-							})(<Input addonBefore={prefixSelector} style={{ width: 250 }} />)}
-						</Form.Item>
-						<Form.Item
-							label="Captcha"
-							extra="We must make sure that your are a human."
-						>
-							<Row gutter={8}>
-								<Col span={12}>
-									{getFieldDecorator("captcha", {
-										rules: [
-											{
-												required: true,
-												message: "Please input the captcha you got!"
-											}
-										]
-									})(<Input />)}
-								</Col>
-								<Col span={12}>
-									<Button style={{ width: 120 }}>Get captcha</Button>
-								</Col>
-							</Row>
-						</Form.Item>
-						<Form.Item {...tailFormItemLayout}>
-							{getFieldDecorator("agreement", {
-								valuePropName: "checked"
-							})(
-								<Checkbox>
-									I have read the <a href="">agreement</a>
-								</Checkbox>
-							)}
-						</Form.Item>
-						<Form.Item {...tailFormItemLayout}>
-							<Button
-								type="primary"
-								htmlType="submit"
-								style={{
-									width: "250px",
-									alignItems: "center",
-									marginLeft: "0px"
-								}}
+							<Form.Item
+								label="Confirm Password"
+								className="reg-input-box"
+								hasFeedback
 							>
-								Register
-							</Button>
-						</Form.Item>
-					</Form>
-				</div>
-			</div>
+								{getFieldDecorator("confirm", {
+									rules: [
+										{
+											required: true,
+											message: "Please confirm your password!"
+										},
+										{
+											validator: this.compareToFirstPassword
+										}
+									]
+								})(
+									<Input.Password
+										onBlur={this.handleConfirmBlur}
+										style={{ width: 250 }}
+									/>
+								)}
+							</Form.Item>
+
+							<Form.Item label="Address" className="reg-input-box">
+								{getFieldDecorator("residence", {
+									initialValue: ["NSW", "Sydney", "Ryde"],
+									rules: [
+										{
+											type: "array",
+											required: true,
+											message: "Please select your habitual residence!"
+										}
+									]
+								})(
+									<Cascader
+										options={residences}
+										style={{ width: 250, color: "black" }}
+									/>
+								)}
+							</Form.Item>
+							<Form.Item label="Phone Number" className="reg-input-box">
+								{getFieldDecorator("phone", {
+									rules: [
+										{
+											required: true,
+											message: "Please input your phone number!"
+										}
+									]
+								})(
+									<Input addonBefore={prefixSelector} style={{ width: 250 }} />
+								)}
+							</Form.Item>
+							<Form.Item
+								className="reg-input-box"
+								label="Captcha"
+								extra="We must make sure that your are a human."
+							>
+								<Row gutter={8}>
+									<Col span={12}>
+										{getFieldDecorator("captcha", {
+											rules: [
+												{
+													required: true,
+													message: "Please input the captcha you got!"
+												}
+											]
+										})(<Input />)}
+									</Col>
+									<Col span={12}>
+										<Button style={{ width: 120 }}>Get captcha</Button>
+									</Col>
+								</Row>
+							</Form.Item>
+							<Form.Item {...tailFormItemLayout}>
+								{getFieldDecorator("agreement", {
+									valuePropName: "checked"
+								})(
+									<Checkbox>
+										I have read the <a href="">agreement</a>
+									</Checkbox>
+								)}
+							</Form.Item>
+							<Form.Item {...tailFormItemLayout} className=".reg-button-box">
+								<Button
+									type="primary"
+									htmlType="submit"
+									style={{
+										width: "250px",
+										alignItems: "center",
+										marginLeft: "0px"
+									}}
+								>
+									Sign up
+								</Button>
+								<Divider style={{ width: "100%", marginLeft: "-20%" }} />
+								<Link to="/login" style={{ marginTop: "-10%" }}>
+									<a href="">Already have an account? Login here</a>
+								</Link>
+							</Form.Item>
+						</div>
+					</div>
+				</Form>
+			</section>
 		);
 	}
 }

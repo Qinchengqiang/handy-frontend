@@ -6,39 +6,85 @@ body {
 	color: #fff;
 }
 
-.container {
-	font-family: "Montserrat", sans-serif;
-	margin-top: 15rem;
-	width: 80%;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	border-radius: 10px;
-	box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
-	height: 30rem;
+.login-form {
+	height: 100vh;
+	background-color: white;
+	background-size: cover;
 	display: flex;
-	flex-direction: column;
-
-	justify-content: center;
 	align-items: center;
-	border-radius: 10px;
-	.form-header {
-		font-weight: bold;
-		margin-top: -15%;
-		color: black;
-		font-size: 30px;
-	}
-	.form-input {
-		border: none;
-		height: 40px;
-		width: 300px;
+	justify-content: center;
+	font-family: "Montserrat", sans-serif;
+	.box {
+		min-width: 400px;
+		min-height: 500px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 10px #0e0e0e82;
+		display: flex;
+		flex-direction: column;
+		padding: 40px;
+		border-radius: 10px;
+		.heading h2 {
+			color: #0089fe;
+			font-size: 22px;
+			text-align: left;
+			margin: 15px 0px 10px;
+			border-bottom: 1px solid;
+			padding-bottom: 3px;
+			display: inline-block;
+		}
+		.form-fields {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 10px;
+
+			.input-box {
+				position: relative;
+				margin: 10px;
+			}
+			.button-box {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+		}
 	}
 }
 
-.login-item {
-	color: rgb(0, 0, 0);
-	padding: 25px 25px 0;
-	margin: 2% 20% 0;
-	border-radius: 3px;
+/* responsive */
+@media only screen and (max-width: 375px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 1220px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 1440px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
 }
