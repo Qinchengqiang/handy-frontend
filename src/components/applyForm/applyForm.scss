@@ -1,48 +1,62 @@
 .apply-form {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-around;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     .form {
        
         .name {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             margin-top: 20px;
             input {
                 padding: 10px;
-                border-radius: 2px;
+                border-radius: 5px;
+                border-style: none;
                 margin-left: 10px;
-                font-size: 1.12em;
+                font-size: 1.22em;
             }
         }
         .contact {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             margin-top: 20px;
             input {
                 padding: 10px;
-                border-radius: 2px;
+                border-radius: 5px;
+                border-style: none;
                 margin-left: 10px;
-                font-size: 1.12em;
+                font-size: 1.22em;
             }
         }
         select {
             display: flex;
             justify-content: flex-start;
-            margin: 30px 80px;
+            margin-top: 20px;
+            margin-left: 10px;
             padding: 10px;
+            border-radius: 5px;
+            font-size: 1.22em;
+            background-color: #fff;
         }
-        input {
+        .submit-btn {
+            display: flex;
+            justify-content: flex-start;
             padding: 10px;
-                border-radius: 2px;
-                margin-left: 80px;
-                font-size: 1.12em;
+            
+            input {
+                border-radius: 5px;
+                font-size: 1.22em;
+                background-color: rgb(23, 160, 34);
+                color: #fff;
+                width: 230px;
+                height: 50px;
+                font-size: 1.32em;
+            }
         }
         .hint {
             font-size: 1.1em;
             font-weight: 200;
-            margin: 30px 80px;
+            padding: 10px;
         }
     }
 }

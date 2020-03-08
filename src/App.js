@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Home from './pages/home/Home'
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+// import Home from './pages/home/Home'
 import Apply from './pages/apply'
-import Footer from './components/footer'
 
 class App extends Component {
   render() {
     return (
-      <div className="test">
-          <h2>Welcome</h2>
-          <Home/>
-          <Apply />
-          {/* <Footer /> */}
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/apply">
+            <Apply />
+          </Route>
+        </Switch>
+      </Router>
     );
   }
 }

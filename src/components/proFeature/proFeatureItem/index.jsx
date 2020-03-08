@@ -15,7 +15,7 @@ export default class ProFeatureItem extends Component {
         return (
             <div className="item-container">
                 <img src={this.state.image} alt=""/>
-                <h3 className="title">{this.state.title}</h3>
+                <h3 className="title"><b>{this.state.title}</b></h3>
                 <p>{this.state.description}</p>
             </div>
         )

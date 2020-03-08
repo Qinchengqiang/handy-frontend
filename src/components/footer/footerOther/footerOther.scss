@@ -1,0 +1,39 @@
+.other {
+    border-bottom: solid rgba(235, 233, 233, 0.733) 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .title{
+        h2 {
+            color: #fff;
+            font-size: 1.02em;
+            margin: 20px 20px 0px 0px;
+        }
+    }
+    .nav {
+        display: flex;
+        justify-content: flex-start;
+        ul {
+            list-style: none;
+            padding-inline-start: 0;
+        }
+        li {
+            margin: 10px;
+            margin-left: 0px;
+        }
+        a {
+            color: #88887e;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .left {
+            flex-grow: 1;
+        }
+        .mid {
+            flex-grow: 1;
+        }
+        .right {
+            flex-grow: 1;
+        }
+    }
+}
