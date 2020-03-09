@@ -8,7 +8,7 @@
 
 @media (max-width: 767px){
     .var_nav {
-        width: calc(100vw - 60px);
+        width: calc(100vw - 3.75em);
     }
     .ul-button_layout{
         margin:1.25em auto 1.25em auto;
@@ -44,53 +44,6 @@
         width:20em;
     }
 }
-/* .ul-button_layout{ 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-} */
-
-/* @media (min-width: 375px) and (max-width:768px){
-    .var_nav {
-        margin: 0 auto;
-    }
-}
-@media (min-width: 768px){
-    .ul-button_layout{ 
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-    .var_nav{
-        width:18.75em;
-    }
-    .ul-button_layout{
-        margin:2.5em auto 3.5em auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 992px){
-    .var_nav{
-        margin-right: 1em;
-    }
-}
-@media (min-width:993px){
-    .var_nav{
-        margin-right: 3em;
-    }
-}
- 
-
-@media (max-width: 768px){
-    .var_nav {
-        width: calc(100vw - 60px);
-    }
-    .ul-button_layout{
-        margin:1.25em auto 1.75em auto;
-    }
-} */
 .var_nav
 {
     position:relative;
@@ -126,7 +79,8 @@ ul.ul-button_layout > li:nth-child(3) > div.link_bg {
     width:100%;
     z-index:3;
 }
-.link_title:hover .icon
+
+.var_nav:hover .icon
 {
     -webkit-transform:rotate(360deg);
     -moz-transform:rotate(360deg);
@@ -138,7 +92,6 @@ ul.ul-button_layout > li:nth-child(3) > div.link_bg {
 {
     width:100%;
     background: linear-gradient(45deg, rgba(69,215,255,1) 0%, rgba(69,255,202,1) 45%, rgba(69,255,109,0.7301295518207283) 80%);
-    border: 0.0625em solid #45ffca;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -165,12 +118,11 @@ ul.ul-button_layout > li:nth-child(3) > div.link_bg {
     -moz-transition:all .5s ease-in-out; 
     -o-transition:all .5s ease-in-out; 
     -ms-transition:all .5s ease-in-out;   
-    float:left;
     transition:all .5s ease-in-out;   
     float:left;  
 }
 .icon .icon-tag{
-    top:22px;
+    top: 1.375em;
     position:relative;
     width: 100%;}
 .a--quicklink{

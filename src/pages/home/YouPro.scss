@@ -5,12 +5,9 @@ $color:#00CDED;
     width: 100vw;
     box-sizing: border-box;
    
-    // border: solid yellow;
     .pro_img_container{
         flex-basis: 35%;
-        // border: solid red;
        height: 100%;
-    //    background-image: url(https://cdn.homedsgn.com/wp-content/uploads/2012/11/Soldati-House-Interior-01.jpg);
         background-size: cover;
         padding-top: 7em;
         &_slogan{
@@ -19,18 +16,18 @@ $color:#00CDED;
             height: 10%;
             text-align: left;
             font-weight: 600;
-            font-size: 29px;
+            font-size: 1.8125em;
         }
         &_subtitle{
-            width: 17em;
+            width: 20em;
             margin-left: 10%;
             text-align: left;
             margin-top: 4em;
             line-height: 1.7em;
         }
         &_button{
-            border: solid 2px #00CDED;
-            border-radius: 8px;
+            border: solid 0.125em #00CDED;
+            border-radius: 0.5em;
             height: 4em;
             width: 15em;
             color: #00CDED ;
