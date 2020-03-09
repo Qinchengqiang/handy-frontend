@@ -1,5 +1,5 @@
 import React from 'react'
-import './QuickLink.css'
+import './QuickLink.scss'
 import clean from "./HomeSvg/clean.svg"
 import wrench from "./HomeSvg/wrench.svg"
 import hardware from "./HomeSvg/hardware.svg"

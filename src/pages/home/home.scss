@@ -1,8 +1,10 @@
 .home {
   margin: 2.5em auto;
   padding: 0.8em;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
   font-family: sans-serif;
-  
+  box-sizing: border-box;
 }
 @media (max-width:1439px){
   .home {
@@ -18,9 +20,9 @@
   .container-description-flex{justify-content: flex-start;}
 }
 @media (min-width:768px) and (max-width:1439px) {
-  .right-align-jump{
-    margin-right: calc(17vw)
-  }
+  // .right-align-jump{
+  //   margin-right: calc(10vw)
+  // }
 }
 @media (min-width:768px) {
   .container-description-flex{justify-content: space-between;}
@@ -29,6 +31,7 @@
   display: flex;
   line-height: 1.2em;
   flex-wrap: wrap;
+  
 }
 
 .right-align-jump{
