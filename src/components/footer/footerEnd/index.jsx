@@ -11,18 +11,18 @@ const links = [
 ];
 export default function FooterEnd() {
   return (
-    <div>
-      <div className="end">
+    <div className="end">
+      <div className="end-left">
         <ul className="end-ul">
           {links.map((link, i) => (
             <li key={i}>
               <a href={link.url}>{link.name}</a>
             </li>
           ))}
-          <li className="time">
-            <h4>2020 Handy. All rights reserved.</h4>
-          </li>
         </ul>
+      </div>
+      <div className="end-right">
+        <h4>2020 Handy. All rights reserved.</h4>
       </div>
     </div>
   );

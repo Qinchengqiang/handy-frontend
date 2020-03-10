@@ -1,6 +1,6 @@
 .pro-header {
     background-color: #ecf5f8;
-    height: 90vh;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -22,23 +22,92 @@
     }
     
     .image-container {
-        margin-top: 150px;
+        // margin-top: 150px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-content: flex-end;
         img {
             width: 500px;
             height: 350px;
         }
     }
-    @media (min-width:768px) and (max-width:1220px) {
+}
+
+@media (max-width: 375px) {
+    .pro-header {
+        // width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        .image-container {
+            order: 0;
+            margin-top: 0px;
+            .image {
+                width: 100vw;
+                height: 376px;
+            }
+        }
+    }
+    
+    
+    .pro-content-container {
+        order: 1;
+        // background-color: #f00;
+    }
+
+}
+
+@media (min-width:376px) and (max-width: 768px) {
+    .pro-header {
+
         .image-container {
             display: none;
         }
     }
+   }
+@media (min-width:769px) and (max-width:1220px) {
+    .pro-header{
+        height: auto;
+        // margin-left: 10vw;
+        .pro-content-container {
+            margin-left: 10vw;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: flex-end;
+            img {
+                width: 40vw;
+                height: 300px;
+            }
+        }
+    }
 }
 
+@media (min-width:1221px) and (max-width:1440px) {
+    .pro-header {
+        height: auto;
+        .image-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: flex-end;
+        }
+    }
+}
 
-
-@media (min-width:375px) and (max-width: 768px) {
-
+@media (min-width:1441px) {
+    .pro-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        .image-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-content: flex-end;
+        }
+    }
 }

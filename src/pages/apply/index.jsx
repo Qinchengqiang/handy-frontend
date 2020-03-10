@@ -12,12 +12,12 @@ export default class Apply extends Component {
     return (
       <div className="apply">
         <ProHeader />
-        <ProFeature />
+        {/* <ProFeature />
         <div className="pro-headline"><span className="pro-headline-text">"</span></div>
         <Comment />
         <div className="pro-headline"><span className="pro-headline-text">“</span></div>
         <Requirement />
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }

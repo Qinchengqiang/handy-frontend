@@ -17,7 +17,7 @@ export default class ProHeader extends Component {
             <ApplyForm />
           </div>
           <div className="image-container">
-            <img src="https://cache.hbfiles.com/assets/apply/proapply-pair-no-logo-4a8eeefe912d81ccc156a89005df5e6b.png" alt="" />
+            <img className="image" src="https://cache.hbfiles.com/assets/apply/proapply-pair-no-logo-4a8eeefe912d81ccc156a89005df5e6b.png" alt="" />
           </div>
         </div>
     );
