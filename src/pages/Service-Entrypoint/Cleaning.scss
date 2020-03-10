@@ -20,7 +20,75 @@
     background-position: center;
     background-size: cover;
   }
+
+  .service__what{
+
+    .service__what--bedroom {
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-image: url("../../img/bedroom.jpg");
+      .points--card {
+        transform: translateX(20%);
+        flex: 0 0 40%;
+      }
+
+
+    }
+    .service__what--bathroom {
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-image: url("../../img/bathroom.jpg");
+      .points--card {
+        transform: translateX(-20%);
+        flex: 0 0 40%;
+      }
+
+    }
+    .service__what--kitchen {
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-image: url("../../img/kitchen.jpg");
+      .points--card {
+        transform: translateX(20%);
+        flex: 0 0 40%;
+      }
+
+    }
+    .service__what--extras {
+      background-repeat: no-repeat;
+      background-image: url("../../img/extras.jpg");
+      background-position: right top;
+      .points--card {
+        transform: translateX(-20%);
+        flex: 0 0 40%;
+      }
+
+    }
+  }
+
+
 }
+
+  .service__what {
+    .heading--primary {
+      text-align: center;
+    }
+    [class*="service__what--"] {
+      height: 350px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      .points--card {
+        width: 80%;
+        background: white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+      }
+    }
+
+
+  }
 .service__intro {
   margin-top: 30vh;
   .heading--primary {
@@ -53,50 +121,70 @@
     }
   }
 }
-.service__what {
+
+
+.service__faq {
+  margin: 15vh 0;
   .heading--primary {
     text-align: center;
   }
-  [class*="service__what--"] {
-    height: 20vh;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
 
-  }
-  .service__what--bedroom {
-    background-position: left top;
-    background-image: url("../../img/bedroom.jpg");
-    .points--card{
-      transform: translateX(20%);
+.service__meetpros {
+  padding: 5rem;
+  .heading--primary {
+    text-align: center;
+    margin-bottom: 5%;
+    h4 {
+      font-size: 1.3rem;
+      color: grey;
     }
   }
-  .service__what--bathroom{
-    background-position: right top;
-    background-image: url("../../img/bathroom.jpg");
-    .points--card{
-      transform: translateX(-20%);
-    }
-  }
-  .service__what--kitchen{
-    background-position: left top;
-    background-image: url("../../img/kitchen.jpg");
-    .points--card{
-      transform: translateX(20%);
-    }
-  }
-  .service__what--extras{
-    background-image: url("../../img/extras.jpg");
-    background-position: right top;
-    .points--card{
-      transform: translateX(-20%);
-    }
-  }
-  .points--card{
-    flex: 0 0 40%;
-    background: white;
+  .card--pros {
+    max-width: 90%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    padding: 1.5rem;
+    padding: 10%;
+    .card--profile {
+      padding: 5%;
+      height: 40%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      border-bottom: solid 1px gainsboro;
+      .card--avatar {
+        flex: 0 0 30%;
+        border-radius: 50%;
+        width: 30%;
+        height: 100%;
+      }
+      .card--profileDetailsBox {
+        flex: 0 0 60%;
+        .card--profileName {
+        }
+        .card--profileRating {
+        }
+        .card--profileJobs {
+        }
+      }
+    }
+    .card--intro {
+      //padding: 5% 10%;
+      margin: 5% 0;
+      height: 60%;
+    }
+  }
+}
+
+.service__introDetails{
+  h2 {
+    text-align: center;
+    line-height: 5rem;
+  }
+  p{
+    line-height: 1.6rem;
+    margin: 2rem 0;
+  }
+  .line-break{
+    border-bottom: solid gainsboro 2px;
   }
 }
