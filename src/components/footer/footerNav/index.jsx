@@ -58,7 +58,7 @@ export default function FooterNav() {
           ))}
         </ul>
         <div className="app">
-          <ul>
+          <ul className="app-ul">
             <li>
               <a href="https://handy.app.link/app">
                 <img

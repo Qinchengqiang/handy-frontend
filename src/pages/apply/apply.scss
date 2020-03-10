@@ -9,6 +9,7 @@
         line-height: 1.61em;
         background-color: #5da6c9;
         text-align: center;
+        margin: 30px 0px;
         .pro-headline-text {
             font-size: 6em;
             top: -0.55em;
@@ -22,7 +23,7 @@
 
 @media (max-width: 375px) {
     .apply{
-        background-color: #f00;
+        // background-color: #f00;
         width: 100vw;
     }
 }

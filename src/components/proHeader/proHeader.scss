@@ -59,7 +59,8 @@
 
 @media (min-width:376px) and (max-width: 768px) {
     .pro-header {
-
+        flex-direction: column;
+        justify-content: center;
         .image-container {
             display: none;
         }
@@ -88,6 +89,9 @@
 @media (min-width:1221px) and (max-width:1440px) {
     .pro-header {
         height: auto;
+        .pro-content-container {
+            margin-left: 10vw;
+        }
         .image-container{
             display: flex;
             flex-direction: column;

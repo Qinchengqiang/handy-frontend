@@ -22,3 +22,24 @@
         
     }
 }
+
+@media (max-width: 375px) {
+    .share {
+        display: none;
+    }
+}
+
+@media (min-width:376px) and (max-width: 768px) {
+    .share {
+        display: none;
+    }
+}
+@media (min-width:769px) and (max-width:1220px) {
+
+}
+@media (min-width:1221px) and (max-width:1440px) {
+
+}
+@media (min-width:1441px) {
+    
+}

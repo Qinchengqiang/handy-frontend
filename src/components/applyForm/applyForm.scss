@@ -70,6 +70,7 @@
         font-size: 1.1em;
         font-weight: 200;
         margin-top: 20px;
+        margin-bottom: 30px;
     }
 
     
@@ -116,14 +117,20 @@
 }
 
 @media (min-width:426px) and (max-width: 768px) {
+    .apply-form {
+    
     .form-up {
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
         // background-color: #f00;
         input {
-            margin-top: 20px;
-            margin-left: 20px;
+            // margin-top: 20px;
+            // margin-left: 20px;
+            margin: 10px 30px;
+            max-width: 400px;
         }
     }
+}
     select {
         width: 45%;
     }
