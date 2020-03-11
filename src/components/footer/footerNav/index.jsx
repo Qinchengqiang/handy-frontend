@@ -61,7 +61,7 @@ export default function FooterNav() {
           <ul className="app-ul">
             <li>
               <a href="https://handy.app.link/app">
-                <img
+                <img className="app-image"
                   src="https://cache.hbfiles.com/assets/miscellaneous/app-store-badge-4eb77a579e431ad6a15239b584bc6166.svg"
                   alt=""
                 />
@@ -69,7 +69,7 @@ export default function FooterNav() {
             </li>
             <li>
               <a href="https://handy.app.link/app">
-                <img
+                <img className="app-image"
                   src="https://cache.hbfiles.com/assets/miscellaneous/play-store-badge-d21a273e303988a4598b0230b8a24ec0.svg"
                   alt=""
                 />
