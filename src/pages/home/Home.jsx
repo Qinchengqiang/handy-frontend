@@ -43,7 +43,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Nav />
+        {/* <Nav /> */}
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>

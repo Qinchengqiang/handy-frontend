@@ -8,11 +8,17 @@ import {
   Link
 } from "react-router-dom";
 import ServicePage from "./pages/service/ServicePage"
-
+import WrappedNormalLoginForm from "./pages/login/loginPage";
+import WrappedRegistrationForm from "./pages/register/register";
+import MyAccount from "../src/pages/myAccount/myAccount";
+import Nav from "./components/nav/Nav";
 class App extends Component {
   render() {
     return (
+
+    
       <Router>
+          <Nav/>
          <Switch>
           <Route exact path="/">
             <Home />
@@ -20,14 +26,12 @@ class App extends Component {
            <Route path="/services">
             <ServicePage />
           </Route> 
-          {/* <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register />
-          </Route>  */}
+        	<Route path="/login" exact component={WrappedNormalLoginForm} />
+						<Route path="/register" component={WrappedRegistrationForm} />
+						<Route path="/myaccount" component={MyAccount} />
         </Switch>
         </Router>
+  
     );
   }
 }

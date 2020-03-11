@@ -29,7 +29,7 @@ export default () => {
       <NavLink exact to="/" className='navlink'>
         Help
       </NavLink>
-      <NavLink exact to="/" className='navlink'>
+      <NavLink exact to="/login" className='navlink'>
         Login
       </NavLink>
       </div>
