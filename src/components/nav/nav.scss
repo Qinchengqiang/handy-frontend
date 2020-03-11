@@ -1,0 +1,19 @@
+.navcontainer {
+    display:flex; 
+    justify-content:flex-start;
+    align-items:center;
+    
+}
+.navlink {
+    margin-left:1rem;
+    color:#434343;
+    font-size:16px;
+    padding: 0.7rem 1rem;
+    
+}
+
+.rightpart {
+    margin-left:auto;
+    display:flex ;
+    align-items:center 
+}
