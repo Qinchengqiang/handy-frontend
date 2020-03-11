@@ -1,0 +1,86 @@
+$color: rgba(35,75,132,0.8);
+.shop_img{
+    height: 35em;
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    box-sizing: border-box;
+   
+    // border: solid yellow;
+    .shop_img_container{
+        flex-basis: 60%;
+        // border: solid red;
+       height: 100%;
+       background-image: url(https://cdn.homedsgn.com/wp-content/uploads/2012/11/Soldati-House-Interior-01.jpg);
+        background-size: cover;
+        padding-top: 7em;
+        &_slogan{
+            margin-left:10%;
+            margin-bottom: 0%;
+            height: 10%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.8125em;
+        }
+        &_subtitle{
+            width: 17em;
+            margin-left: 10%;
+            text-align: left;
+            margin-top: 4em;
+            line-height: 1.7em;
+        }
+        &_button{
+            border: solid 0.0625em $color;
+            border-radius: 0.5em;
+            height: 4em;
+            width: 15em;
+            background-color: $color;
+            color: white;
+            padding-top: 1.5em;
+            text-align: center;
+            margin-left: 10%;
+            margin-top: 4em;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+    }
+    .shop_img_container-right{
+        flex: 1;
+        background-image: url(https://cdn.shopify.com/s/files/1/0064/3796/1801/files/TheModernFurnitureStore21_1_1400x.progressive.jpg?v=1560324018);
+        background-size:cover;
+        
+    }
+}
+
+.shop_img_container_button:before {
+    content: "";
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+  .shop_img_container_button:hover {
+    background-color: $color;
+    color: #fff;
+    border-bottom: 0.25em solid darken($color, 10%);
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+     transition: all 0.5s ease-in-out;
+    }
+  }
+
+@media(min-width: 375px) and (max-width:767px) {
+    .shop_img_container-right{
+       display: none;
+    }
+}
+@media(min-width:768px){
+    .shop_img{display: flex;}
+}

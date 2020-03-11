@@ -20,16 +20,16 @@ class App extends Component {
            <Route path="/services">
             <ServicePage />
           </Route> 
-          <Route path="/login">
+          {/* <Route path="/login">
             <Login />
           </Route>
           <Route path="/register">
             <Register />
-          </Route> */}
+          </Route>  */}
         </Switch>
         </Router>
     );
   }
 }
 
-export default App;
+export default App

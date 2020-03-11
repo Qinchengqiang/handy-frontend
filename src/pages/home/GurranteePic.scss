@@ -1,0 +1,80 @@
+.gurrantee-pic_container{
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    box-sizing: border-box;
+    height: 35em;
+    &-content{
+        padding-top: 3em;
+        background-color: rgb(35,75,132);
+        height: 100%;
+        text-align: center;
+        .gurrantee-content_logo{
+            object-fit: cover;
+            height: 8em;
+            margin-bottom: 1.5em;
+        }
+        .gurrantee-content_subtitle{
+            color: whitesmoke;
+            font-size: 1.5625em;
+            font-weight: 700;
+            line-height: 1.5em;
+        }
+        .gurrantee-content_text{
+            color: white;
+            line-height: 1.25em;
+            .gurrantee-content_text_link{
+                text-decoration: underline;
+                color:whitesmoke;
+            }
+
+        }
+
+    }
+    
+}
+@media (max-width:375px) {
+    .gurrantee-pic_container-flex{
+        display: none;
+    }
+.gurrantee-content_subtitle{
+    margin: 0 auto;
+    max-width: 70vw;
+}
+.gurrantee-content_text{
+    margin: 3em auto;
+    max-width: 70vw;
+}}
+@media (min-width: 376px){
+    .gurrantee-pic_container{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    .gurrantee-pic_container-content{
+        flex-basis: 20em;
+    }
+    .gurrantee-content_text{
+        margin: 3em auto;
+        max-width: 80%;
+        text-align: left;
+    }
+    .gurrantee-pic_container-flex{
+        flex: 1;    
+    }
+    .gurrantee-pic_container-pic{
+        object-fit: cover;
+        overflow: hidden; 
+    }
+}
+@media (min-width: 1220px){
+    .gurrantee-pic_container-pic{
+        width: 100%;
+        max-height: 100%;
+    }
+}
+@media (min-width: 375px) and (max-width: 1219px){
+    .gurrantee-pic_container-pic{
+        height: 100%;
+        max-width: 100%;
+    }
+}
