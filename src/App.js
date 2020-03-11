@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ServicePage from "./pages/service/ServicePage"
 
 class App extends Component {
   render() {
@@ -16,9 +17,9 @@ class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
-          {/* <Route path="/services">
-            <Services />
-          </Route>
+           <Route path="/services">
+            <ServicePage />
+          </Route> 
           <Route path="/login">
             <Login />
           </Route>
