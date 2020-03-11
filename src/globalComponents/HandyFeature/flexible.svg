@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>flexible icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="24" cy="12" r="4"></circle>
+        <circle id="path-2" cx="4" cy="4" r="4"></circle>
+        <circle id="path-3" cx="4" cy="4" r="4"></circle>
+    </defs>
+    <g id="Cleaning" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-752.000000, -1542.000000)">
+        <g id="flexible-icon" transform="translate(752.000000, 1542.000000)">
+            <g transform="translate(4.000000, 3.000000)" id="Group-5">
+                <g>
+                    <path d="M4,0 L4,30" id="Line-2" stroke="#434343" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M14,0 L14,30" id="Line-2" stroke="#434343" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M24,0 L24,30" id="Line-2" stroke="#434343" stroke-width="1.5" stroke-linecap="round"></path>
+                    <g id="Oval-3">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <circle stroke="#434343" stroke-width="1.6" cx="24" cy="12" r="3.2"></circle>
+                    </g>
+                    <g id="Group-2" transform="translate(10.000000, 19.000000)">
+                        <g id="Oval-3">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <circle stroke="#434343" stroke-width="1.6" cx="4" cy="4" r="3.2"></circle>
+                        </g>
+                    </g>
+                    <g id="Group" transform="translate(0.000000, 4.000000)">
+                        <g id="Oval-3">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <circle stroke="#434343" stroke-width="1.6" cx="4" cy="4" r="3.2"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

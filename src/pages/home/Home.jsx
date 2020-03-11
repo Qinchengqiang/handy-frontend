@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./home.scss";
 // import Nav from "../../components/nav/Nav";
-// import GurranteeSection from "./GurranteeSection";
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
 import FurnitureList from "./FurnitureList"
@@ -10,6 +9,10 @@ import GurranteePic from './GurranteePic'
 import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
+import {Faq} from '../../globalComponents/Faq/Faq.jsx'
+import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
+import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
+
 
 class Home extends Component {
   constructor(props) {
@@ -22,6 +25,7 @@ class Home extends Component {
 
   async componentDidMount() {
     //get data from the store when the first render
+    
 
   }
 
@@ -56,8 +60,13 @@ class Home extends Component {
         <FurnitureList renderTask={this.renderTask} />
         <ProfessionalIntro/>
         <GurranteePic/>
+      
         <ShopPic/>
         <YouPro/>
+        <Faq/>
+        <HandyExplain/>
+        <HandyFeatureAssembly/>
+       
 
         {/* footer (global)*/}
 
@@ -66,4 +75,8 @@ class Home extends Component {
   }
 }
 
+
+// export default connect((state)=>({
+//   login: state.loginStatus.login,
+// }),)(Home)
 export default Home;
