@@ -19,7 +19,7 @@ $color: rgba(35,75,132,0.8);
             height: 10%;
             text-align: left;
             font-weight: 600;
-            font-size: 29px;
+            font-size: 1.8125em;
         }
         &_subtitle{
             width: 17em;
@@ -29,8 +29,8 @@ $color: rgba(35,75,132,0.8);
             line-height: 1.7em;
         }
         &_button{
-            border: solid 1px $color;
-            border-radius: 8px;
+            border: solid 0.0625em $color;
+            border-radius: 0.5em;
             height: 4em;
             width: 15em;
             background-color: $color;
@@ -69,7 +69,7 @@ $color: rgba(35,75,132,0.8);
   .shop_img_container_button:hover {
     background-color: $color;
     color: #fff;
-    border-bottom: 4px solid darken($color, 10%);
+    border-bottom: 0.25em solid darken($color, 10%);
     &:before {
       transform: skewX(-45deg) translateX(13.5em);
      transition: all 0.5s ease-in-out;

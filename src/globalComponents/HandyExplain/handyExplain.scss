@@ -1,0 +1,55 @@
+.handy-explain-container{
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    box-sizing: border-box;
+    &-title{
+        font-size: 1.6em;
+        font-weight: 525;
+        line-height: 1.5;  
+    }
+    &-list{
+        list-style: none;
+        padding-left: 0;
+    }
+
+}
+
+.handy-explain-list{
+    &_img{
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    &_name{
+        margin-bottom: 1em;
+        font-size: 1.2em;
+        font-weight: 525;
+    }
+    &_description{
+        // margin-bottom: 2em;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 767px){
+    .handy-explain-list_img_icon{
+        display: none;
+    }
+}
+@media (min-width: 768px){
+    .handy-explain-container-list{
+        display: flex;
+        justify-content: center;
+    }
+    .handy-explain-list{
+        max-width:  14.4456em;
+        margin-right: 8vw;
+    }
+    .handy-explain-list:nth-child(3){
+        margin-right: 0em;
+
+    }
+}
