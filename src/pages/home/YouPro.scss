@@ -1,0 +1,90 @@
+$color:#00CDED;
+.pro_img{
+    height: 35em;
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    box-sizing: border-box;
+   
+    .pro_img_container{
+        flex-basis: 35%;
+       height: 100%;
+        background-size: cover;
+        padding-top: 7em;
+        &_slogan{
+            margin-left:10%;
+            margin-bottom: 0%;
+            height: 10%;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.8125em;
+        }
+        &_subtitle{
+            width: 20em;
+            margin-left: 10%;
+            text-align: left;
+            margin-top: 4em;
+            line-height: 1.7em;
+        }
+        &_button{
+            border: solid 0.125em #00CDED;
+            border-radius: 0.5em;
+            height: 4em;
+            width: 15em;
+            color: #00CDED ;
+            // background-color: white;
+            padding-top: 1.5em;
+            text-align: center;
+            margin-left: 10%;
+            margin-top: 2em;
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+
+        }
+    }
+    .pro_img_container-right{
+        flex: 1;
+       background-image: url(https://stories.starbucks.com/uploads/2019/01/Dress_Code_low-res-1.jpg);
+        // background-image: url(https://cdn.proify.com/s/files/1/0064/3796/1801/files/TheModernFurnitureStore21_1_1400x.progressive.jpg?v=1560324018);
+        background-size:cover;
+        
+    }
+}
+
+@media(min-width: 375px) and (max-width:767px) {
+    .pro_img_container-right{
+       display: none;
+    }
+    .pro_img_container_slogan{
+        margin-right: 10%;
+    }
+    .pro_img_container{
+        background-image: url(https://irp-cdn.multiscreensite.com/0446adb6/handy_man.png);
+        width: 100%;
+    }
+}
+@media(min-width:768px){
+    .pro_img{display: flex;}
+}
+
+.pro_img_container_button:before {
+    content: "";
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+.pro_img_container_button:hover {
+    background-color: $color;
+    color: #fff;
+    border-bottom: 0.45em solid darken($color, 10%);
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+     transition: all 0.5s ease-in-out;
+    }
+  }

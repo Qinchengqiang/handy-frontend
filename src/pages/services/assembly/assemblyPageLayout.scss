@@ -1,0 +1,18 @@
+.assembly{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    &_header-pic{
+        height: 16.25em;
+        border: solid black;
+    }
+    &_body-container{
+        height: 59.74em;
+        border: solid black;
+    }
+}
+

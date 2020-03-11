@@ -1,0 +1,139 @@
+*{
+
+    // border: 1px black solid;
+	// padding: 1px;
+
+}
+
+
+@media screen and (min-width: 1220px) {
+    .catagories__bar{
+
+        .bar__sticky{
+            position: sticky;
+            top: 30px;
+            min-width: 180px;
+            width: 20vmax;
+            max-width: 220px;
+        }
+
+        box-sizing: border-box;
+        outline: none;
+        display: inline;
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333;
+        text-align: left;
+
+
+        justify-content: center;
+        align-items: center;
+
+
+        a{
+            color: #333333;
+        }
+
+        h2{
+            color: #555555;
+            font-size: 2rem;
+            text-shadow: 0.5px 0.5px gray;
+            padding-bottom: 2vmin;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+
+            li{
+                list-style-type: none;
+                border: white;
+                background-color: white;
+                padding: 10px 0 10px 0;
+                text-align: left;
+                letter-spacing: 1.5px;
+
+                a{
+                    width: min-content;
+                    background-color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.1rem;
+                    text-shadow: 0.2px 0.2px gray;
+                }
+                
+                a:hover {
+                    color: #CCCCCC;
+                    transition-duration: 0.05s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+
+    .catagories__bar{
+
+        .bar__sticky{
+            position: sticky;
+            top: 20px;
+            min-width: 150px;
+            width: 15vmax;
+            max-width: 180px;
+        }
+    
+    
+        box-sizing: border-box;
+        outline: none;
+        display: inline;
+    
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333;
+        text-align: left;
+    
+        justify-content: center;
+        align-items: center;
+    
+    
+        a{
+            color: #333333;
+        }
+    
+        h2{
+            color: #555555;
+            font-size: 1.2rem;
+            text-shadow: 0px 0px white;
+            padding: 0;
+        }
+    
+        ul{
+            margin: 0;
+            padding: 0;
+    
+            li{
+                list-style-type: none;
+                border: white;
+                background-color: white;
+                padding: 3.5px 0 3.5px 0;
+                text-align: left;
+                letter-spacing: 0px;
+    
+                a{
+                    width: min-content;
+                    background-color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 0.8rem;
+                    text-shadow: 0px 0px white;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .catagories__bar{
+        display: none;
+    }
+}

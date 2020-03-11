@@ -1,0 +1,32 @@
+.section__container{
+  max-width: 75vw;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.section__heading{
+  &--container{
+    text-align: center;
+    margin: 5rem auto;
+  }
+  &--primary{
+    font-size: $font-size-primary;
+    margin-bottom: 2rem;
+  }
+  &--secondary{
+    font-size: $font-size-secondary;
+  }
+}
+
+
+.sellingPoint{
+  text-align: center;
+  margin-bottom: 5rem;
+  &__heading{
+    font-size: $font-size-secondary;
+  }
+  &__text{
+font-size: $font-size-tertiary;
+  }
+}
+

@@ -1,0 +1,263 @@
+*{
+
+	// border: 1px black solid;
+	// padding: 2px;
+	
+}
+
+@media screen and (min-width: 1220px) {
+	.search__container{
+		box-sizing: border-box;
+		outline: none;
+		padding: 0;
+
+		background: url('../../img/banner.jpg') no-repeat 100%;
+		background-size: 100% auto;
+
+		width: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		
+		.search__banner{
+			position: relative;
+
+			background-color: white;
+			opacity: 0.9;
+			border-radius: 1vmin;
+
+			max-width: 666px;
+			width: 75vmax;
+			min-width: 300px;
+
+			max-height: 220px;
+			height: 35vmin;
+			min-height: 170px;
+
+			margin: 9vmin;
+			font-size: 2px;
+			
+			h2{
+				line-height: 40px;
+				color: #555555;
+				font-family: Arial, Gadget, sans-serif;
+				padding: 5vmin 3vmin 0 3vmin;
+				font-size: 2.4rem;
+				font-weight: 700;
+				text-shadow: 0.5px 0.5px gray;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			.search__bar{
+
+				position: absolute;
+				left:50%;
+				bottom: 4vmin;
+				transform:translateX(-50%);
+				
+				min-width: 250px;
+				width: 100%;
+				height: 50px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				input{
+					border-radius: 5px;
+					border-width: thin;
+					width: 80%;
+					height: 50px;
+					font-size: 16px;
+					text-shadow: 0.3px 0.3px gray;
+
+					background-color: white;
+				}
+
+				button{
+					border-radius: 5px;
+					border-width: thin;
+					height: 50px;
+					width: 50px;
+					background-color: #0bb8e3;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+	.search__container{
+		box-sizing: border-box;
+		outline: none;
+		padding: 0;
+		width: 100%;
+		
+		background: url('../../img/banner.jpg') no-repeat 100%;
+		background-size: 100% auto;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;	
+		
+		.search__banner{
+			position: relative;
+			opacity: 0.9;
+			background-color: white;
+			border-radius: 1vmin;
+	
+			max-width: 600px;
+			width: 70vmax;
+			min-width: 300px;
+	
+			max-height: 200px;
+			height: 10vmin;
+			min-height: 100px;
+
+			font-size: 2px;
+			
+			margin: 2vmin 0 2vmin 0;
+
+			h2{
+				margin-top: 1.3vmax;
+				padding: 0;
+				font-size: 1.7rem;
+				font-weight: 400;
+				text-align: center;
+			}
+	
+			.search__bar{
+	
+				position: absolute;
+				left:50%;
+				bottom: 1.7vmax;
+				transform:translateX(-50%);
+				
+				min-width: 250px;
+				width: 100%;
+				height: 20px;
+	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+	
+				input{
+					border-radius: 5px;
+					border-width: thin;
+					width: 70%;
+					height: 35px;
+					font-size: 12px;	
+					background-color: white;
+				}
+	
+				button{
+					border-radius: 5px;
+					border-width: thin;
+					height: 35px;
+					width: 35px;
+					background-color: #0bb8e3;
+
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.search__container{
+		box-sizing: border-box;
+		outline: none;
+		padding: 0;
+		width: 100%;
+	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		
+		.search__banner{
+			position: relative;
+	
+			background-color: white;
+			border-radius: 1vmin;
+	
+			max-width: 666px;
+			width: 75vmax;
+			min-width: 300px;
+	
+			max-height: 220px;
+			height: 20vmin;
+			min-height: 70px;
+
+			font-size: 2px;
+			
+			h2{
+				
+				font-size: 1.4rem;
+				font-weight: 400;
+				text-align: center;
+			}
+	
+			.search__bar{
+	
+				position: absolute;
+				left:50%;
+				bottom: 4vmin;
+				transform:translateX(-50%);
+				
+				min-width: 250px;
+				width: 100%;
+				height: 20px;
+	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+	
+				input{
+					border-radius: 5px;
+					border-width: thin;
+					width: 70%;
+					height: 30px;
+					font-size: 12px;	
+					background-color: white;
+				}
+	
+				button{
+					border-radius: 5px;
+					border-width: thin;
+					height: 30px;
+					width: 30px;
+					background-color: #0bb8e3;
+
+					img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 374px) {
+
+	.search__container{		
+		.search__banner{
+			h2{
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

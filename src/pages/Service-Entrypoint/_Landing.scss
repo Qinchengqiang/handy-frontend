@@ -1,0 +1,32 @@
+.form {
+
+  min-height: 50vh;
+  background: aliceblue;
+  background: url(../../img/cleaning--landing.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.intro {
+  max-width: 75vw;
+  margin: 0 auto;
+  text-align: center;
+  &__heading{
+    font-size: $font-size-primary;
+    margin: 2rem 0;
+  }
+&__card{
+  text-align: center;
+  &--heading{
+    font-size: $font-size-secondary;
+    margin: 1.5rem 0;
+  }
+  &--text{
+    font-size: $font-size-tertiary;
+    line-height: 1.3rem;
+  }
+}
+}
+
+
+
