@@ -15,20 +15,18 @@ import Nav from "./components/nav/Nav";
 class App extends Component {
   render() {
     return (
-
-    
       <Router>
           <Nav/>
          <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-           <Route path="/services">
+           <Route exact path="/services">
             <ServicePage />
           </Route> 
-        	<Route path="/login" exact component={WrappedNormalLoginForm} />
-						<Route path="/register" component={WrappedRegistrationForm} />
-						<Route path="/myaccount" component={MyAccount} />
+        	<Route exact path="/login" exact component={WrappedNormalLoginForm} />
+						<Route exact path="/register" component={WrappedRegistrationForm} />
+						<Route exact path="/myaccount" component={MyAccount} />
         </Switch>
         </Router>
   
