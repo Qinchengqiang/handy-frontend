@@ -132,13 +132,14 @@
     }
 }
     select {
-        width: 45%;
+        max-width: 400px;
     }
     .select {
         margin-left: 20px;
+        max-width: 400px;
     }
     .submit-btn {
-        width: 45%;
+        max-width: 400px;
         margin-left: 20px;
     }
 }
