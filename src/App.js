@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Home from './pages/home/Home'
+import Apply from './pages/apply'
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,6 +25,9 @@ class App extends Component {
            <Route exact path="/services">
             <ServicePage />
           </Route> 
+          <Route exact path="/apply">
+            <Apply />
+          </Route>
         	<Route exact path="/login" exact component={WrappedNormalLoginForm} />
 						<Route exact path="/register" component={WrappedRegistrationForm} />
 						<Route exact path="/myaccount" component={MyAccount} />
