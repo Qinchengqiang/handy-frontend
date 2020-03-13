@@ -5,7 +5,7 @@ import ProHeader from '../../components/proHeader'
 import ProFeature from "../../components/proFeature";
 import Comment from "../../components/comment";
 import Requirement from "../../components/requirement";
-import Footer from '../../components/footer'
+import Footer from '../../components/footer/index'
 
 export default class Apply extends Component {
   render() {
