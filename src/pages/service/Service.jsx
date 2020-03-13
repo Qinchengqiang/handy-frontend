@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import "./service.scss";
-import Cleaning from "../Service-Entrypoint/Cleaning";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -53,11 +53,11 @@ function Service() {
             );
           })}
         </div>
-        <Switch>
-          <Route path={`${path}/cleaning`}>
+        {/* <Switch>
+          <Route exact path={`${path}/cleaning`}>
             <Cleaning />
           </Route>
-        </Switch>
+        </Switch> */}
       </div>
     );
   }
