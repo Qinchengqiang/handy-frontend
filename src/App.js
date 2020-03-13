@@ -7,6 +7,7 @@ import WrappedNormalLoginForm from "./pages/login/loginPage";
 import WrappedRegistrationForm from "./pages/register/register";
 import MyAccount from "../src/pages/myAccount/myAccount";
 import Nav from "./components/nav/Nav";
+import HandymanService from "./pages/HandymanService/HandymanService";
 class App extends Component {
 	render() {
 		return (
@@ -22,6 +23,7 @@ class App extends Component {
 					<Route exact path="/login" exact component={WrappedNormalLoginForm} />
 					<Route exact path="/register" component={WrappedRegistrationForm} />
 					<Route exact path="/myaccount" component={MyAccount} />
+					<Route exact path="/handyman-service" component={HandymanService} />
 				</Switch>
 			</Router>
 		);
