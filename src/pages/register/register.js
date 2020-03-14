@@ -160,7 +160,7 @@ class RegistrationForm extends React.Component {
 
 		return (
 			<div className="reg-background">
-				<div className="reg-form">
+				<section className="reg-form">
 					<Form {...formItemLayout} onSubmit={this.handleSubmit}>
 						<div className="box">
 							<div className="reg-heading">
@@ -306,7 +306,7 @@ class RegistrationForm extends React.Component {
 							</div>
 						</div>
 					</Form>
-				</div>
+				</section>
 			</div>
 		);
 	}

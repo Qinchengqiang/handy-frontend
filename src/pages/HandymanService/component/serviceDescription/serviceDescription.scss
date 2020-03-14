@@ -1,0 +1,114 @@
+@mixin screen-sm {
+	@media only screen and (max-width: 375px) {
+		@content;
+	}
+
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+.service-description {
+	background-color: #f9f9f9;
+
+	padding-top: 80px;
+	padding-bottom: 80px;
+	display: flex;
+	flex-direction: column;
+	font-family: "Open Sans", sans-serif;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 32px;
+		line-height: 1.4;
+	}
+	.service-description__section-1 {
+		display: flex;
+
+		align-content: center;
+		justify-content: initial;
+		margin-bottom: 40px;
+
+		.service-description__details {
+			box-shadow: 0px 0px 10px #0e0e0e82;
+			background-color: white;
+			width: 60%;
+			max-height: 16.5rem;
+			overflow: hidden;
+			margin-top: 30px;
+			margin-left: -25%;
+			margin-right: 10%;
+			padding: 1.875rem;
+			h3 {
+				font-size: 20px;
+				text-align: left;
+				margin-bottom: 16px;
+			}
+			p {
+				font-size: 15px;
+				margin-bottom: 0;
+				line-height: 1.6;
+			}
+		}
+		@include screen-sm() {
+			img {
+				display: none;
+			}
+			.service-description__details {
+				width: 100%;
+				margin: 0;
+				max-height: initial;
+			}
+		}
+	}
+	.service-description__section-2 {
+		display: flex;
+
+		flex-direction: row-reverse;
+
+		align-content: center;
+		justify-content: initial;
+		margin-bottom: 40px;
+		img {
+			text-align: right;
+		}
+
+		.service-description__details-2 {
+			box-shadow: 0px 0px 10px #0e0e0e82;
+			background-color: white;
+			width: 60%;
+			max-height: 16.5rem;
+			overflow: hidden;
+			margin-top: 30px;
+			margin-right: -25%;
+			margin-left: 10%;
+			padding: 1.875rem;
+			h3 {
+				font-size: 20px;
+				text-align: left;
+				margin-bottom: 16px;
+			}
+			p {
+				font-size: 15px;
+				margin-bottom: 0;
+				line-height: 1.6;
+			}
+		}
+		@include screen-sm() {
+			img {
+				display: none;
+			}
+			.service-description__details-2 {
+				width: 100%;
+				margin: 0;
+				max-height: initial;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1220px) {
+}
+@media only screen and (max-width: 1440px) {
+}

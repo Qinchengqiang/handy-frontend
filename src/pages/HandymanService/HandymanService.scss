@@ -1,21 +1,31 @@
 @import url("https://fonts.font.im/css?family=Open+Sans");
+@mixin screen-sm {
+	@media only screen and (max-width: 375px) {
+		@content;
+	}
+
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
 
 .hs-main {
-	margin: 50px 100px 20px 100px;
-
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	font-family: sans-serif;
 	flex-wrap: wrap;
 	font-family: "Open Sans", sans-serif;
+	line-height: 1.6;
 
-	justify-content: center;
+	justify-content: space-between;
 	.hs-page-details {
+		margin: 50px 80px 30px 50px;
 		color: black;
-		flex: 2;
+		flex: 1;
 		padding: 0 70px 20px 20px;
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 
 		h1 {
 			font-weight: bold;
@@ -23,6 +33,14 @@
 		}
 		.reviews {
 			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 40px;
+		}
+		li {
+			list-style: none;
+			margin-bottom: 15px;
+			line-height: 1.5;
 		}
 	}
 	.form {
@@ -34,16 +52,26 @@
 		}
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		flex: 1;
-		margin-right: 20px;
-		min-height: 400px;
-		margin-top: -16%;
+
+		margin-right: 140px;
+
 		max-width: 400px;
 		background-color: #ffffff;
 		box-shadow: 0px 0px 10px #0e0e0e41;
 
 		padding: 20px;
 		border-radius: 10px;
+	}
+	@include screen-sm() {
+		.hs-page-details {
+			margin: 0;
+		}
+		.form {
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
 	}
 	.button {
 		width: "320px";
@@ -63,4 +91,23 @@
 	min-width: 100%;
 	height: 280px;
 	display: block;
+}
+.reviews {
+	display: inline-block;
+}
+.rating-stars {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 375px) {
+}
+@media only screen and (max-width: 768px) {
+	.hs-main {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 1220px) {
+}
+@media only screen and (max-width: 1440px) {
 }
