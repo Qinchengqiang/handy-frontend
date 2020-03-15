@@ -1,0 +1,59 @@
+*{
+
+    // border: 1px black solid;
+	// padding: 1px;
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .mini__cata__bar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .mini__cata__bar{
+
+        background-color: white;
+        padding: 10px 0 2px 0;
+        position: sticky;
+        top: 0px;
+        
+        .clickBtn{
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        ul{
+
+            margin: 5px 0 5px 0;   
+            width: 100%;
+
+			white-space: nowrap;
+			vertical-align: top;
+			
+			overflow-x: scroll;
+            overflow-y: hidden;
+            
+            // those lines could make the nav / catalog bar from vertical to horizontal
+
+            li{
+                color: #333333;
+                display: inline-block;
+                vertical-align: top;
+                width: min-content;
+                margin: 0 10px 0 10px;
+                padding: 0 10px 0 10px;
+
+                list-style-type: none;
+                // border: white;
+
+            }
+        }
+    }
+}

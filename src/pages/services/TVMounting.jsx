@@ -180,11 +180,9 @@ class TVMounting extends Component {
                                     Get a Price
                             </button>
                         </div>
-
-                        <div className="term__use">
-                            <p>By entering my email above, I agree to receive updates and exclusive offers from Handy. Consent can be withdrawn any time. For more details see our <u>Terms of Use</u> or <u>Contact Us</u>.</p>
-                        </div>
-
+                    </div>
+                    <div className="term__use">
+                        <p>By entering my email above, I agree to receive updates and exclusive offers from Handy. Consent can be withdrawn any time. For more details see our <u>Terms of Use</u> or <u>Contact Us</u>.</p>
                     </div>
                 </div>
             </div>

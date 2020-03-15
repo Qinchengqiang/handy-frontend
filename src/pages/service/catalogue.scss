@@ -1,0 +1,126 @@
+*{
+
+    // border: 1px black solid;
+	// padding: 1px;
+
+}
+
+.catagories__bar{
+
+    .bar__sticky{
+        position: sticky;  
+    }
+
+    box-sizing: border-box;
+    outline: none;
+    display: inline;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    text-align: left;
+
+    justify-content: center;
+    align-items: center;
+
+
+    ul{
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style-type: none;
+            border: white;
+            background-color: white;
+            text-align: left;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+            text-shadow: 0.2px 0.2px gray;
+
+            .clickBtn{
+                cursor: pointer;
+            }
+            
+        }
+
+        li:hover {
+            color: #CCCCCC;
+            transition-duration: 0.05s;
+        }
+    }
+}
+
+@media screen and (min-width: 1220px) {
+
+    .catagories__bar{
+
+        .bar__sticky{
+            top: 30px;
+            min-width: 180px;
+            width: 20vmax;
+            max-width: 220px;
+        }
+
+        h2{
+            color: #555555;
+            font-size: 2rem;
+            text-shadow: 0.5px 0.5px gray;
+            padding-bottom: 2vmin;
+        }
+
+        ul{
+
+            li{
+                
+                color: #333333;
+                padding: 10px 0 10px 0;
+                letter-spacing: 1px;
+                line-height: 2.5rem;
+                font-size: 1.3rem;
+                text-shadow: 0.2px 0.2px gray;
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+   
+    .catagories__bar{
+
+        .bar__sticky{
+            top: 20px;
+            min-width: 150px;
+            width: 15vmax;
+            max-width: 180px;
+        }
+   
+        h2{
+            color: #333333;
+            font-size: 1.4rem;
+            padding: 0;
+        }
+    
+        ul{
+
+            li{
+                color: #555555;
+                padding: 2px 0 2px 0;
+                font-size: 0.8rem;
+                // text-shadow: 0.1px 0.1px gray;
+
+                .clickBtn{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .catagories__bar{
+        display: none;
+    }
+}

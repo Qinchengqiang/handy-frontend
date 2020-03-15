@@ -33,7 +33,7 @@
 
 		align-items: flex-start;
 
-		margin-top: 40vh;
+		margin-top: 40vmin;
 		width: 44vw;	
 		
 		opacity: 0.9;		
@@ -58,7 +58,6 @@
 
 			img{
 				
-				// margin-top: -8px;
 				width: 30px;
 				padding: 0 3px 0 3px;
 			}
@@ -80,7 +79,6 @@
 			
 			img{
 				
-				// margin-top: -8px;
 				width: 30px;
 				padding: 0 3px 0 3px;
 				margin-right: 10px;
@@ -155,7 +153,7 @@
 				// max-width: 250px;
 	
 				margin: 10px 0 10px 0;
-				padding: 10px;
+				padding: 0;
 				// height: 50px;
 	
 				border-radius: 1vmin;

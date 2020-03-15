@@ -125,7 +125,6 @@ class MovingHelp extends Component {
         return (
 
             <div className="moving__container">
-
                 <div className="moving__desc">
                     <h1>Moving Help</h1>
                     <div className="review__star">
@@ -249,13 +248,13 @@ class MovingHelp extends Component {
                             </select>
 
                             <input className="input__wide" type="text"
-                                placeholder={`  Email Address`}
+                                placeholder={`Email Address`}
                                 value={this.state.email}
                                 onChange={this.handleEmail}
                             />
 
                             <input className="input__wide" type="text"
-                                placeholder={`  Phone Number (Optional)`}
+                                placeholder={`Phone Number (Optional)`}
                                 value={this.state.phone}
                                 onChange={this.handlePhone}
                             />
@@ -270,8 +269,8 @@ class MovingHelp extends Component {
 
                     </div>
                     <div className="term__use">
-                            <p>By signing and clicking Get a Price, you affirm you have read and agree to the <u>Handy Terms</u>, and you agree and authorize Handy and its affiliates, and their networks of service professionals, to deliver marketing calls or texts using automated technology to the number you provided above regarding your project and other home services offers. Consent is not a condition of purchase.</p>
-                        </div>
+                        <p>By signing and clicking Get a Price, you affirm you have read and agree to the <u>Handy Terms</u>, and you agree and authorize Handy and its affiliates, and their networks of service professionals, to deliver marketing calls or texts using automated technology to the number you provided above regarding your project and other home services offers. Consent is not a condition of purchase.</p>
+                    </div>
                 </div>
 
                 

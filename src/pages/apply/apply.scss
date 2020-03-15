@@ -1,0 +1,38 @@
+.apply {
+    // background-color: #ecf5f8;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .pro-headline {
+        height: 1px;
+        line-height: 1.61em;
+        background-color: #5da6c9;
+        text-align: center;
+        margin: 30px 0px;
+        .pro-headline-text {
+            font-size: 6em;
+            top: -0.55em;
+            padding-right: 30px;
+            padding-left: 30px;
+            color: #00bbe2;
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .apply{
+        // background-color: #f00;
+        width: 100vw;
+    }
+}
+
+@media (min-width:376px) and (max-width: 768px) {
+   }
+@media (min-width:769px) and (max-width:1220px) {
+
+}
+@media (min-width:1221px) and (max-width:1440px) {
+
+}

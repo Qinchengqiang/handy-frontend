@@ -24,15 +24,14 @@
 	background-size: 100% auto;
 
 	position: relative;
-	
+			
 	.tv__banner{
 
 		position: absolute;
 		display: flex;
-		background-color: white;
-		// border-radius: 1vmin;
-		border: 1px lightgray solid;
-		box-shadow: 2px 2px 2px gray;
+		flex-wrap: wrap;
+
+		// background-color: white;
 
 		// min-width: 300px;
 		// font-size: 2px;
@@ -41,24 +40,34 @@
 		align-items: flex-start;
 		// text-align: center;
 		
-		margin-top: 20vh;
+		margin-top: 20vmin;
 		opacity: 0.9;
 
 		// min-width: 50vw;
 		max-width: 1200px;
 		width: 65vw;
 		min-width: 550px;
-
-		min-height: 400px;
-		height: 35vmin;		
 	
+		// border-radius: 1vmin;
+		// border: 1px lightgray solid;
+		// box-shadow: 2px 2px 2px gray;
+		
+		height: max-content;
+
 		.tv__mounting{
 			
 			width: 100%;
 			margin-top: 4vh;
+			padding: 4vh 0 4vh 0;
 			position: relative;
+			
+			background-color: white;
 			height: max-content;
-
+			
+			border-radius: 1vmin;
+			border: 1px lightgray solid;
+			box-shadow: 2px 2px 2px gray;
+			
 			h2{
 			
 				display: flex;
@@ -73,7 +82,8 @@
 
 			.review__star{
 
-				display: inline-flex;
+				display: flex;
+				justify-content: center;
 
 				img{
 					
@@ -179,7 +189,7 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		margin-top: 80px;
+		margin-top: 10px;
 
 		color: gray;
 		font-size: 0.9rem;

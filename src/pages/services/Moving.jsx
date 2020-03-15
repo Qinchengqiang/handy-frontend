@@ -7,13 +7,13 @@ import MovingHelp from "./MovingHelp";
 // import MiniCatalog from "./MiniCatalog";
 
 class Moving extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      locations: []
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     data: [],
+  //     locations: []
+  //   };
+  // }
 
   componentDidMount() {
     //get data from the store when the first render

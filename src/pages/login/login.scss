@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+
+.login-form {
+	height: 100vh;
+	background-color: white;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Montserrat", sans-serif;
+	.box {
+		min-width: 400px;
+		min-height: 500px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 10px #0e0e0e82;
+		display: flex;
+		flex-direction: column;
+		padding: 40px;
+		border-radius: 10px;
+		.heading h2 {
+			color: #0089fe;
+			font-size: 22px;
+			text-align: left;
+			margin: 15px 0px 10px;
+			border-bottom: 1px solid;
+			padding-bottom: 3px;
+			display: inline-block;
+		}
+		.form-fields {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-top: 10px;
+
+			.input-box {
+				position: relative;
+				margin: 10px;
+			}
+			.button-box {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+/* responsive */
+@media only screen and (max-width: 375px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 1220px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
+@media only screen and (max-width: 1440px) {
+	.login-form .box {
+		min-width: 100%;
+		padding: 30px;
+	}
+	.login-form {
+		min-width: 100%;
+	}
+}
