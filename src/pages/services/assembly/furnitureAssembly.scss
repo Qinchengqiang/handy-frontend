@@ -1,0 +1,104 @@
+.assembly_page-layout {
+    margin: 0.5em auto;
+    padding: 0.8em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+  @media (max-width:1439px){
+    .assembly_page-layout {
+      max-width: 80em;
+    }
+  }
+  @media (min-width: 1440px){
+    .assembly_page-layout {
+      width: calc(85vw)
+    }
+  }
+
+  .assembly_header-pic {
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    // border: solid black;
+    height: 16.25em
+  }
+
+  .assembly_body-container{
+        justify-content: center;
+        .assembly-furniture_form{
+            order: 1;
+            width:27.9375em;
+            height:40.8125em;
+            // border: solid blue;
+            transform: translateY(-10em);
+            z-index: 1;
+            background-color: #FFFFFF;
+            color: #434343;
+            border: 1.4px solid #EEEEEE;
+            // opacity: 1;
+        }
+  }
+
+  .assembly_body-container-info{
+    order: 0;
+    max-width: 45em;
+    // border: black solid;
+    padding: 4em;
+    &-title{
+        font-weight: 525;
+    }
+    &-rating {
+        display: flex;
+        justify-content: left;
+    }
+    &-paragraph{
+        margin-top: 3.5em;
+        line-height: 1.4;
+    }
+    &-list{
+        list-style: none;
+        padding-left: 0; 
+    }
+    }
+    .assembly_body-container-info-rating_review{
+        margin-left: 0.5em;
+        border-bottom: solid 1px black;
+    }
+    .assembly_body_li{
+        display: flex;
+        margin-bottom: 1.5em;
+        .assembly_body_li_container-img{
+            margin-right: 1.25em;
+        }
+        .assembly_body_li_description{
+            // border: black solid;
+            max-width: 16em;
+            font-weight: 525;
+            line-height: 1.5;
+        }
+    }
+    .assembly_body_li_description-link{
+        color: #0bb8e3;
+    }
+
+    @media (min-width: 768px) {
+        .assembly_body-container{
+            display: flex;
+        }
+    }
+    @media (max-width: 767px){
+        .assembly_body-container-info{
+            transform: translateY(-10em);
+            margin: 0 auto;
+            padding: 1em;
+        }
+        .assembly-furniture_form{
+            margin: 0 auto;
+        }
+        .assembly_page-layout{
+            padding: 0.4em;
+        }
+
+    }
