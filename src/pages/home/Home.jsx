@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./home.scss";
 import Nav from "../../components/nav/Nav";
 
+import TV from "../services/TV"
+import Moving from "../services/Moving"
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -12,19 +15,21 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    //get data from the store when the first render
+
   }
 
   render() {
     return (
       <div className="App">
-        <div></div>
         <Nav />
-        <h2>The easy, reliable way to take care of your home.</h2>
-        {/* task part */}
-        <div></div>
-        {/* footer (global)*/}
+        <div>
 
+                              {/* Here to switch between TV mounting and Moving Page */}
+
+        {/* <TV /> */}
+        <Moving />
+
+        </div>
       </div>
     );
   }
