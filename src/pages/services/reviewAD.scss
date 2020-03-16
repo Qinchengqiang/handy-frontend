@@ -1,202 +1,115 @@
 *{
 
 	// border: 1px black solid;
-	// padding: 1px;
-	
+    // padding: 1px;
+    
 }
 
+.review__container{
 
-.tv__container{
-	box-sizing: border-box;
-	outline: none;
-	padding: 0;
-	width: 100%;
+    background-color: #EEEEEE;
+    background-size: 100% auto;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	// height: 220px;
-	height: 40vmin;
-	// min-height: 170px;
+    width: 100%;
+    // position: absolute;
+    
+    .review__ad{
+        box-sizing: border-box;
+        outline: none;
+        padding: 0;
+        width: 100%;
 
-	background: url('../../../img/tvMounting.jpg') no-repeat 100%;
-	background-size: 100% auto;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
 
-	position: relative;
-			
-	.tv__banner{
+        // height: 220px;
+        // height: 40vmin;
+        // min-height: 170px;
 
-		position: absolute;
-		display: flex;
-		flex-wrap: wrap;
-
-		// background-color: white;
-
-		// min-width: 300px;
-		// font-size: 2px;
-
-		justify-content: center;
-		align-items: flex-start;
-		// text-align: center;
-		
-		margin-top: 20vmin;
-		opacity: 0.9;
-
-		// min-width: 50vw;
 		max-width: 1200px;
 		width: 65vw;
 		min-width: 550px;
-	
-		// border-radius: 1vmin;
-		// border: 1px lightgray solid;
-		// box-shadow: 2px 2px 2px gray;
-		
-		height: max-content;
 
-		.tv__mounting{
-			
-			width: 100%;
-			margin-top: 4vh;
-			padding: 4vh 0 4vh 0;
-			position: relative;
-			
-			background-color: white;
-			height: max-content;
-			
-			border-radius: 1vmin;
-			border: 1px lightgray solid;
-			box-shadow: 2px 2px 2px gray;
-			
-			h2{
-			
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-	
-				color: #333333;
-				font-size: 2.5rem;
-				
-			}
+        // position: relative;
+                
+        .ad__title{
 
-			.review__star{
+            padding: 4vh 0 4vh 0;
+            width: 100%;
+            // position: absolute;
+            display: flex;
+            flex-wrap: wrap;
 
-				display: flex;
-				justify-content: center;
+            // background-color: white;
 
-				img{
-					
-					// margin-top: -8px;
-					width: 30px;
-					padding: 0 3px 0 3px;
-				}
+            // min-width: 300px;
+            // font-size: 2px;
 
-				.review__number{
-					margin: 5px 0 0 10px;
-					font-size: 1.2rem;
-					text-shadow: 0.1px 0.1px darkgray;
-					
-				}
-			}
+            justify-content: center;
+            align-items: center;
+            // text-align: center;
+            
+            // margin-top: 20vmin;
+            // opacity: 0.9;
 
+            // // min-width: 50vw;
+            // max-width: 1200px;
+            // width: 65vw;
+            // min-width: 550px;
+        
+            // border-radius: 1vmin;
+            // border: 1px lightgray solid;
+            // box-shadow: 2px 2px 2px gray;
+            
+            // height: max-content;
+                
+            h2{
+                margin: 1rem 0 0 0;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                // text-align: center;
 
+                color: #333333;
+                font-size: 2.5rem;
+                
+            }
 
-			.zip__etc{
+            h3{
+                margin: 1rem 0 0 0;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                // text-align: center;
 
-				// position: absolute;
-				// left:50%;
-				// transform:translateX(-50%);
-				display: flex;
-				justify-content: center;
-				// width: auto;
-
-				margin-top: 30px;
-				padding: 10px 50px 10px 50px;
-				height: 70px;
-
-			}
+                color: #333333;
+                font-size: 1.5rem;
+                
+            }
+        }
 
 
-			
-			.email__price{
 
-				display: flex;
-				justify-content: center;
-				// margin-top: 30px;
-				padding: 10px 50px 10px 50px;
-				height: 70px;
+        .term__use{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
 
-
-				input{
-					max-width: 360px;
-					margin: 0 10px 0 10px;
-				}
-
-				button{
-					background-color: #63B521;
-					color: white;
-					border-radius: 5px;
-					border-width: thin;
-
-					height: 50px;
-					font-size: 1.3rem;
-					width: 20vw;
-					max-width: 360px;
-				}
-
-				button:hover {
-					background-color: #7EC850;
-
-				}
-			}
-
-			.input__wide{
-				height: 50px;
-				font-size: 1.2rem;
-				width: 18vw;
-				max-width: 250px;
-	
-				margin: 0 10px 0 10px;
-				padding: 0 10px 0 10px;
-				height: 50px;
-	
-				border-radius: 3px;
-				border-width: thin;
-				// background-color: white;
-			}
-
-			.input__narrow{
-				height: 50px;
-				font-size: 1.2rem;
-				width: 14vw;
-				max-width: 185px;
-	
-				margin: 0 10px 0 10px;
-				padding: 0 10px 0 10px;
-				height: 50px;
-	
-				border-radius: 3px;
-				border-width: thin;
-				// background-color: white;
-			}
-
-		}
-	}
-
-	.term__use{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		margin-top: 10px;
-
-		color: gray;
-		font-size: 0.9rem;
-		padding: 10px 5vw 10px 5vw;
-	}
+            color: gray;
+            font-size: 0.9rem;
+            padding: 10px 5vw 10px 5vw;
+        }
+    }
 }
-
 
 // @media screen and (min-width: 1220px) {
 // 	.search__container{

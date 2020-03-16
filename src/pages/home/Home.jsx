@@ -47,8 +47,8 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        {/* <Nav />
-        <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
+        {/* <Nav /> */}
+        {/* <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
@@ -60,8 +60,8 @@ class Home extends Component {
         <div className="container-description-flex">
           <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
           <Link to='./shop' className="right-align-jump">See All ></Link>
-        </div>
-        <FurnitureList renderTask={this.renderTask} />
+        </div> */}
+        {/* <FurnitureList renderTask={this.renderTask} />
         <ProfessionalIntro />
         <GurranteePic />
         <ShopPic />

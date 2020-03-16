@@ -6,26 +6,15 @@
 }
 
 
-.service__center{
+.tv__booking{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 
-	.service__page{
+	height: 70vmin;
 
-		padding: 1px;
-	
-		display: flex;
-		box-sizing: border-box;
-		outline: none;
-		padding: 0;
-		
-		justify-content: center;
+	position: relative;
 
-		.cata__spacing{
-			padding: 3rem 0 0 2rem;
-		}
-	}
 }
 
 

@@ -5,6 +5,15 @@
 
 }
 
+.moving__booking{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	height: 150vmin;
+	
+	position: relative;
+}
 
 .service__center{
 	display: flex;
