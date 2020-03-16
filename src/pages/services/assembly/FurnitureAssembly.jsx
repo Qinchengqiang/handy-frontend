@@ -3,10 +3,11 @@ import starRatingHoc from './starRatingHoc.js'
 // import FurnitureAssemblyInfo from 
 import './furnitureAssembly.scss'
 import checkMark from './checkMark.svg'
-import furnitureAssembly from './furnitureAssembly.png'
+// import furnitureAssembly from './furnitureAssembly.png'
 import {Faq} from '../../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../../globalComponents/HandyFeature/HandyFeatureAssembly'
+import FurnitureForm from './FurnitureForm.jsx'
 
 
 // import {BrowserRouter as Router, Link , Route , Redirect ,Switch } from 'react-router-dom'
@@ -32,12 +33,13 @@ export default function FurnitureAssembly (props) {
              </li>
          )
      })
+    //  <img src={furnitureAssembly} alt="assembly_header-pic" className="assembly_header-pic-img"/>
     return (
         <div className="assembly_page-layout">
             {/* <Nav/> */}
-            <div className="assembly_header-pic" ><img src={furnitureAssembly} alt=""/></div>
+            <div className="assembly_header-pic" ></div>
             <div className="assembly_body-container">
-                 <div className="assembly-furniture_form"></div>
+                 <FurnitureForm className="assembly-furniture_form"></FurnitureForm>
                 <div className="assembly_body-container-info">
                     <h2 className="assembly_body-container-info-title">Furniture Assembly</h2>
                     <div className="assembly_body-container-info-rating">
