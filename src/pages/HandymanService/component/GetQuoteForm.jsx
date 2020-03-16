@@ -70,6 +70,21 @@ class GetQuoteForm extends Component {
 									<Select.Option style={{ height: "40px" }} value="2 hours">
 										2 hours
 									</Select.Option>
+									<Select.Option style={{ height: "40px" }} value="2.5 hours">
+										2.5 hours
+									</Select.Option>
+									<Select.Option style={{ height: "40px" }} value="3 hours">
+										3 hours
+									</Select.Option>
+									<Select.Option style={{ height: "40px" }} value="3.5 hours">
+										3.5 hours
+									</Select.Option>
+									<Select.Option style={{ height: "40px" }} value="4 hours">
+										4 hours
+									</Select.Option>
+									<Select.Option style={{ height: "40px" }} value="4.5 hours">
+										4.5 hours
+									</Select.Option>
 								</Select>
 							)}
 						</Form.Item>

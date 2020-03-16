@@ -7,6 +7,11 @@
 		@content;
 	}
 }
+@mixin screen-lg {
+	@media only screen and (max-width: 1220px) {
+		@content;
+	}
+}
 
 .service-description {
 	background-color: #f9f9f9;
@@ -16,6 +21,9 @@
 	display: flex;
 	flex-direction: column;
 	font-family: "Open Sans", sans-serif;
+	img {
+		max-height: 300px;
+	}
 
 	h1 {
 		text-align: center;
@@ -50,6 +58,13 @@
 				font-size: 15px;
 				margin-bottom: 0;
 				line-height: 1.6;
+			}
+		}
+		@include screen-lg() {
+			.service-description__details {
+				margin-left: -30%;
+				margin-right: 10%;
+				max-height: initial;
 			}
 		}
 		@include screen-sm() {
@@ -95,6 +110,13 @@
 				font-size: 15px;
 				margin-bottom: 0;
 				line-height: 1.6;
+			}
+		}
+		@include screen-lg() {
+			.service-description__details-2 {
+				margin-right: -30%;
+				margin-left: 10%;
+				max-height: initial;
 			}
 		}
 		@include screen-sm() {

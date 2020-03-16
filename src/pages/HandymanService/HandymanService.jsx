@@ -3,6 +3,7 @@ import "./HandymanService.scss";
 import backgroundImg from "./assets/large_other_handyman.jpg";
 import QuoteForm from "./component/GetQuoteForm";
 import HandyExplain from "../../globalComponents/HandyExplain/HandyExplain.jsx";
+import HandyLocation from "../../globalComponents/HandyLocation/handyLocation";
 
 import RatingStars from "./component/ratingStar";
 import DetailList from "./component/detailList";
@@ -11,6 +12,7 @@ import ServiceDescription from "../../globalComponents/serviceDescription/servic
 import img1 from "./assets/large_other_handyman_service_1-b09bcce53e6c53426326ba00b935de3c47e50ee18d585cb7950f74f8ea3775fb.jpg";
 import img2 from "./assets/large_other_handyman_service_2-28c1bd76c25e555556cc65ac94f877826158442b991c382f756151d87bae435f.jpg";
 import img3 from "./assets/large_other_handyman_service_3-b3633a57fb857dc76034244c2bb94e2187e5200ab132d5f59a071a65d8845f52.jpg";
+
 class HandymanService extends Component {
 	state = {
 		reviewAmount: 30000
@@ -86,6 +88,7 @@ class HandymanService extends Component {
 					park. Using Handy means that your odd jobs and home repairs get
 					done, while you focus on the important things in life."
 				/>
+				<HandyLocation />
 			</div>
 		);
 	}
