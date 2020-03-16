@@ -1,0 +1,31 @@
+.shoppage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    .head {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 800;
+        margin: 20px;
+    }
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-start;
+
+        .left {
+            margin: 20px;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: flex-start;
+        }
+    }
+}
