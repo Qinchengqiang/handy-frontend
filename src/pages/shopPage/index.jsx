@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./ShopPage.scss";
 import SideNav from "./SideNav";
 import SlideShow from "./SlideShow";
+import Product from './Product'
 
 export default class ShopPage extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class ShopPage extends Component {
           </div>
           <div className="right">
             <SlideShow />
+            <Product />
           </div>
         </div>
       </div>

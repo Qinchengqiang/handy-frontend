@@ -1,0 +1,24 @@
+.product-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: flex-start;
+        margin: 20px;
+        .section-name {
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: flex-start;
+        margin: 20px;
+    }
+}
