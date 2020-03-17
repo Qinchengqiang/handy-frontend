@@ -20,6 +20,9 @@
 
         .left {
             margin: 20px;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
         }
         .right {
             display: flex;

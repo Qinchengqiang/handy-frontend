@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./ProductionSection.scss";
 import Card from "./ProductCard";
-const cards = [
+const best_sellers = [
   {
-    image: "https://cdn.shopify.com/s/files/1/2531/4912/products/Conrad-Bevel-Mirrored-Frame-Rectangular-Accent-Wall-Mirror-by-iNSPIRE-Q-Bold-3eb26b57-58dd-47dd-b288-4b12fce8f06f_2048x2048.jpg?v=1533141193",
+    image: "https://cdn.shopify.com/s/files/1/2531/4912/products/Corvus-Madonna-Mid-Century-Walnut-and-Black-Finish-Accent-Chair-fa4c44ee-599c-4fe1-830c-c98e5402e80a_2048x2048.jpg?v=1532297208",
     title: "Mid-Century Walnut and Black Finish Accent Chair",
     cur_price: "$149.00",
     pre_price: "$196.00",
     star: "851"
   },
   {
-    image: "https://cdn.shopify.com/s/files/1/2531/4912/products/Conrad-Bevel-Mirrored-Frame-Rectangular-Accent-Wall-Mirror-by-iNSPIRE-Q-Bold-3eb26b57-58dd-47dd-b288-4b12fce8f06f_2048x2048.jpg?v=1533141193",
+    image: "https://cdn.shopify.com/s/files/1/2531/4912/products/Altea-3-light-Satin-Nickel-Flush-Mount-Chandelier-a1b70dfb-73c1-4e09-9ac0-16732c9d604c_2048x2048.jpg?v=1533142129",
     title: "Three-Light Satin Nickel Flush Mount Chandelier",
     cur_price: "$149.00",
     pre_price: "$255.00",
@@ -25,11 +25,20 @@ const cards = [
   }
 ];
 export default class ProductSection extends Component {
+  constructor(props) {
+    super(props)
+    this.state= {
+        name: this.props.name,
+        content: this.props.content,
+    }
+}
   render() {
+    const {name, content} = this.props
+    console.log('section', content);
     return (
       <div className="product-section">
         <div className="header">
-          <span className="section-name">Best Sellers</span>
+    <span className="section-name">{name}</span>
           <span>
             <a href="https://shop.handy.com/collections/best-sellers">
               See All>
@@ -37,7 +46,7 @@ export default class ProductSection extends Component {
           </span>
         </div>
         <div className="cards">
-          {cards.map((card, i) => (
+          {content.map((card, i) => (
             <Card key={card.title}
               image={card.image}
               title={card.title}
