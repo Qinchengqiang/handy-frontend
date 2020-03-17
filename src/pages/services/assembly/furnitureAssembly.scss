@@ -18,7 +18,17 @@ $color:#8cc63f;
       width: calc(85vw)
     }
   }
-
+  .assembly_header-pic-office{
+    margin-left: calc(50% - 50vw);   
+    width: 100vw;
+    background-image: url('./officeAssembly.jpg');
+    // border: solid black;
+    height: 16.25em;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+  }
   .assembly_header-pic {
     margin-left: calc(50% - 50vw);   
     width: 100vw;

@@ -135,8 +135,9 @@ class AssemblyFormInput extends React.Component {
     }
 }
 
-// @AssemblyFormCreate
-class AssemblyFormTest extends React.Component {
+
+const AssemblyFormTest = (title) => {
+return class extends React.Component {
 
     onSubmit = () => {
         this.props.validateFields((isValid, values) => {
@@ -162,7 +163,7 @@ class AssemblyFormTest extends React.Component {
         }
         return (
             <div className="assembly-furniture_form">
-                <div className="assembly-furniture_form-title">Furniture Assembly</div>
+                <div className="assembly-furniture_form-title">{title} Assembly</div>
                 <FormItem validateStatus="error" help={zipcodeError || ""} >
                     {getFieldDec("zipcode", {
                         rules: [{ required: true, message: "Please input your ZIP Code!" }]
@@ -206,5 +207,6 @@ class AssemblyFormTest extends React.Component {
             </div>
         );
     }
-}
-export default AssemblyFormCreate(AssemblyFormTest);
+}}
+export const FurnitureForm = AssemblyFormCreate(AssemblyFormTest("Furniture"));
+export const OfficeForm = AssemblyFormCreate(AssemblyFormTest("Office Furniture"))
