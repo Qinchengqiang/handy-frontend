@@ -229,5 +229,49 @@ $color:#8cc63f;
         // border: black solid;
     }
 
+    .assembly-form_item-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+    }
+    .assembly-form_item-list_button{
+        border: 1.4px solid #EEEEEE;
+        flex-basis: 20%;
+        cursor: pointer;
+    }
+    .assembly-form_item-list_button:hover{
+        background-color: lightgrey;
+    }
+    .assembly-form_item-list-description{
+        border-top: 1.4px solid #EEEEEE;
+        border-bottom: 1.4px solid #EEEEEE;
+        flex-basis: 60%;
+    }
+    .assembly-form_item-list-container{
+        display: block;
+        list-style: none;
+        padding-left: 0;
+        box-sizing: border-box;
+    }
+   #assemblyHours{
+       width: 100%;
+       background-color: white;
+       border: 1.4px solid #EEEEEE;
+       margin-bottom: 0.5em;
+   }
+   #assembly-job-date{
+    width: 100%;
+    background-color: white;
+    border: 1.4px solid #EEEEEE;
+    margin-bottom: 0.5em;
+   }
+   #assembly-time{
+    width: 100%;
+    background-color: white;
+    border: 1.4px solid #EEEEEE;
+    margin-bottom: 0.5em;
+   }
+    // .assembly-form_item-list{}
+
 
   
