@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import './moving.scss';
 
-// import Service from "./Service"
-// import Catalogue from "./Catalogue"
-// import MiniCatalog from "./MiniCatalog";
-
 import MovingHelp from "./MovingHelp";
 import ReviewAD from "../ReviewAD";
+import CustomerReviews from "../CustomerReviews";
 
 
 class Moving extends Component {
@@ -34,6 +31,11 @@ class Moving extends Component {
         <div>
           <ReviewAD title={this.state.title} subtitle={this.state.subTitle} />
         </div>
+        <div>
+          <CustomerReviews />
+        </div>
+
+
         {/* <MiniCatalog /> */}
 
         {/* <div className="service__center">

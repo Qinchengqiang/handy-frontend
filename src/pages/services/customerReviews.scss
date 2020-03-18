@@ -1,14 +1,14 @@
 *{
 
 	// border: 1px black solid;
-    // padding: 1px;
+    // padding: 5px;
     
 }
 
-.reviewCard__container{
+.review__container{
 
     padding: 4vh 0 4vh 0;
-    background-color: #EEEEEE;
+    background-color: white;
     background-size: 100% auto;
 
     display: flex;
@@ -17,89 +17,29 @@
 
     width: 100%;
 
-    .reviewCard__ad{
-        box-sizing: border-box;
-        outline: none;
-        padding: 0;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        // align-items: center;
-
+    .review__body {
 		max-width: 1200px;
 		width: 65vw;
 		min-width: 550px;
-                
-        .reviewCard__body{
 
-            width: 100%;
-            // position: absolute;
+        h2{
+            margin: 1rem 0 0 0;
             display: flex;
-            flex-wrap: wrap;
-
-            // background-color: white;
-
-            justify-content: center;
-            align-items: center;
-            // text-align: center;
-                
-            h2{
-                margin: 1rem 0 0 0;
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                // text-align: center;
-
-                color: #333333;
-                font-size: 2.5rem;
-                
-            }
-
-            h3{
-                margin: 1rem 0 0 0;
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                // text-align: center;
-
-                color: #333333;
-                font-size: 1.5rem;
-                
-            }
-
-            .customer__card{
-                display: inline-flex;
-                width: 100%;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                // align-items: center;
-                // text-align: center;
-                margin-top: 3rem;
-
-                .review__card{
-
-                    display: flex;
-                    flex-direction: column;
-                    
-                    justify-content: left;
-                    align-items: left;
-                    text-align: left;
-                
-                    width: 30%;
-                    padding: 2rem 1rem 1rem 1rem;
-                    margin: 1rem 0.5rem 1rem 0.5rem;
-                    background-color: white;
-                
-                    border-radius: 1vmin;
-                    border: 1px lightgray solid;
-                    box-shadow: 1px 1px 1px gray;
-                }           
-            }
+            width: 100%;
+            color: #333333;
+            font-size: 2.5rem;
+            
         }
+
+        h3{
+            margin: 1rem 0 0 0;
+            display: flex;
+            width: 100%;
+            color: #333333;
+            font-size: 1.5rem;
+        }
+
+
     }
 }
 

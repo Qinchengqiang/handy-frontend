@@ -1,92 +1,35 @@
 *{
 
 	// border: 1px black solid;
-    // padding: 1px;
+    // padding: 5px;
     
 }
 
-.customer__review{
-    display: inline-flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // align-items: center;
-    // text-align: center;
+.review__detail{
     margin-top: 3rem;
 
-    .review__box{
-
+    .detail__title{
         display: flex;
-        flex-direction: column;
-        
+
+        h4{
+            margin-left: 15px;
+        }
+    }
+
+    p{
+        margin: 1rem 0 0 0.2rem;
+        font-size: 1.1rem;
         justify-content: left;
         align-items: left;
         text-align: left;
-
-        width: 30%;
-        padding: 2rem 1rem 1rem 1rem;
-        margin: 1rem;
-        background-color: white;
-
-        border-radius: 1vmin;
-        border: 1px lightgray solid;
-        box-shadow: 1px 1px 1px gray;
-
-        .review__title{
-
-            display: flex;
-            // justify-content: flex-start;
-
-            .review__pic{
-                width: 100px;
-                height: 100px;
-
-                img{
-                    border-radius: 50%;
-                }
-            }
-            .review__rate{
-                margin-left: 1rem;
-            }
-        }
-
-        h4{
-            margin: 0;
-            // display: flex;
-            // width: 100%;
-            // justify-content: center;
-            // align-items: center;
-            // text-align: center;
-
-            color: #333333;
-            font-size: 1.1rem;
-            font-weight: 700;
-            
-        }
-
-        .review__star{
-            
-            display: flex;
-            justify-content: left;
-            align-items: left;
-            text-align: left;
-            margin-bottom: 5px;
-            
-            img{
-                
-                // margin-top: -8px;
-                width: 18px;
-                padding: 0 1px 0 1px;
-            }
-        }
-
-        p{
-            margin-top: 1rem;
-            font-size: 1rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
     }
+
+    img{
+        
+        // margin-top: -8px;
+        width: 30px;
+        padding-right: 5px;
+    }
+
+
 }

@@ -1,4 +1,4 @@
-export const reviewSet = {
+export const reviewCardSet = {
     one: {
         name:
             "Joshua N.",
@@ -13,7 +13,7 @@ export const reviewSet = {
         completed:
             68,
         review:
-            "My name is Jack and I have been doing handyman work for over 20 years. my expertise is in TV mounting, furniture assembly, Electric and Plumbing. I also perform mirror and picture hanging as well as small moving tasks. Hire me today!"
+            `"My name is Jack and I have been doing handyman work for over 20 years. my expertise is in TV mounting, furniture assembly, Electric and Plumbing. I also perform mirror and picture hanging as well as small moving tasks. Hire me today!"`
     },
 
     two: {
@@ -30,7 +30,7 @@ export const reviewSet = {
         completed:
             13,
         review:
-            "Hello, I'm Eric. With 20yrs experience in the trades, 8yrs of home remodeling and 12yrs of electrical, there aren't many tasks that I can't handle. As a well rounded handyman, I'm confident in my ability to provide a quality service for any carpentry, electrical and most plumbing needs you have. If given the chance, it would be a pleasure to do so. Thank you for your consideration."
+            `"Hello, I'm Eric. With 20yrs experience in the trades, 8yrs of home remodeling and 12yrs of electrical, there aren't many tasks that I can't handle. As a well rounded handyman, I'm confident in my ability to provide a quality service for any carpentry, electrical and most plumbing needs you have. If given the chance, it would be a pleasure to do so. Thank you for your consideration."`
     },
 
     three: {
@@ -47,7 +47,7 @@ export const reviewSet = {
         completed:
             62,
         review:
-            "My name is Paul. I have over 20 years experience in furniture assembly, TV mounting, home wiring, and plumbing. I also do Smart product installations. No project is too small. I am very clean and always professional."
+            `"My name is Paul. I have over 20 years experience in furniture assembly, TV mounting, home wiring, and plumbing. I also do Smart product installations. No project is too small. I am very clean and always professional."`
     },
 
     four: {
@@ -64,7 +64,7 @@ export const reviewSet = {
         completed:
             491,
         review:
-            "Hi, I’m Terry a Marin County based Handyman specializing in Furniture Assembly and TV Mounting. I work in the East Bay, North Bay and SF Peninsula. Request me for your job, and you will be 100% satisfied with the work I deliver. Looking forward to your assignment!"
+            `"Hi, I’m Terry a Marin County based Handyman specializing in Furniture Assembly and TV Mounting. I work in the East Bay, North Bay and SF Peninsula. Request me for your job, and you will be 100% satisfied with the work I deliver. Looking forward to your assignment!"`
     },
 
     five: {
@@ -81,7 +81,7 @@ export const reviewSet = {
         completed:
             615,
         review:
-            "My name is Mike I am a professional tv installation expert serving the New York City area since 2005. I also specialize in fast friendly furniture assembly."
+            `"My name is Mike I am a professional tv installation expert serving the New York City area since 2005. I also specialize in fast friendly furniture assembly."`
     },
 
     six: {
@@ -98,6 +98,6 @@ export const reviewSet = {
         completed:
             155,
         review:
-            "Hi, my name is Rick. I have over 25 years experience in home repair and restoration. I am an expert plumber, electrician, painter, plasterer and can fix just about anything. I actually teach residential wiring and home repair at Prairie State College. I can help you with all your needs. No project is too small, or too big."
+            `"Hi, my name is Rick. I have over 25 years experience in home repair and restoration. I am an expert plumber, electrician, painter, plasterer and can fix just about anything. I actually teach residential wiring and home repair at Prairie State College. I can help you with all your needs. No project is too small, or too big."`
     },
 };

@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import './TV.scss';
 
-// import Service from "./Service"
-// import Catalogue from "./Catalogue"
-// import MiniCatalog from "./MiniCatalog";
-
 import TVMounting from "./TVMounting";
 import ReviewAD from "../ReviewAD";
+import CustomerReviews from "../CustomerReviews"
+
 
 class TV extends Component {
   constructor(props) {
@@ -16,6 +14,8 @@ class TV extends Component {
       
       title : "Meet Some of Our Top Handyman Professionals",
       subTitle : "Build a Pro Team so that you always have a great group of go-to professionals for all your household jobs.",
+
+      subService : "TV Mounting",
 
     };
   }
@@ -38,7 +38,9 @@ class TV extends Component {
         <div>
           <ReviewAD title={this.state.title} subtitle={this.state.subTitle} />
         </div>
-
+        <div>
+          <CustomerReviews subService={this.state.subService}/>
+        </div>
 
         {/* <MiniCatalog /> */}
 

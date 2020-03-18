@@ -1,30 +1,17 @@
 import React, { Component } from "react";
 import "./reviewAD.scss";
-import ReviewBox from "./ReviewBox"
-import { reviewSet } from './reviewSet';
+import ReviewCard from "./ReviewCard"
+import { reviewCardSet } from './reviewCardSet';
 
 class ReviewAD extends Component {
 
-    constructor(props) {
-        super(props)
+    // constructor(props) {
+    //     super(props)
 
-        this.state = {
-            
-            // zip: '',
-            // tv: '',
-            // date: '',
-            // time: '',
-            // email: '',
-            
-        };
-
-        // this.handleZip = this.handleZip.bind(this);
-        // this.handleTV = this.handleTV.bind(this);
-        // this.handleDate = this.handleDate.bind(this);
-        // this.handleTime = this.handleTime.bind(this);
-        // this.handleEmail = this.handleEmail.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    //     this.state = {
+                        
+    //     };
+    // }
 
 
     componentDidMount() {
@@ -32,79 +19,21 @@ class ReviewAD extends Component {
     }
 
 
-    // handleZip(e){
-    //     // console.log(e.target.value);
-
-    //     // set state Tag to currentValue
-
-    //     this.setState({
-    //         zip: e.target.value,
-    //     })
-    // }
-
-    // handleTV(e){
-    //     // console.log(e.target.value);
-
-    //     // set state Tag to currentValue
-
-    //     this.setState({
-    //         tv: e.target.value,
-    //     })
-    // }
-
-    // handleDate(e){
-    //     this.setState({
-    //         date: e.target.value,
-    //     })
-    // }
-
-    // handleTime(e){
-    //     // set state Tag to currentValue
-
-    //     this.setState({
-    //         time: e.target.value,
-    //     })
-    // }
-
-    // handleEmail(e){
-    //     // set state Tag to currentValue
-
-    //     this.setState({
-    //         email: e.target.value,
-    //     })
-    // }
-    
-    // handleSubmit(e){
-    //     e.preventDefault();
-
-    //     console.log('Get a price:');
-    //     console.log(this.state);
-
-    //     this.setState({
-    //         zip: '',
-    //         tv: '',
-    //         date: '',
-    //         time: '',
-    //         email: '',
-    //     })
-    // }
-
     render() {
         return (
-
-            <div className="review__container">
-                <div className="review__ad">
-                    <div className="ad__title">
+            <div className="reviewCard__container">
+                <div className="reviewCard__ad">
+                    <div className="reviewCard__body">
                         <h2>{this.props.title}</h2>
                         <h3>{this.props.subtitle}</h3>
-
-                        <div className="customer__review">
-                            <ReviewBox review={reviewSet.one}/>
-                            <ReviewBox review={reviewSet.two}/>
-                            <ReviewBox review={reviewSet.three}/>
-                            <ReviewBox review={reviewSet.four}/>
-                            <ReviewBox review={reviewSet.five}/>
-                            <ReviewBox review={reviewSet.six}/>
+                        <div className="customer__card">
+                            {Object.values(reviewCardSet).map((value, index) => {
+                                return (
+                                    <div key={index} className="review__card">
+                                        <ReviewCard review={value} />
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
