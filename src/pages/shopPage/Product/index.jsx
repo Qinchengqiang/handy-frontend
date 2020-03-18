@@ -643,14 +643,14 @@ const product = [
         cur_price: "$199.00",
         pre_price: "$.00",
         star: "308"
-      },
-      {
-        image: "",
-        title: "",
-        cur_price: "$.00",
-        pre_price: "$.00",
-        star: "91"
       }
+      // {
+      //   image: "",
+      //   title: "",
+      //   cur_price: "$.00",
+      //   pre_price: "$.00",
+      //   star: "91"
+      // }
     ]
   },{
     name: "Locks",
@@ -668,14 +668,14 @@ const product = [
         cur_price: "$329.00",
         pre_price: "$.00",
         star: "308"
-      },
-      {
-        image: "",
-        title: "",
-        cur_price: "$.00",
-        pre_price: "$.00",
-        star: "91"
       }
+      // {
+      //   image: "",
+      //   title: "",
+      //   cur_price: "$.00",
+      //   pre_price: "$.00",
+      //   star: "91"
+      // }
     ]
   },{
     name: "Security Cameras",
@@ -718,14 +718,14 @@ const product = [
         cur_price: "$329.00",
         pre_price: "$.00",
         star: "308"
-      },
-      {
-        image: "",
-        title: "",
-        cur_price: "$.00",
-        pre_price: "$.00",
-        star: "91"
       }
+      // {
+      //   image: "",
+      //   title: "",
+      //   cur_price: "$.00",
+      //   pre_price: "$.00",
+      //   star: "91"
+      // }
     ]
   },{
     name: "Cleaning Packs",

@@ -34,7 +34,8 @@ export default class ProductSection extends Component {
 }
   render() {
     const {name, content} = this.props
-    console.log('section', content);
+    console.log('section', content.length);
+    if (content.length === 3) {
     return (
       <div className="product-section">
         <div className="header">
@@ -45,7 +46,7 @@ export default class ProductSection extends Component {
             </a>
           </span>
         </div>
-        <div className="cards">
+        <div className="cards-3">
           {content.map((card, i) => (
             <Card key={card.title}
               image={card.image}
@@ -58,5 +59,30 @@ export default class ProductSection extends Component {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div className="product-section">
+        <div className="header">
+    <span className="section-name">{name}</span>
+          <span>
+            <a href="https://shop.handy.com/collections/best-sellers">
+              See All>
+            </a>
+          </span>
+        </div>
+        <div className="cards-2">
+          {content.map((card, i) => (
+            <Card key={card.title}
+              image={card.image}
+              title={card.title}
+              cur_price={card.cur_price}
+              pre_price={card.pre_price}
+              star={card.star}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
   }
 }

@@ -3,6 +3,7 @@ import "./ShopPage.scss";
 import SideNav from "./SideNav";
 import SlideShow from "./SlideShow";
 import Product from './Product'
+import Footer from '../../components/footer'
 
 export default class ShopPage extends Component {
   render() {
@@ -20,6 +21,7 @@ export default class ShopPage extends Component {
             <Product />
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

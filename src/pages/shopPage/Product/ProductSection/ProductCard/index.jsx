@@ -23,8 +23,8 @@ export default class ProductCard extends Component {
             alt=""
           />
         </div>
-        <div className="title">
-    <a href="">{title}</a>
+        <div className="title"><p><a href="">{title}</a></p>
+    
         </div>
         <div className="price">
     <span className="current-price">{cur_price}</span>
