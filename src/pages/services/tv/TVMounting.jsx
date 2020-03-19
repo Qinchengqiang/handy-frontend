@@ -125,52 +125,53 @@ class TVMounting extends Component {
                                 <option value="6 TVs">6 TVs</option>
                             </select>
 
-                            <input className="input__narrow"
-                                 type="date"
-                                 value={this.state.date}
-                                 onChange={this.handleDate}
-                            />
+                            <div className="pick__date">
+                                <input className="input__narrow"
+                                    type="date"
+                                    value={this.state.date}
+                                    onChange={this.handleDate}
+                                />
 
-                            <select className="input__narrow"
-                                value={this.state.time}
-                                onChange={this.handleTime}
-                            >
-                                <option value="7:00 AM">7:00 AM</option>
-                                <option value="7:30 AM">7:30 AM</option>
-                                <option value="8:00 AM">8:00 AM</option>
-                                <option value="8:30 AM">8:30 AM</option>
-                                <option value="9:00 AM">9:00 AM</option>
-                                <option value="9:30 AM">9:30 AM</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="10:30 AM">10:30 AM</option>
-                                <option value="11:00 AM">11:00 AM</option>
-                                <option value="11:30 AM">11:30 AM</option>
-                                <option value="12:00 PM">12:00 PM</option>
-                                <option value="12:30 PM">12:30 PM</option>
-                                <option value="1:00 PM">1:00 PM</option>
-                                <option value="1:30 PM">1:30 PM</option>
-                                <option value="2:00 PM">2:00 PM</option>
-                                <option value="2:30 PM">2:30 PM</option>
-                                <option value="3:00 PM">3:00 PM</option>
-                                <option value="3:30 PM">3:30 PM</option>
-                                <option value="4:00 PM">4:00 PM</option>
-                                <option value="4:30 PM">4:30 PM</option>
-                                <option value="5:00 PM">5:00 PM</option>
-                                <option value="5:30 PM">5:30 PM</option>
-                                <option value="6:00 PM">6:00 PM</option>
-                                <option value="6:30 PM">6:30 PM</option>
-                                <option value="7:00 PM">7:00 PM</option>
-                                <option value="7:30 PM">7:30 PM</option>
-                                <option value="8:00 PM">8:00 PM</option>
-                                <option value="8:30 PM">8:30 PM</option>
-                                <option value="9:00 PM">9:00 PM</option>
-                            </select>
-
+                                <select className="input__narrow"
+                                    value={this.state.time}
+                                    onChange={this.handleTime}
+                                >
+                                    <option value="7:00 AM">7:00 AM</option>
+                                    <option value="7:30 AM">7:30 AM</option>
+                                    <option value="8:00 AM">8:00 AM</option>
+                                    <option value="8:30 AM">8:30 AM</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="9:30 AM">9:30 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="12:30 PM">12:30 PM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="1:30 PM">1:30 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="2:30 PM">2:30 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="3:30 PM">3:30 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="4:30 PM">4:30 PM</option>
+                                    <option value="5:00 PM">5:00 PM</option>
+                                    <option value="5:30 PM">5:30 PM</option>
+                                    <option value="6:00 PM">6:00 PM</option>
+                                    <option value="6:30 PM">6:30 PM</option>
+                                    <option value="7:00 PM">7:00 PM</option>
+                                    <option value="7:30 PM">7:30 PM</option>
+                                    <option value="8:00 PM">8:00 PM</option>
+                                    <option value="8:30 PM">8:30 PM</option>
+                                    <option value="9:00 PM">9:00 PM</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div className="email__price">
 
-                            <input className="input__wide" type="text"
+                            <input className="email__input" type="text"
                                 placeholder={`  Email`}
                                 value={this.state.email}
                                 onChange={this.handleEmail}

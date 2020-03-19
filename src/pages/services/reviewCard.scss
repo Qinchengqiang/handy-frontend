@@ -1,14 +1,15 @@
 *{
 
 	// border: 1px black solid;
-    // padding: 1px;
+    // padding: 3px;
     
 }
 
 .review__title{
 
     display: flex;
-    // justify-content: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
 
     .review__pic{
         width: 100px;
@@ -18,25 +19,27 @@
             border-radius: 50%;
         }
     }
+
     .review__rate{
         margin-left: 1rem;
         width: 100%;
+
+        h4{
+            margin: 0;
+            // display: flex;
+            // width: 100%;
+            // justify-content: center;
+            // align-items: center;
+            // text-align: center;
+        
+            color: #333333;
+            font-size: 1.4rem;
+            font-weight: 600;
+            
+        }
     }
 }
 
-h4{
-    margin: 0;
-    // display: flex;
-    // width: 100%;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
-
-    color: #333333;
-    font-size: 1.1rem;
-    font-weight: 700;
-    
-}
 
 .review__star{
     
@@ -55,9 +58,91 @@ h4{
 }
 
 p{
-    margin-top: 1rem;
+    // margin-top: 2rem;
     font-size: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+
+
+@media screen and (min-width: 1220px) and (max-width: 1439px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin-left: 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin: 0 1rem 0 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin: 0 1rem 0 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 374px) {
+
+}
+

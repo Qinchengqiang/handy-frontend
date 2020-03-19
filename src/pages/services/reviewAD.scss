@@ -7,6 +7,8 @@
 
 .reviewCard__container{
 
+    // position: absolute;
+    margin-top: 20vh;
     padding: 4vh 0 4vh 0;
     background-color: #EEEEEE;
     background-size: 100% auto;
@@ -50,7 +52,7 @@
                 width: 100%;
                 justify-content: center;
                 align-items: center;
-                // text-align: center;
+                text-align: center;
 
                 color: #333333;
                 font-size: 2.5rem;
@@ -63,7 +65,7 @@
                 width: 100%;
                 justify-content: center;
                 align-items: center;
-                // text-align: center;
+                text-align: center;
 
                 color: #333333;
                 font-size: 1.5rem;
@@ -90,7 +92,7 @@
                     text-align: left;
                 
                     width: 30%;
-                    padding: 2rem 1rem 1rem 1rem;
+                    padding: 2rem 0.8rem 1rem 0.8rem;
                     margin: 1rem 0.5rem 1rem 0.5rem;
                     background-color: white;
                 
@@ -103,193 +105,147 @@
     }
 }
 
-// @media screen and (min-width: 1220px) {
-// 	.search__container{
 
-// 		background: url('../../img/banner.jpg') no-repeat 100%;
-// 		background-size: 100% auto;
-		
-// 		.search__banner{
+@media screen and (min-width: 1220px) and (max-width: 1439px) {
+   
+    .reviewCard__container{
 
-// 			opacity: 0.9;
+        .reviewCard__ad{
+            
+            .reviewCard__body{
 
-// 			max-width: 666px;
-// 			width: 75vmax;
-// 			max-height: 220px;
-// 			height: 35vmin;
-// 			min-height: 170px;
+                width: 100%;
 
-// 			margin: 9vmin;
+                h2{
+                    font-size: 2.2rem;
+                }
 
-// 			// h2{
-// 			// 	line-height: 40px;
-// 			// 	color: #555555;
-// 			// 	font-family: Arial, Gadget, sans-serif;
-// 			// 	padding: 5vmin 3vmin 0 3vmin;
-// 			// 	font-size: 2.4rem;
-// 			// 	font-weight: 700;
-// 			// 	text-shadow: 0.5px 0.5px gray;
+                h3{
+                    font-size: 1.2rem;
+                }
 
-// 			// }
+                .customer__card{
 
-// 			// .smallScreen{
-// 			// 	display: none;
-// 			// }
+                    margin-top: 2rem;
 
-// 			// .search__bar{
-
-// 			// 	bottom: 4vmin;
-// 			// 	height: 50px;
-
-// 			// 	input{
-
-// 			// 		width: 80%;
-// 			// 		height: 50px;
-// 			// 		font-size: 16px;
-// 			// 		text-shadow: 0.3px 0.3px gray;
-
-// 			// 	}
-
-// 			// 	button{
-
-// 			// 		height: 50px;
-// 			// 		width: 50px;
-
-// 			// 	}
-// 			// }
-// 		}
-// 	}
-// }
+                    .review__card{
+                    
+                        width: 32%;
+                        padding: 1rem 0.5rem 0 0.5rem;
+                        margin: 1rem 0 1rem 0;
+                        font-size: 0.8rem;
+                    }           
+                }
+            }
+        }
+    }
+}
 
 
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+    .reviewCard__container{
 
-// @media screen and (min-width: 768px) and (max-width: 1219px) {
-// 	.search__container{
-		
-// 		background: url('../../img/banner.jpg') no-repeat 100%;
-// 		background-size: 100% auto;
+        margin-top: 32vh;
 
-		
-// 		.search__banner{
+        .reviewCard__ad{
+            
+            width: 85vw;
 
-// 			opacity: 0.9;
-	
-// 			max-width: 600px;
-// 			width: 70vmax;
-// 			min-width: 300px;
-// 			max-height: 200px;
-// 			height: 10vmin;
-// 			min-height: 100px;
+            .reviewCard__body{
+                    
+                h2{
+                    font-size: 1.8rem;
+                }
 
+                h3{
+                    font-size: 1.1rem;
+                }
 
-// 			margin: 2vmin 0 2vmin 0;
-
-// 			h2{
-
-// 				margin-top: 1.3vmax;
-// 				padding: 0;
-// 				font-size: 1.7rem;
-// 				font-weight: 400;
-// 				text-align: center;
-// 			}
-	
-// 			.smallScreen{
-// 				display: none;
-// 			}
-
-// 			.search__bar{
-	
-// 				bottom: 1.7vmax;
-// 				height: 20px;
-	
-// 				input{
-
-// 					width: 70%;
-// 					height: 35px;
-// 					font-size: 12px;	
-
-// 				}
-	
-// 				button{
-
-// 					height: 35px;
-// 					width: 35px;
-
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+                .customer__card{
+                    
+                    margin-top: 1rem;
+                    
+                    .review__card{
+                    
+                        width: 100%;
+                        padding: 1rem 0.5rem 0 0.5rem;
+                        margin: 1rem 0 1rem 0;
+                        font-size: 0.8rem;
+                    }           
+                }
+            }
+        }
+    }
+}
 
 
-// @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
-// 	.search__container{
+    .reviewCard__container{
 
-// 		.search__banner{
-	
-// 			max-width: 666px;
-// 			width: 75vmax;
-// 			max-height: 220px;
-// 			height: 20vmin;
-// 			min-height: 70px;
-			
-// 			h2{
-// 				// font-size: 1.4rem;
-// 				// font-weight: 400;
-// 				// text-align: center;
+        margin-top: 60vh;
+        padding: 2vh 0 2vh 0;
 
-// 				line-height: 40px;
-// 				color: #555555;
-// 				font-family: Arial, Gadget, sans-serif;
-// 				margin: -2vmin 3vmin 5vmin 15vmin;
-// 				font-size: 24px;
-// 				font-weight: 700;
-// 				// text-shadow: 0.5px 0.5px gray;
+        .reviewCard__ad{
+            
+            width: 95vw;
+            min-width: 320px;
+            padding: 0.5rem;
 
-// 				justify-content: left;
+            .reviewCard__body{
+                    
+                h2{
+                    font-size: 1.6rem;
+                }
 
-// 			}
-	
-// 			.bigScreen{
-// 				display: none;
-// 			}
+                h3{
+                    font-size: 1rem;
+                }
 
-// 			.search__bar{
+                .customer__card{
+                    
+                    margin-top: 0;
+                    padding: 0 1rem 0 1rem;
 
-// 				bottom: 4vmin;
-// 				height: 20px;
-	
-// 				input{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
 
-// 					width: 70%;
-// 					height: 30px;
-// 					font-size: 12px;	
+                    .review__card{
+                        
+                        width: 100%;
+                        
+                        padding: 0.5rem;
+                        margin: 1rem 0 0 0;
+                        font-size: 0.8rem;
+                    }           
+                }
+            }
+        }
+    }
+}
 
-// 				}
-	
-// 				button{
 
-// 					height: 30px;
-// 					width: 30px;
+@media screen and (max-width: 374px) {
 
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+    .reviewCard__container{
 
-// @media screen and (max-width: 374px) {
+        // display: none;
+    }
+}
 
-// 	.search__container{		
-// 		.search__banner{
-// 			h2{
-// 				font-size: 1.2rem;
-				
-// 				.bigScreen{
-// 					display: none;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+
+@media screen and (max-height: 420px) {
+    .reviewCard__container{
+        margin-top: 90vh;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-height: 630px) {
+
+    .reviewCard__container{
+        margin-top: 45vh;
+    }
+}

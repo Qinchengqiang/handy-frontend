@@ -75,8 +75,8 @@ class Home extends Component {
 
         {/* Here to switch between Moving and TV page */}
         
-        <Moving />
-        {/* <TV /> */}
+        {/* <Moving /> */}
+        <TV />
 
 
 

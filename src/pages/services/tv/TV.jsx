@@ -34,11 +34,11 @@ class TV extends Component {
       <div>
         <div className="tv__booking">
           <TVMounting />
-        </div>
-        <div>
+        {/* </div>
+        <div> */}
           <ReviewAD title={this.state.title} subtitle={this.state.subTitle} />
-        </div>
-        <div>
+        {/* </div>
+        <div> */}
           <CustomerReviews subService={this.state.subService}/>
         </div>
 

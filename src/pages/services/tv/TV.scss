@@ -13,36 +13,16 @@
 
 	height: 70vmin;
 
-	position: relative;
+	// position: relative;
 
 }
 
 
 
-@media screen and (min-width: 768px) {
-
-	.service__center{
-		// background-color: red;
-		.service__page{
-			// width: 65vw;
-			max-width: 1220px;
-		}
+@media screen and (max-width: 1219px) {
+	
+	.tv__booking{
+		height: 90vmin;
 	}
+
 }
-
-@media screen and (max-width: 767px) {
-
-	.service__center{
-		padding: 0;
-		margin: 0;
-		.service__page{
-			padding: 0;
-			margin: 0;
-			.cata__spacing{
-				padding: 0;
-				margin: 0;
-			}
-		}
-	}
-}
-
