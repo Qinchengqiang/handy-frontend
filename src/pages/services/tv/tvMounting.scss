@@ -10,6 +10,7 @@
 	box-sizing: border-box;
 	outline: none;
 	padding: 0;
+	margin-bottom: 10vmax;
 	width: 100%;
 
 	display: flex;
@@ -193,15 +194,12 @@
 
 
 
-@media screen and (min-width: 1220px) and (max-width: 1439px)  {
-
-}
-
-
-@media screen and (max-width: 1219px) {
+@media screen and (max-width: 1220px) {
 	
 	.tv__container{
-				
+			
+			margin-bottom: 22vmax;
+
 		.tv__banner{
 
 			max-width: 1000px;
@@ -295,10 +293,12 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
 	.tv__container{
 		
+		margin-bottom: 30vmax;
+
 		.tv__banner{
 
 			// position: relative;
@@ -386,17 +386,50 @@
 }
 
 
-@media screen and (max-width: 374px) {
-
-}
-
-@media screen and (max-height: 420px) {
+@media screen and (min-width: 768px) and (max-height: 768px) {
 
 	.tv__container{
+		
+		margin-bottom: 40vmax;
+
 		.tv__banner{
 			.tv__mounting{
 				margin-top: 50vh;
 			}
 		}
 	}
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 767px) {
+	.tv__container{
+		
+		margin-bottom: 30vmax;
+	}
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 719px) and (min-height: 720px) {
+	.tv__container{
+		
+		margin-bottom: 45vmax;
+		
+	}
+}
+
+@media screen and (max-width: 375px) {
+    .tv__container{
+        margin-bottom: 50vh;
+    }
+}
+
+@media screen and (max-height: 375px) {
+    .tv__container{
+		margin-bottom: 75vh;
+		.tv__banner{
+			.tv__mounting{
+				margin-top: 25vh;
+			}
+		}
+    }
 }

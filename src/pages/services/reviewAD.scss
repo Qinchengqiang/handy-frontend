@@ -8,7 +8,7 @@
 .reviewCard__container{
 
     // position: absolute;
-    margin-top: 20vh;
+    // margin-top: 20vh;
     padding: 4vh 0 4vh 0;
     background-color: #EEEEEE;
     background-size: 100% auto;
@@ -145,7 +145,7 @@
 @media screen and (min-width: 768px) and (max-width: 1219px) {
     .reviewCard__container{
 
-        margin-top: 32vh;
+        // margin-top: 32vh;
 
         .reviewCard__ad{
             
@@ -183,7 +183,7 @@
 
     .reviewCard__container{
 
-        margin-top: 60vh;
+        // margin-top: 60vh;
         padding: 2vh 0 2vh 0;
 
         .reviewCard__ad{
@@ -227,25 +227,3 @@
     }
 }
 
-
-@media screen and (max-width: 374px) {
-
-    .reviewCard__container{
-
-        // display: none;
-    }
-}
-
-
-@media screen and (max-height: 420px) {
-    .reviewCard__container{
-        margin-top: 90vh;
-    }
-}
-
-@media screen and (max-width: 700px) and (min-height: 630px) {
-
-    .reviewCard__container{
-        margin-top: 45vh;
-    }
-}
