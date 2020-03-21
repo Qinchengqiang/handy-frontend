@@ -141,11 +141,13 @@ class MovingHelp extends Component {
                     <p>
                         <b>Note: This service is for moving help, including packing boxes, unpacking boxes, heavy lifting, and loading items into a vehicle. It is not full-service moving and there is no transportation provided.</b>
                     </p>
-                    <p><img src={check} alt="check" width="100%" /> Vetted and <span>background-checked professionals</span>.</p>
-                    <p><img src={check} alt="check" width="100%" /> Friendly 24/7 customer service.</p>
-                    <p><img src={check} alt="check" width="100%" /> Backed by the <span>Handy Happiness Guarantee</span>.</p>
-                    <p><img src={check} alt="check" width="100%" /> Affordable, upfront pricing.</p>
-                    <p><img src={check} alt="check" width="100%" /> No time windows, book when you want.</p>
+                    <div className="review__hints">
+                        <p><img src={check} alt="check" width="100%" /> Vetted and <span>background-checked professionals</span>.</p>
+                        <p><img src={check} alt="check" width="100%" /> Friendly 24/7 customer service.</p>
+                        <p><img src={check} alt="check" width="100%" /> Backed by the <span>Handy Happiness Guarantee</span>.</p>
+                        <p><img src={check} alt="check" width="100%" /> Affordable, upfront pricing.</p>
+                        <p><img src={check} alt="check" width="100%" /> No time windows, book when you want.</p>
+                    </div>
                 </div>
 
                 <div className="moving__banner">

@@ -218,12 +218,12 @@
 				.review__star{
 	
 					img{
-						width: 25px;
+						width: 20px;
 						padding: 0 1px 0 1px;
 					}
 	
 					.review__number{
-						font-size: 1.2rem;
+						font-size: 1.1rem;
 					}
 				}
 
@@ -240,21 +240,22 @@
 					
 					width: 100%;
 					max-width: 1000px;
-					margin: 10px 0 0 0;
+					margin: 5px 0 0 0;
 					padding: 0;
-					height: 45px;
+					height: 40px;
+					font-size: 1.1rem;
 				}
 	
 				.pick__date{
 					
 					.input__narrow{
 
-						font-size: 1.2rem;
+						font-size: 1.1rem;
 						width: 50%;
 						max-width: 1000px;
-						margin: 10px 0 0 0;
+						margin: 5px 0 0 0;
 						padding: 0;
-						height: 45px;
+						height: 40px;
 					}
 				}
 
@@ -272,19 +273,20 @@
 					.email__input{
 
 						max-width: 1000px;
-						font-size: 1.2rem;
-						height: 50px;
+						font-size: 1.1rem;
+						height: 40px;
 						width: 100%;
-						margin: 10px 0 0 0;
+						margin: 5px 0 0 0;
 						padding: 0;
-						height: 45px;
+
 					}
 
 					button{						
 						width: 100%;
 						max-width: 1000px;
-						margin: 10px 0 0 0;
+						margin: 5px 0 0 0;
 						padding: 0;
+						height: 45px;
 					}
 				}
 			}

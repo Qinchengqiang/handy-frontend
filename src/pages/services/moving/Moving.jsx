@@ -27,11 +27,11 @@ class Moving extends Component {
 
         <div className="moving__booking">
           <MovingHelp />
-        </div>
-        <div>
+        {/* </div>
+        <div> */}
           <ReviewAD title={this.state.title} subtitle={this.state.subTitle} />
-        </div>
-        <div>
+        {/* </div>
+        <div> */}
           <CustomerReviews />
         </div>
 
