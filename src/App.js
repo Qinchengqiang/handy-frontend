@@ -16,6 +16,8 @@ import Nomatch from './components/Nomatch'
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
 import {FurnitureAssembly,OfficeAssembly} from './pages/services/assembly/FurnitureAssembly';
 import ShopPage from './pages/shopPage'
+import TV from './pages/services/tv/TV';
+import Moving from './pages/services/moving/Moving';
 class App extends Component {
   render() {
     return (
@@ -45,6 +47,12 @@ class App extends Component {
           </Route>
           <Route exact path="/services/office-furniture-assembly">
             <OfficeAssembly/>
+          </Route>
+          <Route exact path="/services/tv">
+            <TV/>
+          </Route>
+          <Route exact path="/services/moving">
+            <Moving/>
           </Route>
           <Route path="*">
             <Nomatch />
