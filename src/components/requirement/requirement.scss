@@ -1,0 +1,28 @@
+.requirement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    h1 {
+        text-align: center;
+    }
+    .detail {
+        display: flex;
+        justify-content: center;
+        ul {
+            width: 500px;
+            font-size: 18px;
+            li {
+                margin-top: 30px;
+            }
+        }
+    }
+    .ignore {
+        display: flex;
+        justify-content: center;
+        p {
+            font-size: 12px;
+        }
+    }
+}
