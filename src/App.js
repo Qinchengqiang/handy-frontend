@@ -14,6 +14,7 @@ import MyAccount from "../src/pages/myAccount/myAccount";
 import Nav from "./components/nav/Nav";
 import Nomatch from './components/Nomatch'
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
+import {FurnitureAssembly,OfficeAssembly} from './pages/services/assembly/FurnitureAssembly';
 class App extends Component {
   render() {
     return (
@@ -25,6 +26,12 @@ class App extends Component {
           </Route>
           <Route exact path="/services">
             <ServicePage />
+          </Route>
+          <Route exact path="/services/furniture-assembly">
+            <FurnitureAssembly/>
+          </Route>
+          <Route exact path="/services/office-furniture-assembly">
+            <OfficeAssembly/>
           </Route>
           <Route exact path="/apply">
             <Apply />

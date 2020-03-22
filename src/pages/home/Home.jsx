@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./home.scss";
-import Nav from "../../components/nav/Nav";
+// import Nav from "../../components/nav/Nav";
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
 import FurnitureList from "./FurnitureList"
