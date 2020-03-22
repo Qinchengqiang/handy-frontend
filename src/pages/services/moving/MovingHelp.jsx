@@ -274,8 +274,6 @@ class MovingHelp extends Component {
                         <p>By signing and clicking Get a Price, you affirm you have read and agree to the <u>Handy Terms</u>, and you agree and authorize Handy and its affiliates, and their networks of service professionals, to deliver marketing calls or texts using automated technology to the number you provided above regarding your project and other home services offers. Consent is not a condition of purchase.</p>
                     </div>
                 </div>
-
-                
             </div>
         );
     }

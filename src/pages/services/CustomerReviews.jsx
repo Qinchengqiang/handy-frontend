@@ -37,7 +37,6 @@ class CustomerReviews extends Component {
                         })}
                     </div>
                 </div>
-
             </div>
         );
     }
