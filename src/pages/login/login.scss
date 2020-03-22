@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
+.login-container {
+	background-image: url("login-background.png");
+	opacity: 0.8;
 
+	background-size: 800px 700px;
+	background-repeat: repeat;
+}
 .login-form {
-	height: 100vh;
-	background-color: white;
-	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: "Montserrat", sans-serif;
+
 	.box {
+		margin-top: 100px;
+		margin-bottom: 100px;
 		min-width: 400px;
 		min-height: 500px;
 		background-color: #ffffff;

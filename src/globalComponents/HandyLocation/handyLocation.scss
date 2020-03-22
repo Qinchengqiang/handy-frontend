@@ -1,0 +1,157 @@
+@mixin screen-sm {
+	@media only screen and (max-width: 375px) {
+		@content;
+	}
+}
+@mixin screen-md {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin screen-lg {
+	@media only screen and (max-width: 1220px) {
+		@content;
+	}
+}
+
+.handy-location-container {
+	background-color: #f9f9f9;
+
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: "Open Sans", sans-serif;
+	justify-content: center;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 20px;
+		font-size: 32px;
+		line-height: 1.4;
+	}
+	p {
+		width: 50%;
+		margin: auto;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	.handy-location-detail {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+	}
+	@include screen-sm() {
+		p {
+			margin: 0;
+			width: 100%;
+		}
+		h1 {
+			font-size: 20px;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+		img {
+			display: none;
+		}
+	}
+	@include screen-md() {
+		img {
+			display: none;
+		}
+
+		p {
+			margin: 0;
+			width: 100%;
+		}
+		h1 {
+			font-size: 20px;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+	}
+	@include screen-lg() {
+		img {
+			max-width: 80%;
+		}
+	}
+	.list-container {
+		padding: 40px;
+		line-height: 2;
+		background-color: white;
+
+		ul {
+			padding-left: 5rem;
+			padding-top: 2rem;
+			list-style: square inside;
+			columns: 2;
+			width: 30rem;
+		}
+		@include screen-sm() {
+			ul {
+				columns: 1;
+			}
+		}
+		@include screen-md() {
+			ul {
+				padding: 0;
+			}
+		}
+		li {
+			text-align: left;
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+			border-style: none;
+		}
+	}
+}
+
+.why-handy-container {
+	background-color: white;
+	width: 80%;
+	margin: auto;
+	padding: 50px 200px 50px 200px;
+	display: flex;
+	flex-direction: column;
+	font-family: "Open Sans", sans-serif;
+
+	text-align: left;
+
+	@include screen-md() {
+		width: 100%;
+		margin: 20px;
+		padding: 0;
+	}
+
+	@include screen-lg() {
+		padding: 50px 100px 50px 100px;
+	}
+
+	h1 {
+		margin-bottom: 15px;
+		font-size: 30px;
+		line-height: 1.4;
+	}
+	p {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+	button {
+		width: 30%;
+		height: 55px;
+		font-size: 20px;
+		outline: none;
+		color: white;
+		background-color: yellowgreen;
+		margin: auto;
+		margin-top: 20px;
+		border-radius: 5px;
+	}
+}
