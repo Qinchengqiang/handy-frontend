@@ -23,37 +23,20 @@ class TV extends Component {
   componentDidMount() {
     //get data from the store when the first render
 
-  
-
-
-
   }
 
   render() {
     return (
       <div>
         <div className="tv__booking">
+
           <TVMounting />
-        {/* </div>
-        <div> */}
+
           <ReviewAD title={this.state.title} subtitle={this.state.subTitle} />
-        {/* </div>
-        <div> */}
+
           <CustomerReviews subService={this.state.subService}/>
+
         </div>
-
-        {/* <MiniCatalog /> */}
-
-        {/* <div className="service__center">
-          <div className="service__page">
-            <div className="cata__spacing">
-              <Catalogue />
-            </div>
-
-            <Service />
-            
-          </div>
-        </div> */}
       </div>
     );
   }

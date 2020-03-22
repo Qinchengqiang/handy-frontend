@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import "./home.scss";
-<<<<<<< HEAD
-import Nav from "../../components/nav/Nav";
-=======
 // import Nav from "../../components/nav/Nav";
->>>>>>> catherine-develop
 import QuickLink from "./QuickLink"
 import TaskList from "./TaskList"
 import FurnitureList from "./FurnitureList"
@@ -17,13 +13,8 @@ import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
-<<<<<<< HEAD
-
-import TV from "../services/tv/TV";
-import Moving from "../services/moving/Moving";
-
-=======
->>>>>>> catherine-develop
+import Moving from '../services/moving/Moving';
+import TV from '../services/tv/TV';
 
 class Home extends Component {
   constructor(props) {
@@ -53,66 +44,37 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home">
-        {/* <Nav /> */}
-<<<<<<< HEAD
-        {/* <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
-=======
-        <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
->>>>>>> catherine-develop
-        <QuickLink />
-        <h2 className="left_align">Cleaning & Handyman Tasks</h2>
-        <div className="container-description-flex">
-          <div className="left_align left_align-space">Instantly book highly rated pros for cleaning and handyman tasks at a fixed price.</div>
-<<<<<<< HEAD
-          <Link to="./services" className="right-align-jump">See All ></Link>
-=======
-          <Link to="./services"  className="right-align-jump">See All ></Link>
->>>>>>> catherine-develop
-        </div>
-        <TaskList renderTask={this.renderTask} />
-        <h2 className="left_align">Home Furniture with Assembly Included</h2>
-        <div className="container-description-flex">
-          <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
-<<<<<<< HEAD
-          <Link to='./shop' className="right-align-jump">See All ></Link>
-        </div> */}
-        {/* <FurnitureList renderTask={this.renderTask} />
-        <ProfessionalIntro />
-        <GurranteePic />
-        <ShopPic />
-        <YouPro />
-        <Faq />
-        <HandyExplain />
-        <HandyFeatureAssembly /> */}
+      // <div className="home">
+      //   {/* <Nav /> */}
+      //   <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
+      //   <QuickLink />
+      //   <h2 className="left_align">Cleaning & Handyman Tasks</h2>
+      //   <div className="container-description-flex">
+      //     <div className="left_align left_align-space">Instantly book highly rated pros for cleaning and handyman tasks at a fixed price.</div>
+      //     <Link to="./services"  className="right-align-jump">See All ></Link>
+      //   </div>
+      //   <TaskList renderTask={this.renderTask} />
+      //   <h2 className="left_align">Home Furniture with Assembly Included</h2>
+      //   <div className="container-description-flex">
+      //     <div className="left_align-space">Everything you buy from Handy comes with free delivery and professional installation included.</div>
+      //     <Link to='./shop' className="right-align-jump">See All ></Link>     
+      //   </div>
+      //   <FurnitureList renderTask={this.renderTask} />
+      //   <ProfessionalIntro/>
+      //   <GurranteePic/>
+      //   <ShopPic/>
+      //   <YouPro/>
+      //   <Faq/>
+      //   <HandyExplain/>
+      //   <HandyFeatureAssembly/>
+      //   </div>
+      
 
-
-
-
-        {/* Here to switch between Moving and TV page */}
-        
-        <Moving />
-        {/* <TV /> */}
-
-
-
+      <div>
+        {/* <Moving /> */}
+        <TV />
 
       </div>
-
-=======
-          <Link to='./shop' className="right-align-jump">See All ></Link>     
-        </div>
-        <FurnitureList renderTask={this.renderTask} />
-        <ProfessionalIntro/>
-        <GurranteePic/>
-        <ShopPic/>
-        <YouPro/>
-        <Faq/>
-        <HandyExplain/>
-        <HandyFeatureAssembly/>
-        </div>
-      
->>>>>>> catherine-develop
     );
   }
 }

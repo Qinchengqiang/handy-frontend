@@ -236,13 +236,13 @@
 
 
 
-@media screen and (min-width: 1221px) {
+@media screen and (max-width: 1440px) {
 
 	.moving__container{
 
 		padding: 0 10vw 0 10vw;
 		height: 40vmin;
-		margin-bottom: 60rem;
+		margin-bottom: 65rem;
 
 		.moving__desc{
 		
@@ -400,7 +400,6 @@
 					font-size: 1rem;
 					margin: 5px 0 5px 0;
 					padding: 5px;
-					
 
 				}
 	
