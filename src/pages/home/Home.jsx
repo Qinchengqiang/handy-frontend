@@ -28,13 +28,16 @@ class Home extends Component {
 
   }
 
+
   renderTask = (taskImgUrl, taskName, linkTo) => {
     return (
       <li key={taskName} className="li-container_flex">
-        <Link to={linkTo} style={{textDecoration:"none"}}>
-        <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-        <div className="task_description">{taskName}</div>
-        </Link>
+        <div className="li-container_flex-inside">
+          <Link to={linkTo} style={{ textDecoration: "none" }}>
+            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+            <div className="task_description">{taskName}</div>
+          </Link>
+        </div>
       </li>
     )
   }

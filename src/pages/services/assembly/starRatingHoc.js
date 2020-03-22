@@ -29,7 +29,7 @@ function StarRating(props) {
       onClick={e => {
         setRating(e.target.getAttribute("star-id") || rating);
         handleReviewCount();
-    }
+      }
       }
       onMouseOver={hoverOver}
     >
@@ -44,8 +44,8 @@ function StarRating(props) {
   );
 }
 
-export default function starRatingHoc (rating,handleReviewCount) {
+export default function starRatingHoc(rating, handleReviewCount) {
   return (
-      <StarRating rating={rating} handleReviewCount={handleReviewCount}/>
+    <StarRating rating={rating} handleReviewCount={handleReviewCount} />
   );
 }
