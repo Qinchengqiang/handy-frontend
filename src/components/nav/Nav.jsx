@@ -16,7 +16,7 @@ export default () => {
       <NavLink exact to="/services" className='navlink' >
         Services
       </NavLink>
-      <NavLink exact to="/" className='navlink'>
+      <NavLink exact to="/shop" className='navlink'>
         Shop
       </NavLink>
       <NavLink exact to="/apply" className='navlink'>

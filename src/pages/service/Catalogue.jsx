@@ -5,6 +5,11 @@ import { imgset } from './imgset'
 
 class Catalogue extends Component {
 
+  componentDidMount() {
+    //get data from the store when the first render
+
+  }
+
   scrollToAnchor = (anchorName) => {
     if (anchorName) {
       let anchorElement = document.getElementById(anchorName);
