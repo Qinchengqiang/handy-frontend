@@ -27,12 +27,6 @@ class App extends Component {
           <Route exact path="/services">
             <ServicePage />
           </Route>
-          <Route exact path="/services/furniture-assembly">
-            <FurnitureAssembly/>
-          </Route>
-          <Route exact path="/services/office-furniture-assembly">
-            <OfficeAssembly/>
-          </Route>
           <Route exact path="/apply">
             <Apply />
           </Route>
@@ -41,6 +35,12 @@ class App extends Component {
           <Route exact path="/myaccount" component={MyAccount} />
           <Route exact path={`/services/cleaning`}>
             <Cleaning />
+          </Route>
+          <Route exact path="/services/furniture-assembly">
+            <FurnitureAssembly/>
+          </Route>
+          <Route exact path="/services/office-furniture-assembly">
+            <OfficeAssembly/>
           </Route>
           <Route path="*">
             <Nomatch />
