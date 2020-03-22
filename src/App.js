@@ -15,6 +15,7 @@ import Nav from "./components/nav/Nav";
 import Nomatch from './components/Nomatch'
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
 import {FurnitureAssembly,OfficeAssembly} from './pages/services/assembly/FurnitureAssembly';
+import ShopPage from './pages/shopPage'
 class App extends Component {
   render() {
     return (
@@ -26,6 +27,9 @@ class App extends Component {
           </Route>
           <Route exact path="/services">
             <ServicePage />
+          </Route>
+          <Route exact path="/shop">
+            <ShopPage />
           </Route>
           <Route exact path="/apply">
             <Apply />
