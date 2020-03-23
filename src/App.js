@@ -33,7 +33,7 @@ class App extends Component {
           <Route exact path="/apply">
             <Apply />
           </Route>
-          <Route exact path="/login" exact component={WrappedNormalLoginForm} />
+          <Route exact path="/login" component={WrappedNormalLoginForm} />
           <Route exact path="/register" component={WrappedRegistrationForm} />
           <Route exact path="/myaccount" component={MyAccount} />
           <Route exact path="/services/handyman-service" component={HandymanService} />
