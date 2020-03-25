@@ -16,6 +16,8 @@ import {
 	OfficeAssembly
 } from "./pages/services/assembly/FurnitureAssembly";
 import ShopPage from "./pages/shopPage";
+import { RegisterPage } from "./pages/register/register";
+import { LoginPage } from "./pages/login/loginPage";
 class App extends Component {
 	render() {
 		return (
@@ -34,8 +36,8 @@ class App extends Component {
 					<Route exact path="/apply">
 						<Apply />
 					</Route>
-					<Route exact path="/login" exact component={WrappedNormalLoginForm} />
-					<Route exact path="/register" component={WrappedRegistrationForm} />
+					<Route exact path="/login" exact component={LoginPage} />
+					<Route exact path="/register" component={RegisterPage} />
 					<Route exact path="/myaccount" component={MyAccount} />
 					<Route exact path="/handyman-service" component={HandymanService} />
 					<Route exact path={`/services/cleaning`}>

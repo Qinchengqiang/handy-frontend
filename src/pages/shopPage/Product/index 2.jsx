@@ -1,0 +1,805 @@
+import React, { Component } from "react";
+import "./Product.scss";
+import ProductSection from "./ProductSection";
+
+const product = [
+  {
+    name: "Best Sellers",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Corvus-Madonna-Mid-Century-Walnut-and-Black-Finish-Accent-Chair-fa4c44ee-599c-4fe1-830c-c98e5402e80a_2048x2048.jpg?v=1532297208",
+        title: "Mid-Century Walnut and Black Finish Accent Chair",
+        cur_price: "$149.00",
+        pre_price: "$196.00",
+        star: "851"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Altea-3-light-Satin-Nickel-Flush-Mount-Chandelier-a1b70dfb-73c1-4e09-9ac0-16732c9d604c_2048x2048.jpg?v=1533142129",
+        title: "Three-Light Satin Nickel Flush Mount Chandelier",
+        cur_price: "$149.00",
+        pre_price: "$255.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Conrad-Bevel-Mirrored-Frame-Rectangular-Accent-Wall-Mirror-by-iNSPIRE-Q-Bold-3eb26b57-58dd-47dd-b288-4b12fce8f06f_2048x2048.jpg?v=1533141193",
+        title: "Bevel Mirrored Frame Rectangular Accent Wall Mirror",
+        cur_price: "$289.00",
+        pre_price: "$329.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Air Containers",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/5kbtu_2048x2048.png?v=1525382461",
+        title: "Frigidaire 5,000 BTU Window-Mounted Air Conditioner",
+        cur_price: "$269.00",
+        pre_price: "$",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/10kbtu_2048x2048.png?v=1525382498",
+        title: "Frigidaire 10,000 BTU Window-Mounted Air Conditioner",
+        cur_price: "$389.00",
+        pre_price: "$398.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/12kbtu_copy_2048x2048.png?v=1525382481",
+        title: "Frigidaire 12,000 BTU Window-Mounted Air Conditioner",
+        cur_price: "$479.00",
+        pre_price: "$.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Beds",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Priage_Quick_Lock_14-inch_Metal1_2048x2048.png?v=1529603817",
+        title: "Quick Lock 14-inch Metal Platform Bed Frame",
+        cur_price: "$129.00",
+        pre_price: "$",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard___Footboard_2048x2048.png?v=1529603509",
+        title:
+          "Platform Bed Frame, Box Spring Replacement with Headboard and Footboard",
+        cur_price: "$129.00",
+        pre_price: "$.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard1_2048x2048.png?v=1529603568",
+        title: "Platform Bed Frame, Box Spring Replacement with Headboard",
+        cur_price: "$129.00",
+        pre_price: "$0.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Nightstands",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/One-drawer_Wood_Storage_Accent_End_Table_1_2048x2048.png?v=1530295760",
+        title: "One-drawer Wood Storage Accent End Table ",
+        cur_price: "$109.00",
+        pre_price: "$164.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Black_Wood_End_Table1_2048x2048.png?v=1530294539",
+        title: "Black Wood End Table",
+        cur_price: "$109.00",
+        pre_price: "$162.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Acacia_Wood_Accent_Table1_2048x2048.png?v=1530294388",
+        title: "Acacia Wood Accent Table",
+        cur_price: "$119.00",
+        pre_price: "$173.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Dressers",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Baxton-Studio-Rhodes-Dark-Brown-4-door-Shoe-Cabinet-8dd451e7-098d-4ee5-bad1-92a1a6d12fba_2048x2048.jpg?v=1531411664",
+        title: "Dark Brown Four-door Shoe Cabinet",
+        cur_price: "$219.00",
+        pre_price: "$238.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Carson-Carrington-Porsgrunn-Dark-Oak-Finish-4-drawer-Chest-680e547b-51c7-45c0-9420-a65ad03441a2_2048x2048.jpg?v=1531410996",
+        title: "Dark Oak Finish Four-drawer Chest",
+        cur_price: "$239.00",
+        pre_price: "$254.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Furniture-of-America-Modern-4-drawer-Wood-Metal-Chest-45b098b8-8e2c-42ad-bb87-303cfbeb953f_2048x2048.jpg?v=1531411139",
+        title: "Modern Four-drawer Wood and Metal Chest",
+        cur_price: "$249.00",
+        pre_price: "$265.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Armoires",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Super-Size-Jewelry-Armoire-64787ec8-de5c-4825-b9ea-ab632a816724_2048x2048.jpg?v=1532893159",
+        title: "Mirror-style Over-the-door Super-Size Jewelry Armoire",
+        cur_price: "$209.00",
+        pre_price: "$226.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Avenue-Greene-Becken-Ridge-18-inch-Wide-Storage-Cabinet-9f7f861b-4da2-4d36-82fd-b144aa14a3c1_2048x2048.jpg?v=1545063182",
+        title: "Storage Cabinet",
+        cur_price: "$229.00",
+        pre_price: "$246.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Costway-Black-Tri-Folding-Oval-Mirror-Wood-Vanity-Makeup-Table-Set-with-Stool-_267-Drawers-bathroom_2048x2048.jpg?v=1532893883",
+        title:
+          "Black Tri-Folding Oval Mirror Wood Vanity Makeup Table Set with Stool",
+        cur_price: "$259.00",
+        pre_price: "$273.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Coffee Tables",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Ameriwood-Home-Owen-Retro-Mid-century-Style-Coffee-Table-05476211-cd74-4837-a540-4ebf294f74cb_2048x2048.jpg?v=1532296352",
+        title: "Retro Coffee Table",
+        cur_price: "$119.00",
+        pre_price: "$175.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Modern-Frosted-Glass-38-inch-Coffee-Table-9bf06df5-e8a1-4f0e-ab3d-c8bff6e3279a_2048x2048.jpg?v=1532296287",
+        title: "Frosted Glass Coffee Table",
+        cur_price: "$139.00",
+        pre_price: "$191.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Convenience-Concepts-Oslo-Coffee-Table-974db51f-51b9-421c-99c8-d048f02b6116_2048x2048.jpg?v=1532296476",
+        title: "Wooden Coffee Table",
+        cur_price: "$139.00",
+        pre_price: "$188.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Bookshelves",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Convenience-Concepts-Designs2Go-3-Tier-Wide-Folding-Metal-Shelf-ab4eb998-8f8b-4977-b86c-0675f6c40cb8_2048x2048.jpg?v=1532296059",
+        title: "3-tier Wide Folding Shelf",
+        cur_price: "$88.00",
+        pre_price: "$139.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Convenience-Concepts-Designs2Go-Clear-Glass-Stainless-Steel-5-tier-Glass-Tower-2ae04de8-a0ed-4325-b413-feb93c46df56_2048x2048.jpg?v=1532295964",
+        title:
+          "Clear Glass and Stainless Steel Contemporary 5-tier Display Tower",
+        cur_price: "$94.00",
+        pre_price: "$144.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/3-Shelf-Folding-14-inch-Wide-Bookcase-2f83f75f-6e7b-4900-8b9b-92910c5e75d9_2048x2048.jpg?v=1531684130",
+        title: "Three-Shelf Folding Bookcase",
+        cur_price: "$100.00",
+        pre_price: "$150.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Dining Sets",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Furniture-of-America-Hathway-Industrial-3-piece-Dark-Bronze-Compact-Dining-Set-57fdfef2-f2c2-45c9-a5ca-037d72bd736f_2048x2048.jpg?v=1532296735",
+        title: "Industrial Three-piece Dark Bronze Compact Dining Set",
+        cur_price: "$199.00",
+        pre_price: "$224.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Arts-and-Crafts-Breakfast-Cart-with-Drop-leaf-Table-2a329c06-8e3d-40d1-adce-5828137a00c5_2048x2048.jpg?v=1532296634",
+        title: "Breakfast Bar with Drop-leaf Table",
+        cur_price: "$209.00",
+        pre_price: "$226.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Third-Ward-Michigan-3-piece-Dining-Set-b91a115c-73f8-4cc9-961b-b453d4299fc1_2048x2048.jpg?v=1532296511",
+        title: "Three-Piece Dining Set with Microsuede Seats",
+        cur_price: "$239.00",
+        pre_price: "$250.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Dining Tables",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Third-Ward-Bruce-Breakfast-Table-c210bac1-2a47-42ad-9067-7880ca2fc759_2048x2048.jpg?v=1532296820",
+        title: "Breakfast Table",
+        cur_price: "149.00",
+        pre_price: "$200.00",
+        star: "560"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Simple-Living-Shaker-Dining-Table-ec873d8c-b067-4acd-9b75-ca1efc1392ae_2048x2048.jpg?v=1532296862",
+        title: "Shaker Dining Table",
+        cur_price: "$149.00",
+        pre_price: "$196.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Simple-Living-Country-Cottage-Dining-Table-45a4a3bd-aa2d-48f4-ba7e-5661292331f0_2048x2048.jpg?v=1532296874",
+        title: "Country Cottage Dining Table – Natural, White",
+        cur_price: "$169.00",
+        pre_price: "$217.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Dining Chairs",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Third-Ward-Erie-Chair-a44b5415-cdb0-4bbf-8793-31b71d001343_2048x2048.jpg?v=1532297507",
+        title: "Erie Chair",
+        cur_price: "$89.00",
+        pre_price: "$142.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Third-Ward-Erie-Chairs-Set-of-2-d2dc7eb5-bad3-4f35-8df9-1ffc07060bff_2048x2048.jpg?v=1532297342",
+        title: "Erie Chairs",
+        cur_price: "$109.00",
+        pre_price: "$166.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Botanical-Heights-Hickory-Solid-Wood-Leatherette-Small-Padded-Parson-Chairs-Set-of-2-bfc8ab23-70ab-47f3-a048-a228f7f678df_2048x2048.jpg?v=1532297489",
+        title: "Solid Wood Leatherette Small Padded Parson Chairs",
+        cur_price: "$109.00",
+        pre_price: "$164.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Kitchen Islands",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Trinity-EcoStorage-Chrome-Bamboo-Top-Kitchen-Cart-3b08fa51-f396-49ad-893f-6035d5a21b1b_2048x2048.jpg?v=1532892340",
+        title: "Chrome Bamboo Top Kitchen Cart",
+        cur_price: "$179.00",
+        pre_price: "$207.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Wood-Marble-White-Kitchen-Cart-05181340-ccd1-4bd5-ad86-0c89ce771602_2048x2048.jpg?v=1532892393",
+        title: "Wood/Marble White Kitchen Cart",
+        cur_price: "$189.00",
+        pre_price: "$210.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Prospect-Hill-Sanborn-Wenge-and-Granite-Top-Mobile-Kitchen-Island-with-Wine-Rack-26d404b4-72b4-4393-bd60-cbfa80e5d3b8_2048x2048.jpg?v=1532892405",
+        title: "Wenge and Granite Top Mobile Kitchen Island with Wine Rack",
+        cur_price: "$189.00",
+        pre_price: "$211.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Bar Stools",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Botanical-Heights-Folsom-Counter-Height-Adjustable-Metal-Powder-coated-Bar-Stool-470fb144-10a1-43fc-95b0-ab94904fcef5_2048x2048.jpg?v=1532892783",
+        title: "Counter Height Adjustable Metal Powder-coated Bar Stool",
+        cur_price: "$69.00",
+        pre_price: "$133.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Modern-Adjustable-Bar-Stools-Set-of-2-1f2b03f9-63c8-4013-b4f8-cc671499410d_2048x2048.jpg?v=1532892686",
+        title: "Modern Adjustable Bar Stools (Set of 2)",
+        cur_price: "$99.00",
+        pre_price: "$158.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Tabouret-24-inch-Limeade-Metal-Counter-Stools-Set-of-2-f944cd6a-285c-49c2-a6c7-aeeb08f9bd10_2048x2048.jpg?v=1532892835",
+        title: "24-inch Limeade Metal Counter Stools (Set of 2)",
+        cur_price: "$99.00",
+        pre_price: "$157.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Gift Cards",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Gift-Card-3hr_2048x2048.jpg?v=1550258001",
+        title: "3-Hour Cleaning",
+        cur_price: "$99.00",
+        pre_price: "$129.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Gift-Card-3pack_2048x2048.jpg?v=1550258129",
+        title: "Three 3-Hour Cleanings",
+        cur_price: "$269.00",
+        pre_price: "$389.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Gift-Card-5pack_2048x2048.jpg?v=1550258105",
+        title: "Five 3-Hour Cleanings",
+        cur_price: "$429.00",
+        pre_price: "$645.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Desks",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Comfort-Products-Stanton-50-1001-Black-Computer-Desk-37b699c8-89cc-44ac-a410-0c04dcfadeef_2048x2048.jpg?v=1531683513",
+        title: "Black Computer Desk",
+        cur_price: "$74.00",
+        pre_price: "$144.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/ClosetMaid-Industrial-Desk-e5b05353-7f46-4e1e-a799-f8fc98a3e7a9_2048x2048.jpg?v=1531850852",
+        title: "Industrial Desk",
+        cur_price: "$85.00",
+        pre_price: "$155.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Third-Ward-Menomonee-Corey-Desk-af3c5de9-8a19-4288-b6e6-fd1e9f8b7b62_2048x2048.jpg?v=1531850958",
+        title: "Menomonee Corey Desk",
+        cur_price: "$88.00",
+        pre_price: "$158.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Desk Chairs",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/OFM-Essentials-Adjustable-Black-Office-Chair-f20db6b8-0989-4f44-8e3c-cdb43c3f274e_2048x2048.jpg?v=1532298019",
+        title: "Adjustable Black Office Chair",
+        cur_price: "$89.00",
+        pre_price: "$148.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Boss-Caressoft-Chrome-finished-Adjustable-Upholstered-Medical-Stool-74ca6544-93be-4866-92d4-fb712965c923_2048x2048.jpg?v=1532297721",
+        title: "Adjustable Upholstered Medical Stool",
+        cur_price: "$99.00",
+        pre_price: "$155.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/OFM-Essentials-Adjustable-Black-Leather-Office-Chair-0f65cafc-f7a8-405f-9b1a-9a919d1b298d_2048x2048.jpg?v=1532297739",
+        title: "Adjustable Black Leather Office Chair",
+        cur_price: "$109.00",
+        pre_price: "$162.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Mirrors",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Danya-B-Round-Mirror-Pillar-Candle-Sconce-with-Filigree-Metal-Frame-and-Hanging-Rope-d1c77d48-aeae-46b4-9853-6a89d9e2102d_2048x2048.jpg?v=1533141318",
+        title: "Round Mirror Pillar Candle Sconce",
+        cur_price: "$79.00",
+        pre_price: "$156.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Over-the-door-Full-length-Dressing-Mirror-b71d8303-fae3-4150-942a-a46cb5f604f7_2048x2048.jpg?v=1533141129",
+        title: "Over-the-door Glass/Wood Full-length Dressing Mirror",
+        cur_price: "$99.00",
+        pre_price: "$169.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Safavieh-Handmade-Arts-and-Crafts-Flower-Wall-Mirror-fb9ea9b3-85e7-4204-aee5-9ecc6b397afb_2048x2048.jpg?v=1533141137",
+        title: "Handmade Arts and Crafts Flower Mirror",
+        cur_price: "$109.00",
+        pre_price: "$180.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Shelves",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Floating-U-Laminated-Black-Shelves-Set-of-3-763ac580-26a2-425c-b4b9-986611d54129_2048x2048.jpg?v=1533141387",
+        title: "Floating 'U' Laminated Black Shelves (Set of 3)",
+        cur_price: "$59.00",
+        pre_price: "$140.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Montclair-James-Floating-U-Shelves-Set-of-3-fa1990ac-23bf-4c6c-ab2b-f7693494b3a7_2048x2048.jpg?v=1531683929",
+        title: "Floating U Shelves",
+        cur_price: "$69.00",
+        pre_price: "$111.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Danya-B-Laminated-Silver-Grey-Floating-U-Shelves-Set-of-3-e5b7f020-9ec1-4725-b752-f163019f66cf_2048x2048.jpg?v=1531684062",
+        title: "Laminated Silver Gray Floating U Shelves",
+        cur_price: "$69.00",
+        pre_price: "$110.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Chandeliers",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Porch-Den-Riverwest-Bremen-Crystal-Chandelier-5d0b2c70-dd94-48bb-ab34-9beb0b293fc6_2048x2048.jpg?v=1533142190",
+        title: "Crystal Chandelier",
+        cur_price: "129.00",
+        pre_price: "$236.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Single-light-Crystal-Chandelier-0f4286b1-7d4a-4caf-85bd-9a69c610129e_2048x2048.jpg?v=1533142108",
+        title: "Single-Light Crystal Chandelier",
+        cur_price: "$139.00",
+        pre_price: "$243.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Silver-Orchid-Taylor-4-light-Chrome-and-White-Crystal-Chandelier-fb04d143-151c-476e-948f-3f979f9fb5aa_2048x2048.jpg?v=1533141990",
+        title: "Four-Light Chrome and White Crystal Chandelier",
+        cur_price: "$149.00",
+        pre_price: "$254.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Ceiling Fans",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Hunter-Low-Profile-42-inch-Ceiling-Fan-with-White-Finish-and-5-White-Blades-37f4fdb9-cb89-4b1e-ac6c-a4f705fcd7e3_2048x2048.jpg?v=1533141898",
+        title: "White Metal Low Profile 42-Inch Ceiling Fan",
+        cur_price: "$149.00",
+        pre_price: "$251.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Transitional-28-inch-Ceiling-fan-in-Brushed-Nickel-5907435b-e1a0-499d-b50d-81976f24c623_2048x2048.jpg?v=1533141709",
+        title: "Transitional 28-Inch Ceiling fan in Brushed Nickel",
+        cur_price: "$159.00",
+        pre_price: "$260.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Westinghouse-7876400-42-Gun-Metal-Three-Blade-Reversible-Ceiling-Fan-With-Light-9516827f-c82f-4240-a9cb-dd3dcf95601d_2048x2048.jpg?v=1533141795",
+        title: "42-Inch Gunmetal Three-Blade Reversible Ceiling Fan With Light",
+        cur_price: "$159.00",
+        pre_price: "$258.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Grills",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Blackstone_28_front_2048x2048.png?v=1528234326",
+        title: "Blackstone Outdoor Flat Top Gas Grill Griddle Station",
+        cur_price: "$229.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/144_front_2048x2048.png?v=1528296752",
+        title: "Weber Original Kettle Premium Charcoal Grill",
+        cur_price: "$229.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Weber_153_Front_2048x2048.png?v=1528234264",
+        title: "Weber 22-Inch Performer Charcoal Grill",
+        cur_price: "$349.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Outdoor",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/luciano_outdoor_2048x2048.png?v=1528234676",
+        title: "4-piece Outdoor Wood Chat Set",
+        cur_price: "$429.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/white_b58c73a7-a26f-405a-b368-d002a5fe3332_2048x2048.png?v=1531144746",
+        title: "2-piece Outdoor Wicker Sofa Set",
+        cur_price: "$439.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/cordoba_brown_2048x2048.png?v=1528234614",
+        title: "4-piece Outdoor Wicker Conversation Set",
+        cur_price: "$449.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Outdoor Dining",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/georgina_brown_2048x2048.png?v=1528382384",
+        title: "3-piece Outdoor Wicker Bistro Set",
+        cur_price: "$299.00",
+        pre_price: "$.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/acacia_front_copy_2048x2048.png?v=1528382439",
+        title: "5-piece Stowaway Patio Dining Set",
+        cur_price: "$449.00",
+        pre_price: "$.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/borcay_front_2048x2048.png?v=1531159547",
+        title: "3-piece Outdoor Picnic Dining Set",
+        cur_price: "$589.00",
+        pre_price: "$.00",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Hubs",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Google_Home_2048x2048.jpg?v=1524711822",
+        title: "Google Home",
+        cur_price: "$199.00",
+        pre_price: "$.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Google_WiFi_2048x2048.jpg?v=1524712270",
+        title: "Google Wi-Fi",
+        cur_price: "$199.00",
+        pre_price: "$.00",
+        star: "308"
+      }
+    ]
+  },
+  {
+    name: "Locks",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/August_Silver_2048x2048.jpg?v=1524711747",
+        title: "August Smart Lock",
+        cur_price: "$229.00",
+        pre_price: "$.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/August_Pro_Silver_2048x2048.jpg?v=1524711794",
+        title: "August Smart Lock Pro + Connect",
+        cur_price: "$329.00",
+        pre_price: "$.00",
+        star: "308"
+      }
+    ]
+  },
+  {
+    name: "Security Cameras",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Nest_Indoor_2048x2048.jpg?v=1524712333",
+        title: "Nest Cam Indoor",
+        cur_price: "$299.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Nest_Outdoor_2048x2048.jpg?v=1524712443",
+        title: "Nest Cam Outdoor",
+        cur_price: "$299.00",
+        // pre_price: "$.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/Nest_IQ_Outdoor_2048x2048.jpg?v=1524712395",
+        title: "Nest Cam IQ Outdoor",
+        cur_price: "$399.00",
+        pre_price: "",
+        star: "91"
+      }
+    ]
+  },
+  {
+    name: "Thermostats",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/nest_2048x2048.png?v=1528227140",
+        title: "Nest Thermostat E",
+        cur_price: "$249.00",
+        pre_price: "$.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/1_2048x2048.png?v=1524713159",
+        title: "Nest Learning Thermostat",
+        cur_price: "$329.00",
+        pre_price: "$.00",
+        star: "308"
+      }
+    ]
+  },
+  {
+    name: "Cleaning Packs",
+    content: [
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/3_Cleaning_Pack_Giftcards_Square_2048x2048.jpg?v=1560282286",
+        title: "3 Home Cleanings",
+        cur_price: "$297.00",
+        pre_price: "$.00",
+        star: ""
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/5_Cleaning_Pack_Giftcards_Square2_2048x2048.jpg?v=1560282251",
+        title: "5 Home Cleanings",
+        cur_price: "$455.00",
+        pre_price: "$495.00",
+        star: "308"
+      },
+      {
+        image:
+          "https://cdn.shopify.com/s/files/1/2531/4912/products/8_Cleaning_Pack_Giftcards_Square3_2048x2048.jpg?v=1560282213",
+        title: "8 Home Cleanings",
+        cur_price: "$680.00",
+        pre_price: "$792.00",
+        star: "91"
+      }
+    ]
+  }
+];
+export default class Product extends Component {
+  render() {
+    return (
+      <div>
+        {product.map((section, i) => (
+          <ProductSection
+            key={section.name}
+            name={section.name}
+            content={section.content}
+          />
+        ))}
+      </div>
+    );
+  }
+}

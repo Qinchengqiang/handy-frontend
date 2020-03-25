@@ -33,21 +33,19 @@
 			padding-bottom: 3px;
 			display: inline-block;
 		}
-		.reg-form-fields {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			margin-top: 10px;
-
-			.reg-input-box {
-				position: relative;
-				margin: 10px;
-			}
-			.reg-button-box {
-				width: 500px;
-				display: flex;
-				justify-content: center;
-			}
+		label {
+			font-size: 18px;
+			margin-top: 5px;
+			font-weight: bold;
+		}
+		input {
+			margin: 10px;
+		}
+		button {
+			margin-top: 20px;
+		}
+		.help-block {
+			color: red;
 		}
 	}
 }

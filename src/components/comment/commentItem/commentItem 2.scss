@@ -1,0 +1,12 @@
+.commentItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+        text-align: center;
+        font-size: 1.12em;
+    }
+}

@@ -1,0 +1,45 @@
+.share {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: solid rgba(235, 233, 233, 0.733) 1px;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0px;
+        justify-content: flex-start;
+        .icon {
+            overflow: hidden;
+            border-radius: 50%;
+            border-color: #fff;
+            border-width: 2px;
+            img {
+                width: 50px;
+                height: 50px;   
+            }            
+        }
+        
+    }
+}
+
+@media (max-width: 375px) {
+    .share {
+        display: none;
+    }
+}
+
+@media (min-width:376px) and (max-width: 768px) {
+    .share {
+        display: none;
+    }
+}
+@media (min-width:769px) and (max-width:1220px) {
+
+}
+@media (min-width:1221px) and (max-width:1440px) {
+
+}
+@media (min-width:1441px) {
+    
+}
