@@ -8,6 +8,7 @@ import WrappedNormalLoginForm from "./pages/login/loginPage";
 import WrappedRegistrationForm from "./pages/register/register";
 import MyAccount from "../src/pages/myAccount/myAccount";
 import Nav from "./components/nav/Nav";
+import Footer from './components/footer/'
 import HandymanService from "./pages/HandymanService/HandymanService";
 import Nomatch from "./components/Nomatch";
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
@@ -56,6 +57,8 @@ class App extends Component {
             <Nomatch />
           </Route>
         </Switch>
+        <Footer/>
+        
       </Router>
 
     );

@@ -10,6 +10,7 @@ import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
+
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
@@ -64,9 +65,9 @@ class Home extends Component {
         <GurranteePic/>
         <ShopPic/>
         <YouPro/>
-        <Faq/>
         <HandyExplain/>
         <HandyFeatureAssembly/>
+        <Faq/>
         </div>
     );
   }
