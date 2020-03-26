@@ -13,7 +13,6 @@ import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -66,7 +65,6 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         </div>
-      
     );
   }
 }

@@ -22,16 +22,16 @@
         padding: 10px 0 2px 0;
         position: sticky;
         top: 0px;
-    
-        a{
-            color: #333333;
+        
+        .clickBtn{
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
         }
-    
+
         ul{
 
-            margin: 10px 0 10px 0;
-            padding-bottom: 10px;
-    
+            margin: 5px 0 5px 0;   
             width: 100%;
 
 			white-space: nowrap;
@@ -43,7 +43,7 @@
             // those lines could make the nav / catalog bar from vertical to horizontal
 
             li{
-
+                color: #333333;
                 display: inline-block;
                 vertical-align: top;
                 width: min-content;
@@ -52,12 +52,7 @@
 
                 list-style-type: none;
                 // border: white;
-    
-                a{
-                    // width: min-content;
-                    
-                    font-family: Arial, Helvetica, sans-serif;                    
-                }
+
             }
         }
     }

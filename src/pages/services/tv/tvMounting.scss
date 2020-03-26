@@ -1,0 +1,438 @@
+*{
+
+	// border: 1px black solid;
+	// padding: 3px;
+	
+}
+
+
+.tv__container{
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin-bottom: 10vmax;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// height: 220px;
+	height: 40vmin;
+	// min-height: 170px;
+
+	background: url('../../../img/tvMounting.jpg') no-repeat 100%;
+	background-size: 100% auto;
+
+	// position: relative;
+			
+	.tv__banner{
+
+		// position: absolute;
+		display: flex;
+		flex-wrap: wrap;
+
+		// background-color: white;
+
+		// min-width: 300px;
+		// font-size: 2px;
+
+		justify-content: center;
+		align-items: flex-start;
+		// text-align: center;
+		
+		margin-top: 20vmin;
+		opacity: 0.9;
+
+		// min-width: 50vw;
+		max-width: 1200px;
+		width: 65vw;
+		min-width: 550px;
+		
+		height: max-content;
+
+		.tv__mounting{
+			
+			width: 100%;
+			margin-top: 4vh;
+			padding: 4vh 0 4vh 0;
+			// position: relative;
+			
+			background-color: white;
+			height: max-content;
+			
+			border-radius: 1vmin;
+			border: 1px lightgray solid;
+			box-shadow: 2px 2px 2px gray;
+			
+			h2{
+			
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+	
+				color: #333333;
+				font-size: 2.5rem;
+				
+			}
+
+			.review__star{
+
+				display: flex;
+				justify-content: center;
+
+				img{
+					
+					// margin-top: -8px;
+					width: 30px;
+					padding: 0 3px 0 3px;
+				}
+
+				.review__number{
+					margin: 5px 0 0 10px;
+					font-size: 1.2rem;
+					text-shadow: 0.1px 0.1px darkgray;
+					
+				}
+			}
+
+			.zip__etc{
+
+				// position: absolute;
+				// left:50%;
+				// transform:translateX(-50%);
+				display: flex;
+				justify-content: center;
+				// width: auto;
+
+				margin-top: 30px;
+				padding: 10px 50px 10px 50px;
+				height: max-content;
+
+			}
+			
+			.email__price{
+
+				display: flex;
+				justify-content: center;
+				// margin-top: 30px;
+				padding: 10px 50px 10px 50px;
+				height: 70px;
+
+
+				input{
+					max-width: 360px;
+					margin: 0 10px 0 10px;
+					font-size: 1.3rem;
+				}
+
+				button{
+					background-color: #63B521;
+					color: white;
+					border-radius: 5px;
+					border-width: thin;
+
+					height: 50px;
+					font-size: 1.3rem;
+					width: 20vw;
+					max-width: 360px;
+				}
+
+				button:hover {
+					background-color: #7EC850;
+				}
+			}
+
+			.input__wide{
+				height: 50px;
+				font-size: 1.2rem;
+				width: 18vw;
+				max-width: 250px;
+	
+				margin: 0 10px 0 10px;
+				padding: 0 10px 0 10px;
+				font-size: 1.3rem;
+				border-radius: 3px;
+				border-width: thin;
+			}
+
+			.pick__date{
+
+				display: flex;
+				flex-wrap: nowrap;
+
+				.input__narrow{
+					height: 50px;
+					font-size: 1.2rem;
+					width: 14vw;
+					max-width: 185px;
+					font-size: 1.3rem;
+					margin: 0 10px 0 10px;
+					padding: 0 10px 0 10px;
+		
+					border-radius: 3px;
+					border-width: thin;
+					// background-color: white;
+				}
+			}
+		}
+	}
+
+	.term__use{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-top: 10px;
+
+		color: gray;
+		font-size: 0.9rem;
+		padding: 10px 5vw 10px 5vw;
+	}
+}
+
+
+
+@media screen and (max-width: 1220px) {
+	
+	.tv__container{
+			
+			margin-bottom: 22vmax;
+
+		.tv__banner{
+
+			max-width: 1000px;
+			width: 75vw;
+			min-width: 550px;
+
+			.tv__mounting{
+				
+				margin-top: 15vh;
+				
+				h2{
+					font-size: 1.8rem;
+					margin: 0;
+				}
+
+				.review__star{
+	
+					img{
+						width: 20px;
+						padding: 0 1px 0 1px;
+					}
+	
+					.review__number{
+						font-size: 1.1rem;
+					}
+				}
+
+				.zip__etc{
+
+					margin-top: 0;
+					flex-direction: column;
+					width: 100%;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+				
+				.input__wide{
+					
+					width: 100%;
+					max-width: 1000px;
+					margin: 5px 0 0 0;
+					padding: 0;
+					height: 40px;
+					font-size: 1.1rem;
+				}
+	
+				.pick__date{
+					
+					.input__narrow{
+
+						font-size: 1.1rem;
+						width: 50%;
+						max-width: 1000px;
+						margin: 5px 0 0 0;
+						padding: 0;
+						height: 40px;
+					}
+				}
+
+				.email__price{
+	
+					// display: none;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					height: max-content;
+					padding-top: 0;
+					padding-bottom: 0;
+
+					.email__input{
+
+						max-width: 1000px;
+						font-size: 1.1rem;
+						height: 40px;
+						width: 100%;
+						margin: 5px 0 0 0;
+						padding: 0;
+
+					}
+
+					button{						
+						width: 100%;
+						max-width: 1000px;
+						margin: 5px 0 0 0;
+						padding: 0;
+						height: 45px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.tv__container{
+		
+		margin-bottom: 30vmax;
+
+		.tv__banner{
+
+			// position: relative;
+			margin-top: 35vh;
+			width: 85vw;
+			min-width: 50px;
+			
+			.tv__mounting{
+				
+				// position: absolute;
+				margin-top: 10vh;
+				padding: 2vh 0 2vh 0;
+				width: 95vw;
+
+				h2{
+					font-size: 1.5rem;
+				}
+
+				.review__star{
+	
+					img{
+						width: 20px;
+					}
+	
+					.review__number{
+						font-size: 1rem;
+					}
+				}
+
+
+				.zip__etc{
+					margin-top: 10px;
+				}
+				
+				.input__wide{
+					
+					font-size: 1rem;
+					max-width: 1000px;
+					height: 40px;
+				}
+	
+				.pick__date{
+					
+					.input__narrow{
+
+						font-size: 1rem;
+						height: 40px;
+					}
+				}
+
+				.email__price{
+	
+					.email__input{
+
+						font-size: 1rem;
+						height: 40px;
+					}
+
+					button{
+						
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	.term__use{
+
+		// position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		
+
+		color: gray;
+		font-size: 0.9rem;
+		padding: 0;
+
+		p{
+			font-size: 0.8rem;
+		}
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-height: 768px) {
+
+	.tv__container{
+		
+		margin-bottom: 40vmax;
+
+		.tv__banner{
+			.tv__mounting{
+				margin-top: 50vh;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 1219px) and (max-height: 1000px){
+	.tv__container{
+		
+		margin-bottom: 40vmax;
+
+	}
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 719px) and (min-height: 720px) {
+	.tv__container{
+		
+		margin-bottom: 45vmax;
+		
+	}
+}
+
+@media screen and (max-width: 375px) {
+    .tv__container{
+        margin-bottom: 50vh;
+    }
+}
+
+@media screen and (max-height: 375px) {
+    .tv__container{
+		margin-bottom: 85vh;
+		.tv__banner{
+			.tv__mounting{
+				margin-top: 50vh;
+			}
+		}
+    }
+}

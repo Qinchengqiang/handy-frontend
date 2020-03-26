@@ -1,0 +1,143 @@
+*{
+
+	// border: 1px black solid;
+    // padding: 3px;
+    
+}
+
+.review__title{
+
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+
+    .review__pic{
+        width: 100px;
+        height: 100px;
+
+        img{
+            border-radius: 50%;
+        }
+    }
+
+    .review__rate{
+        margin-left: 1rem;
+        width: 100%;
+
+        h4{
+            margin: 0;
+            // display: flex;
+            // width: 100%;
+            // justify-content: center;
+            // align-items: center;
+            // text-align: center;
+        
+            color: #333333;
+            font-size: 1.4rem;
+            font-weight: 600;
+            
+        }
+    }
+}
+
+
+.review__star{
+    
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    margin-bottom: 5px;
+    
+    img{
+        
+        // margin-top: -8px;
+        width: 18px;
+        padding: 0 1px 0 1px;
+    }
+}
+
+p{
+    // margin-top: 2rem;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 1220px) and (max-width: 1439px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin-left: 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin: 0 1rem 0 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .review__title{
+
+        margin: 0.5rem 0 0.5rem 0;
+
+        .review__pic{
+            margin: 0 1rem 0 1rem;
+        }
+
+        .review__rate{
+
+            h4{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    p{
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+

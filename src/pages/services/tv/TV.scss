@@ -1,0 +1,29 @@
+*{
+
+	// border: 1px black solid;
+	// padding: 1px;
+
+}
+
+
+.tv__booking{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	height: 70vmin;
+
+	// position: relative;
+
+}
+
+
+
+@media screen and (max-width: 1220px) {
+	
+	.tv__booking{
+		height: 90vmin;
+	}
+
+}
+

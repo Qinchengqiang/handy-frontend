@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./App.scss";
 import Home from "./pages/home/Home";
 import Apply from "./pages/apply";
-import {Router, Switch, Route } from "react-router-dom";
-import history from './history'
+import { Router, Switch, Route } from "react-router-dom";
+import history from "./history";
 import ServicePage from "./pages/service/ServicePage";
 import WrappedNormalLoginForm from "./pages/login/loginPage";
 import WrappedRegistrationForm from "./pages/register/register";

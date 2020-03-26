@@ -30,7 +30,7 @@ export const imgset ={
           "https://farm66.staticflickr.com/65535/49572079087_611ced6d9e.jpg",
         "Cleaning Service":
           "https://farm66.staticflickr.com/65535/49571851561_0a703eb5de.jpg",
-        Housekeeping:
+        "Housekeeping":
           "https://farm66.staticflickr.com/65535/49571850106_ef944d0109.jpg",
         "Maid Service":
           "https://farm66.staticflickr.com/65535/49572075442_b28da57d9b.jpg",
@@ -193,7 +193,7 @@ export const imgset ={
           "https://farm66.staticflickr.com/65535/40917183313_c1eccc005d.jpg",
         "Move Out Cleaning":
           "https://farm66.staticflickr.com/65535/48305584436_0f2bfa8754.jpg",
-        Storage:
+        "Storage":
           "https://farm66.staticflickr.com/65535/48621914468_a623b36d20.jpg",
         "Window Treatments":
           "https://farm66.staticflickr.com/65535/49088479862_c84f9f7805.jpg",

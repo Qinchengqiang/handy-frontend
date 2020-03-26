@@ -54,7 +54,8 @@ class SearchBar extends Component {
 
             <div className="search__container">
                 <div className="search__banner">
-                    <h2>Choose a service to get started.</h2>
+                    <h2 className="bigScreen">Choose a service to get started.</h2>
+                    <h2 className="smallScreen">Find a home service:</h2>
                     <div>                      
                         {/* This SearchBar could response Mouse Click and "Enter" Key Press */}
                         <form onClick={this.handleSubmit.bind(this)} className='search__bar'>
@@ -64,8 +65,8 @@ class SearchBar extends Component {
                                 onChange={this.handleChange}
                             />
                             <span>
-                                <button type="search">
-                                    <img src={search} alt="search" width="70%" />
+                                <button>
+                                    <img src={search} alt="search" width="100%" />
                                 </button>
                             </span>
                         </form>
