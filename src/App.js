@@ -5,8 +5,6 @@ import Apply from "./pages/apply";
 import { Router, Switch, Route } from "react-router-dom";
 import history from "./history";
 import ServicePage from "./pages/service/ServicePage";
-import WrappedNormalLoginForm from "./pages/login/loginPage";
-import WrappedRegistrationForm from "./pages/register/register";
 import MyAccount from "../src/pages/myAccount/myAccount";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/";
@@ -56,6 +54,7 @@ class App extends Component {
 						<Nomatch />
 					</Route>
 				</Switch>
+			<Footer/>
 			</Router>
 		);
 	}

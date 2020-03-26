@@ -7,8 +7,10 @@ import {connect} from "react-redux";
 
 
 
-function Nav ({loggingIn,username}) {
+function Nav (props) {
   //this part needs router to direct the current location
+  const auth = localStorage.getItem('token')
+  const user = localStorage.getItem('localuser')
   return (
     <div className='navcontainer'>
       <NavLink exact to="/"  className='navlink'>
@@ -30,9 +32,9 @@ function Nav ({loggingIn,username}) {
       <NavLink exact to="/" className='navlink'>
         Help
       </NavLink>
-      {loggingIn?
+      {auth?
       (<NavLink exact to="/" className='navlink'>
-        {`Hello ${username}`}
+        {`Hello ${user}`}
       </NavLink>): (<NavLink exact to="/login" className='navlink'>
         Login
       </NavLink>)}
@@ -41,9 +43,4 @@ function Nav ({loggingIn,username}) {
   );
 };
 
-export default connect(state=>{
-  return {
-    username: state.username,
-    loggin: state.loggingIn
-  }
-})(Nav)
+export default connect(state=> ({authentication: state.authentication}))(Nav)

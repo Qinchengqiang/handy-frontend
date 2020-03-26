@@ -36,6 +36,8 @@ class LoginPage extends React.Component {
 		const { username, password } = this.state;
 		if (username && password) {
 			this.props.login(username, password);
+			localStorage.setItem('token',true)
+			localStorage.setItem('localuser',username)
 			console.log(username, password);
 		}
 		console.log(`login status is ${loginStatus}`);
