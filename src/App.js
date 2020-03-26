@@ -23,7 +23,7 @@ import { LoginPage } from "./pages/login/loginPage";
 class App extends Component {
 	render() {
 		return (
-			<Router history={history}>
+			<Router>
 				<Nav />
 				<Switch>
 					<Route exact path="/">
