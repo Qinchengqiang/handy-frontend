@@ -40,7 +40,7 @@ class App extends Component {
 					<Route exact path="/login" component={LoginPage} />
 					<Route exact path="/register" component={RegisterPage} />
 					<Route exact path="/myaccount" component={MyAccount} />
-					<Route exact path="/handyman-service" component={HandymanService} />
+					<Route exact path="/services/handyman-service" component={HandymanService} />
 					<Route exact path={`/services/cleaning`}>
 						<Cleaning />
 					</Route>
