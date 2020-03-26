@@ -1,6 +1,6 @@
 import React from "react";
 import "./login.scss";
-import history from '../../history'
+import history from "../../history";
 import "antd/dist/antd.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -31,16 +31,15 @@ class LoginPage extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const loginStatus = this.props.loggingIn
+		const loginStatus = this.props.loggingIn;
 		this.setState({ submitted: true });
 		const { username, password } = this.state;
 		if (username && password) {
 			this.props.login(username, password);
 			console.log(username, password);
 		}
-		console.log(`login status is ${loginStatus}`)
-		history.push('/')
-		
+		console.log(`login status is ${loginStatus}`);
+		history.push("/");
 	}
 
 	render() {
