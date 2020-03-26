@@ -8,7 +8,7 @@ import './furnitureAssembly.scss'
 //     }
 // }
 
-const keyArr = ["small", "medium", "large"]
+const furnitureSizeArr = ["small", "medium", "large"]
 
 
 
@@ -32,8 +32,8 @@ class FurnitureCounter extends Component {
     }
 
     render() {
-        const rst = keyArr.map((elem, index) => {
-            const keyName = keyArr[index];
+        const rst = furnitureSizeArr.map((elem, index) => {
+            const keyName = furnitureSizeArr[index];
             return (
                 <li className="assembly-form_item-list" key={elem + index}>
                     <div onClick={() => this.handleDecrease(keyName)} className="assembly-form_item-list_button" role="button">-</div>
