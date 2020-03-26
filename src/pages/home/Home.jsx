@@ -10,6 +10,7 @@ import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
+
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
@@ -28,13 +29,16 @@ class Home extends Component {
 
   }
 
+
   renderTask = (taskImgUrl, taskName, linkTo) => {
     return (
       <li key={taskName} className="li-container_flex">
-        <Link to={linkTo} style={{textDecoration:"none"}}>
-        <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-        <div className="task_description">{taskName}</div>
-        </Link>
+        <div className="li-container_flex-inside">
+          <Link to={linkTo} style={{ textDecoration: "none" }}>
+            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+            <div className="task_description">{taskName}</div>
+          </Link>
+        </div>
       </li>
     )
   }
@@ -61,9 +65,9 @@ class Home extends Component {
         <GurranteePic/>
         <ShopPic/>
         <YouPro/>
-        <Faq/>
         <HandyExplain/>
         <HandyFeatureAssembly/>
+        <Faq/>
         </div>
     );
   }
