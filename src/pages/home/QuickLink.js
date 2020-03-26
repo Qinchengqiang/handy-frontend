@@ -23,7 +23,7 @@ export default function QuickLink() {
 
     return (
         <ul className="ul-button_layout">
-            {renderLi(clean, (<a href="./cleaning" className="a--quicklink"><span className="span--text">Home Cleaning</span></a>))}
+            {renderLi(clean, (<a href="./services/cleaning" className="a--quicklink"><span className="span--text">Home Cleaning</span></a>))}
             {renderLi(wrench, (<a href="./services" className="a--quicklink"><span className="span--text">Tradie Services</span></a>))}
             {renderLi(hardware, (<a href="./shop" className="a--quicklink"><span className="span--text">Household Shop</span></a>))}
         </ul>
