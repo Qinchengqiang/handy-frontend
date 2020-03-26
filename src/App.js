@@ -11,6 +11,10 @@ import Footer from "./components/footer/";
 import HandymanService from "./pages/HandymanService/HandymanService";
 import Nomatch from "./components/Nomatch";
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
+import TV from "./pages/services/tv/TV";
+import Moving from "./pages/services/moving/Moving";
+
+
 import {
 	FurnitureAssembly,
 	OfficeAssembly
@@ -49,6 +53,12 @@ class App extends Component {
 					</Route>
 					<Route exact path="/services/office-furniture-assembly">
 						<OfficeAssembly />
+					</Route>
+					<Route exact path="/services/tv">
+						<TV />
+					</Route>
+					<Route exact path="/services/moving">
+						<Moving />
 					</Route>
 					<Route path="*">
 						<Nomatch />

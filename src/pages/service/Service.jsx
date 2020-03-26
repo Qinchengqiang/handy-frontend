@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './service.scss';
 import { imgset } from './imgset';
+import {Link} from 'react-router-dom';
 
 class Service extends Component {
 
@@ -31,8 +32,12 @@ class Service extends Component {
                                             Object.values(imgset.serviceItems[key]).map((pic, index) => {            // this is an Array contains all the links in 'popular' or 'cleaning' etc.
                                                 return (
                                                     <div key={index} className="pics">
-                                                        <img src={pic} alt="" height="100%" />
-                                                        <h6>{(Object.keys(imgset.serviceItems[key])[index])}</h6>
+
+                                                        <Link to={"./services/moving"}>
+                                                            <img src={pic} alt="" height="100%" />
+                                                            <h6>{(Object.keys(imgset.serviceItems[key])[index])}</h6>
+                                                        </Link>
+
                                                     </div>
                                                 );                                                                       // this is to get an Array contains all the names in 'popular' or 'cleaning' etc. by corresponding Index  
                                             })
