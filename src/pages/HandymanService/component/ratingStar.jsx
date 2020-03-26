@@ -21,9 +21,9 @@ const ratingStars = props => {
 				<FontAwesomeIcon icon={faStar} style={{ color: "orange" }} />
 			</div>
 			&nbsp;&nbsp;
-			<a style={{ textDecoration: "underline" }}>
+			<span style={{ textDecoration: "underline" }}>
 				{props.reviewAmount} Reviews
-			</a>
+			</span>
 		</div>
 	);
 };

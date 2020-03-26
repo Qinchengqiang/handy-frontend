@@ -49,6 +49,7 @@ class RegisterPage extends React.Component {
 		) {
 			this.props.register(user);
 			console.log(user);
+			alert("Sign up successfully!");
 		}
 	}
 
@@ -159,8 +160,6 @@ class RegisterPage extends React.Component {
 		);
 	}
 }
-
-// export default RegisterPage;
 
 function mapState(state) {
 	const { registering } = state.registration;
