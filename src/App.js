@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./App.scss";
 import Home from "./pages/home/Home";
 import Apply from "./pages/apply";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Router, Switch, Route } from "react-router-dom";
+import history from './history'
 import ServicePage from "./pages/service/ServicePage";
 import WrappedNormalLoginForm from "./pages/login/loginPage";
 import WrappedRegistrationForm from "./pages/register/register";
@@ -18,10 +19,11 @@ import {
 import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
 import { LoginPage } from "./pages/login/loginPage";
+
 class App extends Component {
 	render() {
 		return (
-			<Router>
+			<Router history={history}>
 				<Nav />
 				<Switch>
 					<Route exact path="/">
@@ -36,7 +38,7 @@ class App extends Component {
 					<Route exact path="/apply">
 						<Apply />
 					</Route>
-					<Route exact path="/login" exact component={LoginPage} />
+					<Route exact path="/login" component={LoginPage} />
 					<Route exact path="/register" component={RegisterPage} />
 					<Route exact path="/myaccount" component={MyAccount} />
 					<Route exact path="/handyman-service" component={HandymanService} />
