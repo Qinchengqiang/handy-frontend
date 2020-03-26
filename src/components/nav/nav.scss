@@ -1,21 +1,25 @@
 .navcontainer {
-    display:flex; 
-    justify-content:flex-start;
-    align-items:center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  margin: auto;
+  @media (max-width: 767px) {
+   width:100%;
+  }
+  @media (min-width: 768px) and (max-width: 1219px) {
     max-width: 80em;
-    margin:auto;
-    
+  }
 }
 .navlink {
-    margin-left:1rem;
-    color:#434343;
-    font-size:16px;
-    padding: 0.7rem 1rem;
-    
+  margin-left: 1rem;
+  color: #434343;
+  font-size: 16px;
+  padding: 0.7rem 1rem;
 }
 
 .rightpart {
-    margin-left:auto;
-    display:flex ;
-    align-items:center 
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
