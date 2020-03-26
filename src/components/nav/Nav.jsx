@@ -3,11 +3,14 @@ import "./nav.scss";
 import { NavLink } from "react-router-dom";
 import "antd/dist/antd.css";
 import logo from './logo'
+import {connect} from "react-redux";
 
 
 
-export default () => {
+function Nav (props) {
   //this part needs router to direct the current location
+  const auth = localStorage.getItem('token')
+  const user = localStorage.getItem('localuser')
   return (
     <div className='navcontainer'>
       <NavLink exact to="/"  className='navlink'>
@@ -29,10 +32,15 @@ export default () => {
       <NavLink exact to="/" className='navlink'>
         Help
       </NavLink>
-      <NavLink exact to="/login" className='navlink'>
+      {auth?
+      (<NavLink exact to="/" className='navlink'>
+        {`Hello ${user}`}
+      </NavLink>): (<NavLink exact to="/login" className='navlink'>
         Login
-      </NavLink>
+      </NavLink>)}
       </div>
     </div>
   );
 };
+
+export default connect(state=> ({authentication: state.authentication}))(Nav)

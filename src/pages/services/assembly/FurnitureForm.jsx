@@ -39,6 +39,10 @@ function AssemblyFormCreate(Comp) {
                     }
                 }
 
+                // if (rule.emailValidator) {
+
+                // }
+
                 return false;
             });
             // cleans out any error if previously registered with the field
@@ -139,7 +143,8 @@ class AssemblyFormInput extends React.Component {
 const AssemblyFormTest = (title) => {
 return class extends React.Component {
 
-    onSubmit = () => {
+    onSubmit = (e) => {
+        e.preventDefault();
         this.props.validateFields((isValid, values) => {
             if (isValid) {
                 console.log(values);
