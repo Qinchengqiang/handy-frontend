@@ -1,4 +1,4 @@
-.handy-explain-container{
+.handy-explain--container{
     padding: 2em 0 2em 0;
     margin: 0 auto;
     background-color: #f9f9f9;
@@ -6,49 +6,49 @@
     margin-left: calc(50% - 50vw);   
     width: 100vw;
     box-sizing: border-box;
-    &-title{
+    &--title{
         font-size: 1.6em;
         font-weight: 525;
         line-height: 1.5;  
     }
-    &-list{
+    &--list{
         list-style: none;
         padding-left: 0;
     }
 
 }
 
-.handy-explain-list{
-    &_img{
+.handy-explain--list{
+    &__img{
         margin-bottom: 1em;
         margin-top: 1em;
     }
-    &_name{
+    &__name{
         margin-bottom: 1em;
         font-size: 1.2em;
         font-weight: 525;
     }
-    &_description{
+    &__description{
         // margin-bottom: 2em;
         font-weight: 400;
     }
 }
 
 @media (max-width: 767px){
-    .handy-explain-list_img_icon{
+    .handy-explain--list__img__icon{
         display: none;
     }
 }
 @media (min-width: 768px){
-    .handy-explain-container-list{
+    .handy-explain--container--list{
         display: flex;
         justify-content: center;
     }
-    .handy-explain-list{
+    .handy-explain--list{
         max-width:  14.4456em;
         margin-right: 8vw;
     }
-    .handy-explain-list:nth-child(3){
+    .handy-explain--list:nth-child(3){
         margin-right: 0em;
 
     }
