@@ -22,6 +22,7 @@ import {
 import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
 import { LoginPage } from "./pages/login/loginPage";
+import CartPage from "./pages/cartpage";
 
 class App extends Component {
 	render() {
@@ -40,6 +41,9 @@ class App extends Component {
 					</Route>
 					<Route exact path="/apply">
 						<Apply />
+					</Route>
+					<Route exact path="/cart">
+						<CartPage />
 					</Route>
 					<Route exact path="/login" component={LoginPage} />
 					<Route exact path="/register" component={RegisterPage} />

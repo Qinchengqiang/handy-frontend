@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./ShopPage.scss";
 import SideNav from "./SideNav";
 import SlideShow from "./SlideShow";
-import Product from './Product'
+import ProductsContainer from './ProductsContainer'
 import Footer from '../../components/footer/index'
 
 export default class ShopPage extends Component {
@@ -18,7 +18,7 @@ export default class ShopPage extends Component {
           </div>
           <div className="right">
             <SlideShow />
-            <Product />
+            <ProductsContainer />
           </div>
         </div>
         <Footer />

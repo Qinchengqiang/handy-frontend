@@ -32,6 +32,9 @@ function Nav (props) {
       <NavLink exact to="/" className='navlink'>
         Help
       </NavLink>
+      <NavLink exact to="/" className='navlink'>
+        Cart(?)
+      </NavLink>
       {auth?
       (<NavLink exact to="/" className='navlink'>
         {`Hello ${user}`}

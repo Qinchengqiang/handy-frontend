@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-start;
+    list-style: none;
+    .item {
+        .container {
+            margin: 2rem 4rem 0.6rem 4rem;
+        }
+    }
+    .bottom_line {
+        background-color: rgb(153, 150, 150);
+        width: fit-content;
+        height: 1rem;
+    }
+}
