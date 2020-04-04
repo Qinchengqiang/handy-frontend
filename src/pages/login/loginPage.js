@@ -11,7 +11,6 @@ class LoginPage extends React.Component {
 	constructor(props) {
 		super(props);
 
-		// reset login status
 		// this.props.logout();
 
 		this.state = {
@@ -36,8 +35,8 @@ class LoginPage extends React.Component {
 		const { username, password } = this.state;
 		if (username && password) {
 			this.props.login(username, password);
-			localStorage.setItem('token',true)
-			localStorage.setItem('localuser',username)
+			localStorage.setItem("token", true);
+			localStorage.setItem("localuser", username);
 			console.log(username, password);
 		}
 		console.log(`login status is ${loginStatus}`);
@@ -100,18 +99,6 @@ class LoginPage extends React.Component {
 	}
 }
 
-// function mapState(state) {
-//     const { loggingIn } = state.authentication;
-//     return { loggingIn };
-// }
-
-// const actionCreators = {
-//     login: userActions.login,
-//     logout: userActions.logout
-// };
-
-// const connectedLoginPage = connect(mapState, actionCreators)(LoginPage);
-// export { connectedLoginPage as LoginPage };
 function mapState(state) {
 	const { loggingIn } = state.authentication;
 	return { loggingIn };

@@ -143,7 +143,7 @@ class RegisterPage extends React.Component {
 							</div>
 
 							<div>
-								<button className="btn btn-primary">Register</button>
+								<button className="btn btn-primary">SIGN UP</button>
 
 								<Link
 									to="/login"
