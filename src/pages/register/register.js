@@ -10,10 +10,9 @@ class RegisterPage extends React.Component {
 	constructor(props) {
 		super(props);
 
-		history.listen((location, action) => {
-			// clear alert on location change
-			this.props.clearAlerts();
-		});
+		// clear alert on location change
+		this.props.clearAlerts();
+
 		this.state = {
 			user: {
 				email: "",
