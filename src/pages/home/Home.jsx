@@ -33,25 +33,25 @@ class Home extends Component {
   }
 
 
-  // renderTask = (taskImgUrl, taskName, linkTo) => {
-  //   return (
-  //     <li key={taskName} className="li-container_flex">
-  //       <div className="li-container_flex-inside">
-  //         <Link to={linkTo} style={{ textDecoration: "none" }}>
-  //           <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-  //           <div className="task_description">{taskName}</div>
-  //         </Link>
-  //       </div>
-  //     </li>
-  //   )
-  // }
+  renderTask = (taskImgUrl, taskName, linkTo) => {
+    return (
+      <li key={taskName} className="li-container_flex">
+        <div className="li-container_flex-inside">
+          <Link to={linkTo} style={{ textDecoration: "none" }}>
+            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+            <div className="task_description">{taskName}</div>
+          </Link>
+        </div>
+      </li>
+    )
+  }
 
   render() {
     return (
       <div className="home">
         {/* <Nav /> */}
 
-        {/* <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
+        <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
@@ -71,10 +71,10 @@ class Home extends Component {
         <YouPro/>
         <HandyExplain/>
         <HandyFeatureAssembly/>
-        <Faq/> */}
+        <Faq/>
 
 
-        <MyAccount />
+        {/* <MyAccount /> */}
 
       </div>
     );
