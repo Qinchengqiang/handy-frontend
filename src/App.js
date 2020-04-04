@@ -5,7 +5,7 @@ import Apply from "./pages/apply";
 import { Router, Switch, Route } from "react-router-dom";
 import history from "./history";
 import ServicePage from "./pages/service/ServicePage";
-import MyAccount from "../src/pages/myAccount/myAccount";
+import MyAccount from "../src/pages/myAccount/MyAccount";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/";
 import HandymanService from "./pages/HandymanService/HandymanService";
