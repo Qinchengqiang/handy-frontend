@@ -10,6 +10,7 @@ import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
+import Sidebar from '../../components/sidebar/Sidebar.js'
 
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
@@ -68,6 +69,7 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         <Faq/>
+        <Sidebar/>
         </div>
     );
   }

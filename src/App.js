@@ -13,7 +13,7 @@ import Nomatch from "./components/Nomatch";
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
 import TV from "./pages/services/tv/TV";
 import Moving from "./pages/services/moving/Moving";
-
+import PrivateRoute from './ PrivateRoute'
 
 import {
 	FurnitureAssembly,
@@ -22,6 +22,7 @@ import {
 import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
 import { LoginPage } from "./pages/login/loginPage";
+import Dashboard from "./pages/dashboard/dashboard";
 
 class App extends Component {
 	render() {
@@ -60,6 +61,7 @@ class App extends Component {
 					<Route exact path="/services/moving">
 						<Moving />
 					</Route>
+					<PrivateRoute path="/users" component={Dashboard} />
 					<Route path="*">
 						<Nomatch />
 					</Route>
