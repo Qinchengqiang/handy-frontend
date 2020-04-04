@@ -1,22 +1,22 @@
-.faq_container {
+.faq__container {
   padding: 2em 0 2em 0;
   margin: 0 auto;
   background-color: #ffffff;
 }
-.faq_head {
+.faq__head {
   font-size: 1.6em;
   font-weight: 525;
   // margin-bottom: 1em;
   line-height: 1.5;
   text-align: center;
 }
-.faq_list-layout {
+.faq__list--layout {
   // padding: 0 0.5em 0 0.5em;
   padding-left: 0em;
   list-style: none;
   // border: solid red;
 }
-.faq_section {
+.faq__section {
     // background-color: white;
     color: black;
     cursor: pointer;
@@ -31,13 +31,13 @@
     list-style: none;
     box-sizing: border-box;
   }
-  .faq_title_container{
+  .faq__title__container{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid grey;
     
   }
-  .faq_title {
+  .faq__title {
     margin-top: 0.6em;
     // padding-left: 0.4em;
     padding-bottom: 1em;
@@ -45,7 +45,7 @@
     font-size: 1.2em;
     // margin-bottom: 1em;
   }
-  .faq_symbol-inline{
+  .faq__symbol--inline{
     // padding-right: 0.4em;
     color: #777;
     font-size: 1.6em;
@@ -54,7 +54,7 @@
     line-height: 1.5;
   }
   
-  .faq_paragraph{
+  .faq__paragraph{
     padding-top: 0.4em;
     line-height: 1.3;
     color: black;
@@ -74,27 +74,27 @@
   //   margin-left: 5px;
   // }
   @media (min-width: 768px){
-    .faq_symbol-inline{
+    .faq__symbol--inline{
       padding-right: 1em;
     }
-    .faq_title{
+    .faq__title{
       padding-left: 1em;
     }
-    .faq_paragraph{
+    .faq__paragraph{
       margin-left: 2em;
     }
 
   }
 
   @media (min-width: 768px) and (max-width: 1219px) {
-    .faq_container{
+    .faq__container{
       max-width: 768px;
       
     }
   }
 
   @media(min-width: 1220px){
-    .faq_container{
+    .faq__container{
       max-width: 60vw;
       
     }
