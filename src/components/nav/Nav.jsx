@@ -4,13 +4,15 @@ import { NavLink } from "react-router-dom";
 import "antd/dist/antd.css";
 import logo from './logo'
 import {connect} from "react-redux";
-
+import NavCart from './navCart'
+import { getCartProducts } from '../../redux-kong/reducers'
 
 
 function Nav (props) {
   //this part needs router to direct the current location
   const auth = localStorage.getItem('token')
   const user = localStorage.getItem('localuser')
+  const { products } = props 
   return (
     <div className='navcontainer'>
       <NavLink exact to="/"  className='navlink'>
@@ -33,7 +35,7 @@ function Nav (props) {
         Help
       </NavLink>
       <NavLink exact to="/" className='navlink'>
-        Cart(?)
+        <NavCart products={products} />
       </NavLink>
       {auth?
       (<NavLink exact to="/" className='navlink'>
@@ -46,4 +48,8 @@ function Nav (props) {
   );
 };
 
-export default connect(state=> ({authentication: state.authentication}))(Nav)
+const mapStateToProps = (state) => ({
+  products: getCartProducts(state),
+  authentication: state.authentication
+})
+export default connect(mapStateToProps)(Nav)
