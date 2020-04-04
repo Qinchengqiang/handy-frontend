@@ -14,6 +14,9 @@ import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
+import MyAccount from '../myAccount/MyAccount'
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -30,24 +33,25 @@ class Home extends Component {
   }
 
 
-  renderTask = (taskImgUrl, taskName, linkTo) => {
-    return (
-      <li key={taskName} className="li-container_flex">
-        <div className="li-container_flex-inside">
-          <Link to={linkTo} style={{ textDecoration: "none" }}>
-            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-            <div className="task_description">{taskName}</div>
-          </Link>
-        </div>
-      </li>
-    )
-  }
+  // renderTask = (taskImgUrl, taskName, linkTo) => {
+  //   return (
+  //     <li key={taskName} className="li-container_flex">
+  //       <div className="li-container_flex-inside">
+  //         <Link to={linkTo} style={{ textDecoration: "none" }}>
+  //           <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
+  //           <div className="task_description">{taskName}</div>
+  //         </Link>
+  //       </div>
+  //     </li>
+  //   )
+  // }
 
   render() {
     return (
       <div className="home">
         {/* <Nav /> */}
-        <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
+
+        {/* <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
@@ -67,8 +71,12 @@ class Home extends Component {
         <YouPro/>
         <HandyExplain/>
         <HandyFeatureAssembly/>
-        <Faq/>
-        </div>
+        <Faq/> */}
+
+
+        <MyAccount />
+
+      </div>
     );
   }
 }
