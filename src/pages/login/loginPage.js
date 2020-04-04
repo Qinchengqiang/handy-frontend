@@ -30,21 +30,18 @@ class LoginPage extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const loginStatus = this.props.loggingIn;
+
 		this.setState({ submitted: true });
 		const { username, password } = this.state;
 		if (username && password) {
 			this.props.login(username, password);
 			localStorage.setItem("token", true);
 			localStorage.setItem("localuser", username);
-			console.log(username, password);
-			history.push("/");
 		}
-		console.log(`login status is ${loginStatus}`);
 	}
 
 	render() {
-		// const { loggingIn } = this.props;
+		const { loggingIn } = this.props;
 		const { username, password, submitted } = this.state;
 		return (
 			<div className="login-container">
@@ -82,7 +79,12 @@ class LoginPage extends React.Component {
 							</div>
 							<div>
 								<button className="btn btn-primary">Login</button>
-
+								{loggingIn && (
+									<img
+										style={{ marginTop: "50px", marginLeft: "20px" }}
+										src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+									/>
+								)}
 								<Link
 									to="/register"
 									className="btn btn-link"
@@ -100,10 +102,8 @@ class LoginPage extends React.Component {
 }
 
 function mapState(state) {
-	return {
-		isFailed: state.authentication.fail,
-		errMessage: state.authentication.error
-	};
+	const { loggingIn } = state.authentication;
+	return { loggingIn };
 }
 
 const actionCreators = {

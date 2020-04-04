@@ -15,9 +15,9 @@ class RegisterPage extends React.Component {
 				number: "",
 				username: "",
 				password: "",
-				confirmPassword: ""
+				confirmPassword: "",
 			},
-			submitted: false
+			submitted: false,
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -30,8 +30,8 @@ class RegisterPage extends React.Component {
 		this.setState({
 			user: {
 				...user,
-				[name]: value
-			}
+				[name]: value,
+			},
 		});
 	}
 
@@ -49,7 +49,6 @@ class RegisterPage extends React.Component {
 		) {
 			this.props.register(user);
 			console.log(user);
-			alert("Sign up successfully!");
 		}
 	}
 
@@ -167,7 +166,7 @@ function mapState(state) {
 }
 
 const actionCreators = {
-	register: userActions.register
+	register: userActions.register,
 };
 
 const connectedRegisterPage = connect(mapState, actionCreators)(RegisterPage);

@@ -6,21 +6,21 @@ import { history } from "../helpers/history";
 export const userActions = {
 	login,
 	logout,
-	register
+	register,
 	// getAll,
 	// delete: _delete
 };
 
 function login(username, password) {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(request({ username }));
 
 		userService.login(username, password).then(
-			user => {
+			(user) => {
 				dispatch(success(user));
 				history.push("/");
 			},
-			error => {
+			(error) => {
 				dispatch(failure(error));
 			}
 		);
@@ -44,15 +44,15 @@ function logout() {
 }
 
 function register(user) {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(request(user));
 
 		userService.register(user).then(
-			user => {
+			(user) => {
 				dispatch(success());
 				history.push("/login");
 			},
-			error => {
+			(error) => {
 				dispatch(failure(error));
 			}
 		);
@@ -62,9 +62,11 @@ function register(user) {
 		return { type: userConstants.REGISTER_REQUEST, user };
 	}
 	function success(user) {
+		alert("Sign up successfully!");
 		return { type: userConstants.REGISTER_SUCCESS, user };
 	}
 	function failure(error) {
+		alert("Username star201101712 is already taken");
 		return { type: userConstants.REGISTER_FAILURE, error };
 	}
 }
