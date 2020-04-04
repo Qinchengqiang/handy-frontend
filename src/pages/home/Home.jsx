@@ -10,7 +10,7 @@ import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
-import Sidebar from '../../components/sidebar/Sidebar.js'
+// import Sidebar from '../../components/sidebar/Sidebar.js'
 
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
@@ -33,11 +33,11 @@ class Home extends Component {
 
   renderTask = (taskImgUrl, taskName, linkTo) => {
     return (
-      <li key={taskName} className="li-container_flex">
-        <div className="li-container_flex-inside">
+      <li key={taskName} className="li--container__flex">
+        <div className="li--container__flex--inside">
           <Link to={linkTo} style={{ textDecoration: "none" }}>
-            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-            <div className="task_description">{taskName}</div>
+            <img src={taskImgUrl} alt={`${taskName} img`} className="img--container"></img>
+            <div className="task__description">{taskName}</div>
           </Link>
         </div>
       </li>
@@ -69,7 +69,6 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         <Faq/>
-        <Sidebar/>
         </div>
     );
   }
