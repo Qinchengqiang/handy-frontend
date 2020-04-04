@@ -1,7 +1,7 @@
 import { userConstants } from "../constants/userConstants";
 
 let user = JSON.parse(localStorage.getItem("user"));
-const initialState = user ? { loggingIn: true, user } : {};
+const initialState = user ? { loggedIn: true, user } : { fail: true };
 
 export function authentication(state = initialState, action) {
 	switch (action.type) {
@@ -16,9 +16,14 @@ export function authentication(state = initialState, action) {
 				user: action.user
 			};
 		case userConstants.LOGIN_FAILURE:
-			return {};
+			return {
+				fail: true,
+				error: "Username or password is incorrect!"
+			};
 		case userConstants.LOGOUT:
-			return {};
+			return {
+				loggedIn: false
+			};
 		default:
 			return state;
 	}

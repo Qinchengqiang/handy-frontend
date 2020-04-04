@@ -2,7 +2,7 @@
 
 export const userService = {
 	login,
-	// logout,
+	logout,
 	register
 	// getAll,
 	// getById,
@@ -27,10 +27,10 @@ function login(username, password) {
 		});
 }
 
-// function logout() {
-//     // remove user from local storage to log user out
-//     localStorage.removeItem('user');
-// }
+function logout() {
+	// remove user from local storage to log user out
+	localStorage.removeItem("user");
+}
 
 // function getAll() {
 //     const requestOptions = {

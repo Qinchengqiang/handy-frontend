@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
 	constructor(props) {
 		super(props);
 
-		// this.props.logout();
+		this.props.logout();
 
 		this.state = {
 			username: "",
@@ -38,9 +38,9 @@ class LoginPage extends React.Component {
 			localStorage.setItem("token", true);
 			localStorage.setItem("localuser", username);
 			console.log(username, password);
+			history.push("/");
 		}
 		console.log(`login status is ${loginStatus}`);
-		history.push("/");
 	}
 
 	render() {
@@ -100,8 +100,10 @@ class LoginPage extends React.Component {
 }
 
 function mapState(state) {
-	const { loggingIn } = state.authentication;
-	return { loggingIn };
+	return {
+		isFailed: state.authentication.fail,
+		errMessage: state.authentication.error
+	};
 }
 
 const actionCreators = {
