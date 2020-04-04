@@ -5,14 +5,10 @@ import { Link } from "react-router-dom";
 const menu = (
 	<Menu>
 		<Menu.Item>
-			<a target="_blank" rel="noopener noreferrer" href="">
-				My Account
-			</a>
+			<Link to="/">My Account</Link>
 		</Menu.Item>
 		<Menu.Item>
-			<a target="_blank" rel="noopener noreferrer" href="">
-				My service
-			</a>
+			<Link to="/">My service</Link>
 		</Menu.Item>
 		<Menu.Item>
 			<Link to="/login">Logout</Link>
@@ -26,7 +22,7 @@ const loggedIn = () => {
 		<Dropdown overlay={menu}>
 			<a
 				className="ant-dropdown-link"
-				onClick={e => e.preventDefault()}
+				onClick={(e) => e.preventDefault()}
 				style={{ fontSize: "20px", color: "darkblue" }}
 			>
 				{user}
