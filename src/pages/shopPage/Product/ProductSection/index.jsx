@@ -30,7 +30,7 @@ export default class ProductSection extends Component {
   };
   render() {
     const { name, content, width } = this.props;
-    console.log(content.slice(0, 2));
+    // console.log(content.slice(0, 2));
     if (content.length === 3) {
       return (
         <div className="product-section">

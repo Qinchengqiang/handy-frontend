@@ -58,15 +58,9 @@ const FurnitureAssemblyFunc = (title, formBoolean) => (props) => {
                         {rst}
                     </ul>
                 </div>
-
-
-                {/* <FurnitureAssemblyInfo/> */}
-                {/* <FurnitureForm/> */}
             </div>
             <HandyExplain />
             <HandyFeatureAssembly />
-
-          
 
             <ServiceDescription
 					mainheader="The Best Handyman Service"

@@ -8,21 +8,21 @@ export function authentication(state = initialState, action) {
 		case userConstants.LOGIN_REQUEST:
 			return {
 				loggingIn: true,
-				user: action.user
+				user: action.user,
 			};
 		case userConstants.LOGIN_SUCCESS:
 			return {
 				loggedIn: true,
-				user: action.user
+				user: action.user,
 			};
 		case userConstants.LOGIN_FAILURE:
 			return {
 				fail: true,
-				error: "Username or password is incorrect!"
+				error: "Username or password is incorrect!",
 			};
 		case userConstants.LOGOUT:
 			return {
-				loggedIn: false
+				loggedIn: false,
 			};
 		default:
 			return state;
