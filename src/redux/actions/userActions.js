@@ -1,27 +1,28 @@
 import { userConstants } from "../constants/userConstants";
 import { userService } from "../services/userServices";
-
+import { alertActions } from "../actions/alertActions";
 import { history } from "../helpers/history";
 
 export const userActions = {
 	login,
-	// logout,
-	register
+	logout,
+	register,
 	// getAll,
 	// delete: _delete
 };
 
 function login(username, password) {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(request({ username }));
 
 		userService.login(username, password).then(
-			user => {
+			(user) => {
 				dispatch(success(user));
 				history.push("/");
 			},
-			error => {
+			(error) => {
 				dispatch(failure(error));
+				dispatch(alertActions.error(error));
 			}
 		);
 	};
@@ -37,22 +38,24 @@ function login(username, password) {
 	}
 }
 
-// function logout() {
-// 	// userService.logout();
-// 	return { type: userConstants.LOGOUT };
-// }
+function logout() {
+	userService.logout();
+	return { type: userConstants.LOGOUT };
+}
 
 function register(user) {
-	return dispatch => {
+	return (dispatch) => {
 		dispatch(request(user));
 
 		userService.register(user).then(
-			user => {
+			(user) => {
 				dispatch(success());
 				history.push("/login");
+				dispatch(alertActions.success("Registration successful"));
 			},
-			error => {
+			(error) => {
 				dispatch(failure(error));
+				dispatch(alertActions.error(error));
 			}
 		);
 	};

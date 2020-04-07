@@ -20,21 +20,21 @@ export default function faqFunc(titleArr, paragraphArr) {
             }
             // return the actual Faq li jsx
             return (
-                <li className="faq_section" key={index} onClick={handleClick}>
-                    <div className="faq_title_container" >
-                        <div className="faq_title">{elem}</div>
-                        <div className="faq_symbol-inline">{active ? "-" : "+"}</div>
+                <li className="faq__section" key={index} onClick={handleClick}>
+                    <div className="faq__title__container" >
+                        <div className="faq__title">{elem}</div>
+                        <div className="faq__symbol--inline">{active ? "-" : "+"}</div>
                     </div>
-                    <div className={`faq_paragraph ${status}`} ref={titleRef} >
+                    <div className={`faq__paragraph ${status}`} ref={titleRef} >
                         {paragraphArr[index]}
                     </div>
                 </li>
             )
         })
         return (
-            <div className="faq_container">
-                <div className="faq_head">Frequent Asked Questions</div>
-                <ul className="faq_list-layout">
+            <div className="faq__container">
+                <div className="faq__head">Frequent Asked Questions</div>
+                <ul className="faq__list--layout">
                     {rst}
                 </ul>
             </div>

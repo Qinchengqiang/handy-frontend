@@ -13,7 +13,7 @@
 	justify-content: center;
 	font-family: "Montserrat", sans-serif;
 
-	.box {
+	.login-form__box {
 		margin-top: 100px;
 		margin-bottom: 100px;
 		min-width: 400px;
@@ -62,7 +62,6 @@
 }
 @media only screen and (max-width: 768px) {
 	.login-form .box {
-		min-width: 100%;
 		padding: 30px;
 	}
 	.login-form {
@@ -71,7 +70,7 @@
 }
 @media only screen and (max-width: 1220px) {
 	.login-form .box {
-		min-width: 100%;
+		width: 100%;
 		padding: 30px;
 	}
 	.login-form {
@@ -80,7 +79,6 @@
 }
 @media only screen and (max-width: 1440px) {
 	.login-form .box {
-		min-width: 100%;
 		padding: 30px;
 	}
 	.login-form {

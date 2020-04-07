@@ -1,0 +1,19 @@
+[{
+    "icon": "home",
+    "key": "services",
+    "label": "services",
+    "url": "/users/services"
+  }, 
+  {
+    "icon": "setting",
+    "key": "setting",
+    "label": "settings",
+    "url": "/users/edit"
+  },
+  {
+    "icon": "shopping",
+    "key": "order",
+    "label": "orders",
+    "url": "/users/orders"
+  }
+]
