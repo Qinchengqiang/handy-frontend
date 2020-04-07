@@ -3,7 +3,7 @@ import "./App.scss";
 import Home from "./pages/home/Home";
 import Apply from "./pages/apply";
 import { Router, Switch, Route } from "react-router-dom";
-import history from "./history";
+import { history } from "../src/redux/helpers/history";
 import ServicePage from "./pages/service/ServicePage";
 import MyAccount from "../src/pages/myAccount/myAccount";
 import Nav from "./components/nav/Nav";
@@ -17,7 +17,7 @@ import PrivateRoute from './ PrivateRoute'
 
 import {
 	FurnitureAssembly,
-	OfficeAssembly
+	OfficeAssembly,
 } from "./pages/services/assembly/FurnitureAssembly";
 import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
@@ -66,7 +66,7 @@ class App extends Component {
 						<Nomatch />
 					</Route>
 				</Switch>
-			<Footer/>
+				<Footer />
 			</Router>
 		);
 	}

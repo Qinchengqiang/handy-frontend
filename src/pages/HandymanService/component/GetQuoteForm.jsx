@@ -108,7 +108,6 @@ class GetQuoteForm extends Component {
 							)}
 						</Form.Item>
 						<Button
-							className="button"
 							style={{
 								width: "320px",
 								height: "40px",

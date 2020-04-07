@@ -8,7 +8,7 @@ export function configureFakeBackend() {
 			// wrap in timeout to simulate server api call
 			setTimeout(() => {
 				// authenticate  (url.endsWith("/users/authenticate")
-				if  (url.endsWith("/users/authenticate")&& opts.method === "POST") {
+				if (url.endsWith("/authenticate") && opts.method === "POST") {
 					// get parameters from post request
 					let params = JSON.parse(opts.body);
 
