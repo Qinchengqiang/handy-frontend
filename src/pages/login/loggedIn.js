@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 const menu = (
 	<Menu>
 		<Menu.Item>
-			<Link to="/">My Account</Link>
+			<Link to="/users/services">My Account</Link>
 		</Menu.Item>
 		<Menu.Item>
-			<Link to="/">My service</Link>
+			<Link to="/users/edit">My service</Link>
+		</Menu.Item>
+		<Menu.Item>
+			<Link to="/users/orders">My orders</Link>
 		</Menu.Item>
 		<Menu.Item>
 			<Link to="/login">Logout</Link>
