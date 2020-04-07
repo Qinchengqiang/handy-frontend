@@ -273,7 +273,7 @@ class MyAccount extends Component {
 				<div className="payment__container">
 					<div className="info__container">
 						<div className="gift__pic">
-							<img src="https://cache.hbfiles.com/assets/miscellaneous/gift-send-cb2a6957e7866e75331a3ccb88e922f4.png"  alt="" />
+							<img src="https://cache.hbfiles.com/assets/miscellaneous/gift-send-cb2a6957e7866e75331a3ccb88e922f4.png" alt="" />
 						</div>
 						<div className="info__item">
 							<h6>Give $40, Get $25</h6>
