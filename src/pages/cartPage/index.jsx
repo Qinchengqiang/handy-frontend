@@ -5,8 +5,8 @@ import Cart from "./cart";
 // import Checkout from "./Checkout";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { checkout } from '../../redux-kong/actions'
-import { getTotal, getCartProducts } from "../../redux-kong/reducers";
+// import { checkout } from '../../redux-kong/actions'
+// import { getTotal, getCartProducts } from "../../redux-kong/reducers";
 
 const CartPage = ({ products, total, checkout }) => (
   <div className="cartPage">
@@ -34,13 +34,12 @@ CartPage.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    products: getCartProducts(state),
-    total: getTotal(state)
+    // products: getCartProducts(state),
+    // total: getTotal(state)
   })
   
   export default connect(
-    mapStateToProps,
-    { checkout }
+    mapStateToProps
   )(CartPage)
 
 //   export default class CartPage extends Component {

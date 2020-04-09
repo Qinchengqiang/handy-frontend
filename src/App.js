@@ -23,6 +23,7 @@ import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
 import { LoginPage } from "./pages/login/loginPage";
 import CartPage from "./pages/cartPage";
+import { connect } from 'react-redux'
 
 class App extends Component {
 	render() {
@@ -72,4 +73,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect()(App);

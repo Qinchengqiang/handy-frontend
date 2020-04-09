@@ -1,4 +1,4 @@
-import _products from '../api/products.json'
+import _products from './products.json'
 
 const TIMEOUT = 100
 
