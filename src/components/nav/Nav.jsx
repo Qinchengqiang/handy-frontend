@@ -34,7 +34,7 @@ function Nav (props) {
       <NavLink exact to="/" className='navlink'>
         Help
       </NavLink>
-      <NavLink exact to="/" className='navlink'>
+      <NavLink exact to="/cart" className='navlink'>
         <NavCart products={products} />
         {/* Cart */}
       </NavLink>

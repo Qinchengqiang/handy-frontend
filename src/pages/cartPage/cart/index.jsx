@@ -3,7 +3,7 @@ import "./Cart.scss";
 import PropTypes from "prop-types";
 import ProductItem from '../../shopPage/ProductItem'
 
-const Cart  = ({ products, total, onCheckoutClicked }) => {
+const Cart  = ({ products, total }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     products.map(product =>
@@ -23,10 +23,10 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
       <h3>Your Cart</h3>
       <div>{nodes}</div>
       <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
+      {/* <button onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
         Checkout
-      </button>
+      </button> */}
     </div>
   )
 }
@@ -34,7 +34,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
 Cart.propTypes = {
   products: PropTypes.array,
   total: PropTypes.string,
-  onCheckoutClicked: PropTypes.func
+  // onCheckoutClicked: PropTypes.func
 }
 
 export default Cart
