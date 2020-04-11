@@ -1,8 +1,14 @@
 import _products from './products.json'
 
-const TIMEOUT = 100
+export const getAllProducts = callback => {
+    setTimeout(() => {
+        callback(_products)
+    }, 100);
+}
 
-export default {
-    getProducts:(cb, timeout) => setTimeout(()=> cb(_products), timeout || TIMEOUT),
-    buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
+
+export const buyProducts = (products, callback, errorCallback) => {
+    setTimeout(() => {
+        Math.random() > 0.5 ? callback() : errorCallback()
+    }, 100);
 }

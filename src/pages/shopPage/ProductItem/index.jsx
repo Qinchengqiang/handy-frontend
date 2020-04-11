@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import "./ProductItem.scss";
 import { Rate } from "antd";
 
-const ProductItem = ({product, onAddToCartClicked}) => (
+const ProductItem = ({product, AddToCart}) => (
   <div className="product-card">
         <div className="image-container">
           <img src={product.image} alt="" />
@@ -23,7 +23,7 @@ const ProductItem = ({product, onAddToCartClicked}) => (
         <div className="hint">
           <p>Expert assembly included</p>
         </div>
-        <button className="add" onClick={onAddToCartClicked} disabled={product.inventory > 0 ? '' : 'disabled'}>{product.inventory > 0 ? 'Add to cart' : 'Sold Out'}</button>
+        <button className="add" onClick={AddToCart} disabled={product.inventory > 0 ? '' : 'disabled'}>{product.inventory > 0 ? 'Add to cart' : 'Sold Out'}</button>
       </div>
 )
 
@@ -36,7 +36,7 @@ ProductItem.propTypes = {
     star: PropTypes.string.isRequired,
     inventory: PropTypes.number.isRequired
   }).isRequired,
-  onAddToCartClicked: PropTypes.func.isRequired
+  AddToCart: PropTypes.func.isRequired
 }
 export default ProductItem
 // export default class ProductItem extends Component {

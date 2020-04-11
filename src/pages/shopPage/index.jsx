@@ -1,54 +1,53 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./ShopPage.scss";
 import SideNav from "./SideNav";
 import SlideShow from "./SlideShow";
 import ProductItem from "./ProductItem";
 import Footer from "../../components/footer/index";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { getVisibleProducts } from "../../redux/reducers/productReducer";
+import { getAllProducts, AddToCart } from "../../redux/actions/productAction";
+import { Component } from "react";
 
-const ShopPage = ({ count }) => {
-  return (
-    <div className="shoppage">
-      <div className="head">
-        Shop for your home with expert installation included.
-      </div>
-      <div className="content">
-        <div className="left">
-          <SideNav />
+class ShopPage extends Component {
+  render() {
+    const { products, AddToCart } = this.props;
+    return (
+      <div className="shoppage">
+        <div className="head">
+          Shop for your home with expert installation included.
         </div>
-        <div className="right">
-          <SlideShow />
-          {count.map((product) => (
-            <Link to={"./detail/" + product.id}>
-              <ProductItem key={product.id} product={product} />
-            </Link>
-          ))}
+        <div className="content">
+          <div className="left">
+            <SideNav />
+          </div>
+          <div className="right">
+            <SlideShow />
+            <div className="productSection">
+              {products.slice(0,3).map((product) => (
+                <ProductItem
+                  key={product.id}
+                  product={product}
+                  AddToCart={() => AddToCart(product)}
+                />
+              ))}
+            </div>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    products: state.products.all,
+  };
 };
 
-// ShopPage.PropTypes = {
-//   count: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       image: PropTypes.string.isRequired,
-//       cur_price: PropTypes.string.isRequired,
-//       pre_price: PropTypes.string,
-//       star: PropTypes.string.isRequired,
-//       inventory: PropTypes.number.isRequired,
-//     })
-//   ).isRequired
-// };
+const mapDispatchToProps = {
+  getAllProducts,
+  AddToCart,
+};
 
-const mapStateToProps = state => ({
-  count: getVisibleProducts(state.count)
-  // loading: state.loading,
-});
-
-export default connect(mapStateToProps)(ShopPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ShopPage);

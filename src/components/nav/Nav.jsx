@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 import logo from './logo'
 import {connect} from "react-redux";
 import NavCart from './navCart'
-// import { getCartProducts } from '../../redux-kong/reducers'
+import { getCartProducts } from '../../pages/cartPage'
 
 
 function Nav (props) {
@@ -35,8 +35,8 @@ function Nav (props) {
         Help
       </NavLink>
       <NavLink exact to="/" className='navlink'>
-        {/* <NavCart products={products} /> */}
-        Cart
+        <NavCart products={products} />
+        {/* Cart */}
       </NavLink>
       {auth?
       (<NavLink exact to="/" className='navlink'>
@@ -50,7 +50,7 @@ function Nav (props) {
 };
 
 const mapStateToProps = (state) => ({
-  // products: getCartProducts(state),
+  products: getCartProducts(state),
   authentication: state.authentication
 })
 export default connect(mapStateToProps)(Nav)

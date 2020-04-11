@@ -30,6 +30,12 @@
             justify-content: center;
             align-content: flex-start;
             width: calc(60% - 6rem);
+            .productSection {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-content: flex-start;
+            }
         }
         @media screen  and (max-width: 1220px) and (min-width: 769px) {
             .left {
