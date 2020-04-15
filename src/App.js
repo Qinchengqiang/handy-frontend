@@ -14,6 +14,7 @@ import Cleaning from "./pages/Service-Entrypoint/Cleaning";
 import TV from "./pages/services/tv/TV";
 import Moving from "./pages/services/moving/Moving";
 import PrivateRoute from './ PrivateRoute'
+import CartPage from './/pages/cartPage'
 
 import {
 	FurnitureAssembly,
@@ -42,6 +43,7 @@ class App extends Component {
 					<Route exact path="/apply">
 						<Apply />
 					</Route>
+					<Route exact path="/cart" component={CartPage} />
 					<Route exact path="/login" component={LoginPage} />
 					<Route exact path="/register" component={RegisterPage} />
 					<Route exact path="/myaccount" component={MyAccount} />
