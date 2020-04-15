@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    .checkout {
+        margin: 1rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        .checkout-button {
+            width: 200px;
+            font-size: 2rem;
+            border-radius: 10px;
+            background-color: rgb(255, 38, 0);
+        }
+    }
+}

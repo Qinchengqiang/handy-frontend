@@ -1,13 +1,7 @@
-export const productsConstants = {
-	RECEIVE_PRODUCTS : 'RECEIVE_PRODUCTS',
-	ADD_TO_CART : 'ADD_TO_CART',
-	SET_CHECKOUT_STATUS : 'SET_CHECKOUT_STATUS',
-    SET_ITEMS : 'SET_ITEMS',
-	ADD_COUNT : 'ADD_COUNT',
-	DEL_PRODUCT : 'DEL_PRODUCT',
-	DEC_PRODUCT : 'DEC_PRODUCT',
-	DEL_COUNT : 'DEL_COUNT',
-	CLEAR_PRODUCT : 'CLEAR_PRODUCT',
-	ADD_HISTORY : 'ADD_HISTORY',
-};
 
+//Types should be in const to avoid typos and duplication since it's a string and could be easily miss spelled
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const SUB_QUANTITY = 'SUB_QUANTITY';
+export const ADD_QUANTITY = 'ADD_QUANTITY';
+export const ADD_SHIPPING = 'ADD_SHIPPING';

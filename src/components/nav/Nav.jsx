@@ -5,8 +5,6 @@ import "antd/dist/antd.css";
 import logo from './logo'
 import {connect} from "react-redux";
 import NavCart from './navCart'
-import { getCartProducts } from '../../pages/cartPage'
-
 
 function Nav (props) {
   //this part needs router to direct the current location
@@ -36,7 +34,6 @@ function Nav (props) {
       </NavLink>
       <NavLink exact to="/cart" className='navlink'>
         <NavCart products={products} />
-        {/* Cart */}
       </NavLink>
       {auth?
       (<NavLink exact to="/" className='navlink'>
@@ -50,7 +47,7 @@ function Nav (props) {
 };
 
 const mapStateToProps = (state) => ({
-  products: getCartProducts(state),
-  authentication: state.authentication
+  authentication: state.authentication,
+  products: state.cart.addedItems
 })
 export default connect(mapStateToProps)(Nav)

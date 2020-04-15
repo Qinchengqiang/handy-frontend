@@ -7,37 +7,58 @@
     flex-direction: column;
     justify-content: space-around;
     align-content: flex-start;
-    .product-item {
+    .collection {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-content: flex-start;
-        .image-container{
+        flex-direction: column;
+        .collection-item {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-content: center;
-            width: 150px;
-            height: 150px;
-            border: solid 1px #dadada;
-            box-shadow: 1px 1px #dadada;
-            img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: cover;
-                object-position: center;
-                // border: solid 1px green;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: flex-start;
+            .image-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                width: 150px;
+                height: 150px;
+                border: solid 1px #dadada;
+                box-shadow: 1px 1px #dadada;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    // border: solid 1px green;
+                }
             }
-        }
-        .title_price {
-            margin-top: 10px;
-            font-size: 1.8rem;
-            // .title {
-            //     font-size: 1.8rem;
-            // }
-            
+            .item-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                // background-color: rgb(245, 149, 60);
+                .title {
+                    font-size: 1.8rem;
+                    color: rgb(245, 136, 136)
+                }
+                p {
+                    text-align: start;
+                }
+                .quantity-button {
+                    margin-left: 50px;
+                }
+                .remove-button {
+                    width: 100px;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    background-color: rgb(165, 159, 157);
+                }
+            }
+  
         }
     }
+   
     .totalPrice {
         font-size: 3rem;
         text-align: end;
