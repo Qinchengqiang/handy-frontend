@@ -3,7 +3,6 @@ import "./ShopPage.scss";
 import SideNav from "./SideNav";
 import SlideShow from "./SlideShow";
 import { Rate } from "antd";
-import ProductItem from "./ProductItem";
 import Footer from "../../components/footer/index";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/actions/cartActions";

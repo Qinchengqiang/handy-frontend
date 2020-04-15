@@ -1,4 +1,4 @@
-import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../constants/productsConstants'
+import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../constants/cartConstants'
 
 
 const initState = {
@@ -37,6 +37,57 @@ const initState = {
         "category": "Best Sellers"
       
 
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/5kbtu_2048x2048.png?v=1525382461",
+    "title": "Frigidaire 5,000 BTU Window-Mounted Air Conditioner",
+    "cur_price": "$269.00",
+    "pre_price": "$",
+    "star": "",
+    "id": 4,
+    "inventory": 99,
+    "category": "Air Containers"
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/10kbtu_2048x2048.png?v=1525382498",
+    "title": "Frigidaire 10,000 BTU Window-Mounted Air Conditioner",
+    "cur_price": "$389.00",
+    "pre_price": "$398.00",
+    "star": "308",
+    "id": 5,
+    "inventory": 99,
+    "category": "Air Containers"
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/12kbtu_copy_2048x2048.png?v=1525382481",
+    "title": "Frigidaire 12,000 BTU Window-Mounted Air Conditioner",
+    "cur_price": "$479.00",
+    "pre_price": "$.00",
+    "star": "91",
+    "id": 6,
+    "inventory": 99,
+    "category": "Air Containers"
+},
+{
+
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Priage_Quick_Lock_14-inch_Metal1_2048x2048.png?v=1529603817",
+    "title": "Quick Lock 14-inch Metal Platform Bed Frame",
+    "cur_price": "$129.00",
+    "pre_price": "$",
+    "star": "",
+    "id": 7,
+    "inventory": 99,
+    "category": "Beds"
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard___Footboard_2048x2048.png?v=1529603509",
+    "title": "Platform Bed Frame, Box Spring Replacement with Headboard and Footboard",
+    "cur_price": "$129.00",
+    "pre_price": "$.00",
+    "star": "308",
+    "id": 8,
+    "inventory": 99,
+    "category": "Beds"
   }
     ],
     addedItems:[],
