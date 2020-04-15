@@ -112,6 +112,7 @@
 
 			}
 			
+
 			.email__price{
 
 				display: flex;
@@ -155,6 +156,10 @@
 				font-size: 1.3rem;
 				border-radius: 3px;
 				border-width: thin;
+			}
+
+			.input__warning{
+				border-color: red;
 			}
 
 			.pick__date{

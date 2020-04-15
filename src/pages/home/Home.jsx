@@ -15,6 +15,9 @@ import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
+import MyAccount from '../myAccount/MyAccount'
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +51,7 @@ class Home extends Component {
     return (
       <div className="home">
         {/* <Nav /> */}
+
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
@@ -69,7 +73,11 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         <Faq/>
-        </div>
+
+
+        {/* <MyAccount /> */}
+
+      </div>
     );
   }
 }

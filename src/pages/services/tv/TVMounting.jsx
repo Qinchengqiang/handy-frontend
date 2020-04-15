@@ -4,6 +4,9 @@ import star from "../../../img/star.svg";
 import star_half from "../../../img/star-half-alt.svg";
 import "./tvMounting.scss";
 
+const ZIPCODE = "input__wide";
+const ZIPCODERED = "input__wide input__warning";
+
 class TVMounting extends Component {
 
     constructor(props) {
