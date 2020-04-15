@@ -15,7 +15,6 @@ import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
 
-import MyAccount from '../myAccount/MyAccount'
 
 
 class Home extends Component {
@@ -73,10 +72,6 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         <Faq/>
-
-
-        {/* <MyAccount /> */}
-
       </div>
     );
   }
