@@ -1,0 +1,326 @@
+*{
+
+	// border: 1px black solid;
+    // padding: 2px;
+    
+	box-sizing: border-box;
+}
+
+
+.account__page__container{
+
+    display: flex;
+    max-width: 1920px;
+
+    .account__container{
+        
+        width: 66vw;
+        margin-right: 1vmin;
+
+        .info__container{
+
+            display: flex;
+            flex-wrap: wrap;
+            
+            border: 1px darkgrey solid;
+            border-radius: 5px;
+
+            min-width: 330px;
+
+            margin: 1vmin 0 2vmin 0;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+
+            h5{
+                width: 100%;
+                font-weight: 700;
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .info__item{
+
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-right: 1.5rem;
+
+                label{
+                    font-size: 1rem;
+                    width: 100%;
+                }
+
+                input{
+                    font-size: 1rem;
+                    padding: 0.4rem;
+                    width: 100%;
+                    border: 1px darkgrey solid;
+                    border-radius: 5px;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .short__info{
+                width: 50%;
+            }
+
+            .ccForm{
+                display: flex;
+                flex-wrap: wrap;
+
+                margin-top: 4rem;
+                width: 100%;
+
+            }
+
+
+
+            button{
+                color: snow;
+                background-color: #00ccff;
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                margin-top: 2rem;
+                width: max-content;
+
+                border: 0;
+                border-radius: 5px;
+            }
+
+            button:hover{
+                
+                background-color: #40d9ff;
+            }
+
+            .button__ccinfo{
+                font-weight: 600;
+                margin: 0;
+            }
+
+        }
+        .pwd__info{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+    .payment__container{
+        
+        display: flex;
+        flex-wrap: wrap;
+
+        border: none; 
+        width: 33vw;
+        height: max-content;
+        margin: 0 1vmin 1vmin 1vmin;
+        
+
+        .info__container{
+
+            display: flex;
+            flex-wrap: wrap;
+            
+            border: 1px darkgrey solid;
+            border-radius: 5px;
+
+            padding: 0;
+
+            width: 100%;
+            height: max-content;
+            margin: 1vmin 0 1vmin 0;
+
+            .gift__pic{
+
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+                height: min-content;
+                margin-bottom: 1rem;
+
+                img{
+                    width: 80%;
+                }
+            }
+
+
+            .info__item{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+
+                h6{
+                    width: 100%;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+
+                .font__blue{
+                    color: #00ccff;
+                }
+            }
+
+            .info__refEmail{
+
+                width: 100%;
+                margin-top: 1rem;
+
+            }
+
+            input{
+                font-size: 1rem;
+                line-height: 2rem;
+                padding: 0.4rem;
+                width: 75%;
+                border: 1px darkgrey solid;
+                border-radius: 5px 0 0 5px;
+
+            }
+
+            button{
+                color: snow;
+                font-size: 1rem;
+                line-height: 2rem;
+                padding: 0.4rem;
+                width: 25%;
+                background-color: #00ccff;
+                border: 1px #00ccff solid;
+                border-radius: 0 5px 5px 0;
+            }
+
+            .info__payment{
+
+                width: 100%;
+                padding: 2rem 1rem 0rem 1rem;
+                
+                .info__savings{
+
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+
+                    h4{
+                        font-family: Comic Sans MS;
+                        font-weight: 700;
+                        margin: 0;
+                        color: #00ccff;
+                    }
+                }
+
+                h5{
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                    color: gray;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                a{
+                    font-size: 0.8rem;
+                    color: #00ccff;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+    .account__page__container{
+
+        display: flex;
+        flex-wrap: wrap-reverse;
+        width: 100%;
+        
+
+        .account__container{
+            width: 100%;
+
+            .info__container{
+
+                flex-wrap: wrap;
+                min-width: 0;
+
+                .info__item{
+
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding-right: 1rem;
+
+                    label{
+
+                        line-height: 1.2rem;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .payment__container{
+            width: 100%;
+
+            .info__container{
+    
+                border: 0px white solid;
+
+                .gift__pic{
+                    display: none;
+                }
+
+                .info__item{
+
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;                    
+                    padding-right: 0;
+
+                    h6{
+                        display: none;
+                    }
+                    p{
+                        text-align: left;
+                    }
+                }
+
+                .info__refEmail{
+                    display: none;
+                }
+
+                .info__payment{
+                    padding: 0;
+                    margin: 0;
+
+                    .info__savings{
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h4{
+                        font-size: 1rem;
+                    }
+                    h5{
+                        font-size: 1rem;
+                    }
+                    p{
+                        display: none;
+                    }
+                    a{
+                        display: none;
+                    }
+                    h6{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

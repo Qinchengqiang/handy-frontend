@@ -21,7 +21,7 @@ class HandymanService extends Component {
 	render() {
 		return (
 			<div>
-				<img className="back-image" src={backgroundImg} />
+				<img className="back-image" src={backgroundImg} alt="" />
 
 				<div className="hs-main">
 					<div className="hs-page-details">

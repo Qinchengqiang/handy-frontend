@@ -17,14 +17,14 @@ export default function Handyfeature (props) {
 
     const renderLi = ( listName, listDescription, img) => {
       return (
-       <li className="handy-feature-list" key={listName}>
-           <div className="handy-feature-list_card">
-                <div className="handy-feature-list_img">
-                    <img src={img} className='handy-feature-list_img_icon' alt={listName}/>
+       <li className="handy-feature--list" key={listName}>
+           <div className="handy-feature--list__card">
+                <div className="handy-feature--list__img">
+                    <img src={img} className='handy-feature--list__img__icon' alt={listName}/>
                 </div>
-                <div className="handy-feature-list_name">{listName}</div>
+                <div className="handy-feature--list__name">{listName}</div>
            </div>
-            <div className="handy-feature-list_description">{listDescription}</div>    
+            <div className="handy-feature--list__description">{listDescription}</div>    
        </li>
       )
     }
@@ -34,7 +34,7 @@ export default function Handyfeature (props) {
   
       return (
           
-              <ul className="handy-feature-container-list">
+              <ul className="handy-feature--container--list">
                   {rst}
               </ul>
          

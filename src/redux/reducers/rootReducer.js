@@ -2,16 +2,14 @@ import { combineReducers } from "redux";
 
 import { authentication } from "./authReducer";
 import { registration } from "./regReducer";
-import cart from './cartReducer'
 // import { users } from './users.reducer';
-// import { alert } from './alert.reducer';
+import { alert } from "./alertReducer";
 
 const rootReducer = combineReducers({
 	authentication,
 	registration,
 	//   users,
-	//   alert
-	cart,
+	alert,
 });
 
 export default rootReducer;

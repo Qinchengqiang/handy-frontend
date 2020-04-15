@@ -19,34 +19,34 @@ const handyLocation = props => {
 					<div className="list-container">
 						<ul>
 							<li>
-								<a>NYC</a>
+								<span>NYC</span>
 							</li>
 							<li>
-								<a>SF</a>
+								<span>SF</span>
 							</li>
 							<li>
-								<a>Boston</a>
+								<span>Boston</span>
 							</li>
 							<li>
-								<a>Chicago</a>
+								<span>Chicago</span>
 							</li>
 							<li>
-								<a>Miami</a>
+								<span>Miami</span>
 							</li>
 							<li>
-								<a>DC</a>
+								<span>DC</span>
 							</li>
 							<li>
-								<a>Los Angeles</a>
+								<span>Los Angeles</span>
 							</li>
 							<li>
-								<a>Houston</a>
+								<span>Houston</span>
 							</li>
 							<li>
-								<a>London</a>
+								<span>London</span>
 							</li>
 							<li>
-								<a>Toronto</a>
+								<span>Toronto</span>
 							</li>
 						</ul>
 					</div>

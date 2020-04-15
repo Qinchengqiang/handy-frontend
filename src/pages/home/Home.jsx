@@ -10,9 +10,13 @@ import ShopPic from './ShopPic'
 import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
+// import Sidebar from '../../components/sidebar/Sidebar.js'
 
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
+
+import MyAccount from '../myAccount/MyAccount'
+
 
 class Home extends Component {
   constructor(props) {
@@ -32,11 +36,11 @@ class Home extends Component {
 
   renderTask = (taskImgUrl, taskName, linkTo) => {
     return (
-      <li key={taskName} className="li-container_flex">
-        <div className="li-container_flex-inside">
+      <li key={taskName} className="li--container__flex">
+        <div className="li--container__flex--inside">
           <Link to={linkTo} style={{ textDecoration: "none" }}>
-            <img src={taskImgUrl} alt={`${taskName} img`} className="img-container"></img>
-            <div className="task_description">{taskName}</div>
+            <img src={taskImgUrl} alt={`${taskName} img`} className="img--container"></img>
+            <div className="task__description">{taskName}</div>
           </Link>
         </div>
       </li>
@@ -47,6 +51,7 @@ class Home extends Component {
     return (
       <div className="home">
         {/* <Nav /> */}
+
         <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
@@ -68,7 +73,11 @@ class Home extends Component {
         <HandyExplain/>
         <HandyFeatureAssembly/>
         <Faq/>
-        </div>
+
+
+        {/* <MyAccount /> */}
+
+      </div>
     );
   }
 }
