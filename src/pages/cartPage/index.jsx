@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./CartPage.scss";
-import { CartHeader } from "./cartHeader";
-import ProductItem from "../shopPage/ProductItem";
 import { connect } from "react-redux";
 import { checkout } from "../../redux/actions/productAction";
 import { store } from "../../redux/helpers/store";
@@ -81,37 +79,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
-
-// const CartPage = ({ products, total, checkout }) => (
-//   <div className="cartPage">
-//     <CartHeader />
-//     <Cart
-//       products={products}
-//       total={total}
-//       onCheckoutClicked={() => checkout(products)}
-//     />
-//     {/* <Checkout /> */}
-//   </div>
-// );
-
-// CartPage.propTypes = {
-//   products: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       title: PropTypes.string.isRequired,
-//       price: PropTypes.number.isRequired,
-//       quantity: PropTypes.number.isRequired
-//     })
-//   ).isRequired,
-//   total: PropTypes.string,
-//   checkout: PropTypes.func.isRequired
-// };
-
-// const mapStateToProps = (state) => ({
-//     // products: getCartProducts(state),
-//     // total: getTotal(state)
-//   })
-
-//   export default connect(
-//     mapStateToProps
-//   )(CartPage)
