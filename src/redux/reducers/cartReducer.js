@@ -6,8 +6,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Corvus-Madonna-Mid-Century-Walnut-and-Black-Finish-Accent-Chair-fa4c44ee-599c-4fe1-830c-c98e5402e80a_2048x2048.jpg?v=1532297208",
         "title": "Mid-Century Walnut and Black Finish Accent Chair",
-        "cur_price": 149.00,
-        "pre_price": 196.00,
+        "cur_price": 149,
+        "pre_price": 196,
         "star": "851",
         "id": 1,
         "inventory": 1,
@@ -17,8 +17,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Altea-3-light-Satin-Nickel-Flush-Mount-Chandelier-a1b70dfb-73c1-4e09-9ac0-16732c9d604c_2048x2048.jpg?v=1533142129",
         "title": "Three-Light Satin Nickel Flush Mount Chandelier",
-        "cur_price": 149.00,
-        "pre_price": 255.00,
+        "cur_price": 149,
+        "pre_price": 255,
         "star": "308",
         "id": 2,
         "inventory": 2,
@@ -28,8 +28,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Conrad-Bevel-Mirrored-Frame-Rectangular-Accent-Wall-Mirror-by-iNSPIRE-Q-Bold-3eb26b57-58dd-47dd-b288-4b12fce8f06f_2048x2048.jpg?v=1533141193",
         "title": "Bevel Mirrored Frame Rectangular Accent Wall Mirror",
-        "cur_price": 289.00,
-        "pre_price": 329.00,
+        "cur_price": 289,
+        "pre_price": 329,
         "star": "91",
         "id": 3,
         "inventory": 99,
@@ -56,13 +56,13 @@ const cartReducer= (state = initState,action)=>{
             addedItem.quantity += 1 
              return{
                 ...state,
-                 total: state.total + addedItem.price 
+                 total: state.total + addedItem.cur_price 
                   }
         }
          else{
             addedItem.quantity = 1;
             //calculating the total
-            let newTotal = state.total + addedItem.price 
+            let newTotal = state.total + addedItem.cur_price 
             
             return{
                 ...state,
@@ -89,7 +89,7 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_QUANTITY){
         let addedItem = state.items.find(item=> item.id === action.id)
           addedItem.quantity += 1 
-          let newTotal = state.total + addedItem.price
+          let newTotal = state.total + addedItem.cur_price
           return{
               ...state,
               total: newTotal
@@ -100,7 +100,7 @@ const cartReducer= (state = initState,action)=>{
         //if the qt == 0 then it should be removed
         if(addedItem.quantity === 1){
             let new_items = state.addedItems.filter(item=>item.id !== action.id)
-            let newTotal = state.total - addedItem.price
+            let newTotal = state.total - addedItem.cur_price
             return{
                 ...state,
                 addedItems: new_items,
@@ -109,7 +109,7 @@ const cartReducer= (state = initState,action)=>{
         }
         else {
             addedItem.quantity -= 1
-            let newTotal = state.total - addedItem.price
+            let newTotal = state.total - addedItem.cur_price
             return{
                 ...state,
                 total: newTotal
@@ -121,14 +121,14 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 6
+              total: state.total + 60
           }
     }
 
     if(action.type=== 'SUB_SHIPPING'){
         return{
             ...state,
-            total: state.total - 6
+            total: state.total - 60
         }
   }
     
