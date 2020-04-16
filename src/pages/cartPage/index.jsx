@@ -93,17 +93,17 @@ const mapStateToProps = (state) => {
     //addedItems: state.addedItems
   };
 };
-const mapDispatchToProps = (dispatch) => {
-  return {
-    removeItem: (id) => {
-      dispatch(removeItem(id));
-    },
-    addQuantity: (id) => {
-      dispatch(addQuantity(id));
-    },
-    subtractQuantity: (id) => {
-      dispatch(subtractQuantity(id));
-    },
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(CartPage);
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     removeItem: (id) => {
+//       dispatch(removeItem(id));
+//     },
+//     addQuantity: (id) => {
+//       dispatch(addQuantity(id));
+//     },
+//     subtractQuantity: (id) => {
+//       dispatch(subtractQuantity(id));
+//     },
+//   };
+// };
+export default connect(mapStateToProps, {removeItem,addQuantity,subtractQuantity})(CartPage);
