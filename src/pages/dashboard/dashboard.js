@@ -1,7 +1,7 @@
 import React , {Component} from 'react'
 import {Route, Link, Redirect,Switch} from 'react-router-dom'
 import Sidebar from '../../components/sidebar/Sidebar'
-import MyAccount from '../myAccount/MyAccount'
+import MyAccount from '../myAccount/myAccount'
 import './dashboard.scss'
 export default class Dashboard extends Component {
     render(){

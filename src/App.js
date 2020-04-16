@@ -5,7 +5,7 @@ import Apply from "./pages/apply";
 import { Router, Switch, Route } from "react-router-dom";
 import { history } from "../src/redux/helpers/history";
 import ServicePage from "./pages/service/ServicePage";
-import MyAccount from "../src/pages/myAccount/MyAccount";
+// import MyAccount from "../src/pages/myAccount/MyAccount";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/";
 import HandymanService from "./pages/HandymanService/HandymanService";
@@ -46,7 +46,7 @@ class App extends Component {
 					<Route exact path="/cart" component={CartPage} />
 					<Route exact path="/login" component={LoginPage} />
 					<Route exact path="/register" component={RegisterPage} />
-					<Route exact path="/myaccount" component={MyAccount} />
+					{/* <Route exact path="/myaccount" component={MyAccount} /> */}
 					<Route exact path="/services/handyman-service" component={HandymanService} />
 					<Route exact path={`/services/cleaning`}>
 						<Cleaning />
