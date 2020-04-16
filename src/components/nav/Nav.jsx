@@ -5,9 +5,11 @@ import "antd/dist/antd.css";
 import logo from "./logo";
 import { connect } from "react-redux";
 import LoggedIn from "../../pages/login/loggedIn";
+import NavCart from './navCart'
 
 function Nav(props) {
-	const user = localStorage.getItem("localuser");
+  const user = localStorage.getItem("localuser");
+  const { products } = props 
 	return (
 		<div className="navcontainer">
 			<NavLink exact to="/" className="navlink">
@@ -21,6 +23,9 @@ function Nav(props) {
 			</NavLink>
 			<NavLink exact to="/apply" className="navlink">
 				Apply
+			</NavLink>
+      <NavLink exact to="/cart" className="navlink">
+				<NavCart products={products} />
 			</NavLink>
 			<div className="rightpart">
 				<NavLink exact to="/" className="navlink">
@@ -44,4 +49,9 @@ function Nav(props) {
 	);
 }
 
-export default connect(state => ({ auth: state.authentication.loggedIn }))(Nav);
+
+const mapStateToProps = (state) => ({
+  authentication: state.authentication.loggedIn,
+  products: state.cart.addedItems
+})
+export default connect(mapStateToProps)(Nav);

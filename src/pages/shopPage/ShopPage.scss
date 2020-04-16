@@ -30,6 +30,112 @@
             justify-content: center;
             align-content: flex-start;
             width: calc(60% - 6rem);
+            .productSection {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-content: flex-start;
+                .product-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: flex-start;
+                    margin-left: 20px;
+                    .image-container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        width: 250px;
+                        height: 250px;
+                        border: solid 1px #dadada;
+                        box-shadow: 1px 1px #dadada;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            // border: solid 1px green;
+                        }
+                    }
+                
+                    @media (max-width: 1220px) {
+                        .image-container{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-content: center;
+                            width: 200px;
+                            height: 200px;
+                            border: solid 1px #dadada;
+                            box-shadow: 1px 1px #dadada;
+                            img {
+                                max-width: 100%;
+                                max-height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                // border: solid 1px green;
+                            }
+                        }
+                        .title {
+                            margin-top: 10px;
+                            p {
+                                word-wrap:break-word; 
+                                word-break: normal;
+                                max-width: 200px;
+                                a {
+                                    color: #000;
+                                }
+                            }
+                            
+                        }
+                    }
+                    .title {
+                        margin-top: 10px;
+                        p {
+                            word-wrap:break-word; 
+                            word-break: normal;
+                            max-width: 250px;
+                            a {
+                                color: #000;
+                            }
+                        }
+                        
+                    }
+                    .price {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-content: flex-start;
+                        font-size: 20px;
+                        .current-price {
+                            color: #000;
+                        }
+                        .previous-price {
+                            text-decoration: line-through;
+                            color: #a5b2bc;
+                            margin-left: 10px;
+                        }
+                    }
+                    .star {
+                        // background-color: #f00;
+                        font-size: 15px;
+                    }
+                    .hint {
+                        // background-color: #0f0;
+                        color: rgba(0, 0, 0, 0.514);
+                        font-size: 12px;
+                    }
+                
+                    .add {
+                        color: #fff;
+                        background-color: rgb(0, 153, 255);
+                        width: 250px;
+                    }
+                }
+                
+                
+            }
         }
         @media screen  and (max-width: 1220px) and (min-width: 769px) {
             .left {
