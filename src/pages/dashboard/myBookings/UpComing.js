@@ -30,7 +30,7 @@ const UpComing = (props) => {
       <hr />
 
       <pre>
-        <code>{JSON.stringify(rawOutput, null, 4)}</code>
+        <code>{JSON.stringify(rawOutput.data, null, 4)}</code>
       </pre>
     </>
   );
