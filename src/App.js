@@ -50,7 +50,7 @@ class App extends Component {
 					<Route exact path="/services/handyman-service" component={HandymanService} />
 					{/* <Route exact path={`/services/cleaning`}>
 						<Cleaning />
-					</Route> */}
+					</Route */}>
 					<Route exact path="/services/furniture-assembly">
 						<FurnitureAssembly />
 					</Route>
