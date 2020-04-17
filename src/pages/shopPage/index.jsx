@@ -13,7 +13,7 @@ class ShopPage extends Component {
     console.log(product.id);
 }
   render() {
-    console.log(this.props.items)
+    console.log(this.props.products)
     const { products } = this.props
     return (
       <div className="shoppage">
@@ -28,6 +28,68 @@ class ShopPage extends Component {
             <SlideShow />
             <div className="productSection">
               {products.slice(0,3).map((product) => (
+                  <div className="product-card" key={product.id}>
+                  <div className="image-container">
+                    <img src={product.image} alt="" />
+                  </div>
+                  <div className="title">
+                    <p>
+                      <a href="www.github.com">{product.title}</a>
+                    </p>
+                  </div>
+                  <div className="price">
+                    <span className="current-price">{product.cur_price}</span>
+                    <span className="previous-price">{product.pre_price}</span>
+                  </div>
+                  <div className="star">
+                    <Rate disabled defaultValue={2} /> ({product.star})
+                  </div>
+                  <div className="hint">
+                    <p>Expert assembly included</p>
+                  </div>
+                  <button
+                    className="add"
+                    onClick={()=>{this.handleClick(product)}}
+                    disabled={product.inventory > 0 ? "" : "disabled"}
+                  >
+                    {product.inventory > 0 ? "Add to cart" : "Sold Out"}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="productSection">
+              {products.slice(3,6).map((product) => (
+                  <div className="product-card" key={product.id}>
+                  <div className="image-container">
+                    <img src={product.image} alt="" />
+                  </div>
+                  <div className="title">
+                    <p>
+                      <a href="www.github.com">{product.title}</a>
+                    </p>
+                  </div>
+                  <div className="price">
+                    <span className="current-price">{product.cur_price}</span>
+                    <span className="previous-price">{product.pre_price}</span>
+                  </div>
+                  <div className="star">
+                    <Rate disabled defaultValue={2} /> ({product.star})
+                  </div>
+                  <div className="hint">
+                    <p>Expert assembly included</p>
+                  </div>
+                  <button
+                    className="add"
+                    onClick={()=>{this.handleClick(product)}}
+                    disabled={product.inventory > 0 ? "" : "disabled"}
+                  >
+                    {product.inventory > 0 ? "Add to cart" : "Sold Out"}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="productSection">
+              {products.slice(6,9).map((product) => (
                   <div className="product-card" key={product.id}>
                   <div className="image-container">
                     <img src={product.image} alt="" />
