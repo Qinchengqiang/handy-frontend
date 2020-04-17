@@ -88,7 +88,17 @@ const initState = {
     "id": 8,
     "inventory": 99,
     "category": "Beds"
-  }
+  },
+  {
+    "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard1_2048x2048.png?v=1529603568",
+    "title": "Platform Bed Frame, Box Spring Replacement with Headboard",
+    "cur_price": "$129.00",
+    "pre_price": "$0.00",
+    "star": "91",
+    "id": 9,
+    "inventory": 99,
+    "category": "Beds"
+}
     ],
     addedItems:[],
     total: 0

@@ -33,8 +33,9 @@
             .productSection {
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: space-around;
                 align-content: flex-start;
+                margin: 1rem;
                 .product-card {
                     display: flex;
                     flex-direction: column;
