@@ -3,6 +3,7 @@ import {Route, Link, Redirect,Switch} from 'react-router-dom'
 import Sidebar from '../../components/sidebar/Sidebar'
 import MyAccount from '../myAccount/myAccount'
 import './dashboard.scss'
+import UpComing from './myBookings/UpComing';
 export default class Dashboard extends Component {
     render(){
         return (
@@ -12,7 +13,7 @@ export default class Dashboard extends Component {
               
                <div>
                    <Switch>
-                        <Route path="/users/services" render={props=><div>hello i am services</div>}/>
+                        <Route path="/users/services" component={UpComing}/>
                        
 
                        <Route path="/users/edit" component={MyAccount}/>
