@@ -34,7 +34,7 @@ function Nav(props) {
 				<NavLink exact to="/" className="navlink">
 					Help
 				</NavLink>
-				{props.auth ? (
+				{props.authentication ? (
 					// <NavLink exact to="/" className="navlink">
 					// 	{`Hello ${user}`}
 					// </NavLink> loggedMessage={"user"}
