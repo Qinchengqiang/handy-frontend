@@ -22,18 +22,15 @@ function Nav(props) {
 				Shop
 			</NavLink>
 			<NavLink exact to="/apply" className="navlink">
-				Apply
-			</NavLink>
-      <NavLink exact to="/cart" className="navlink">
-				<NavCart products={products} />
+			Become a Pro
 			</NavLink>
 			<div className="rightpart">
 				<NavLink exact to="/" className="navlink">
-					Become a Pro
-				</NavLink>
-				<NavLink exact to="/" className="navlink">
 					Help
 				</NavLink>
+				<NavLink exact to="/cart" className="navlink">
+				<NavCart products={products} />
+			</NavLink>
 				{props.authentication ? (
 					// <NavLink exact to="/" className="navlink">
 					// 	{`Hello ${user}`}
