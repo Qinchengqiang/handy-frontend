@@ -13,7 +13,11 @@ const initialState = {};
 const bookingReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SHOW_UPCOMINGsync": {
-      return action.result;
+
+      return {
+        ...state,
+        ...action.result
+      };
       //console.log(action.payload);
       //const { userId, results } = action.payload;
       //const bookings = getBookingsByUserId(userId);

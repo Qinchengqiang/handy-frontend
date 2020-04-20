@@ -11,6 +11,7 @@ import Footer from "./components/footer/";
 import HandymanService from "./pages/HandymanService/HandymanService";
 import Nomatch from "./components/Nomatch";
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
+import HomeCleaning from "./pages/services/cleaning/HomeCleaning"
 import TV from "./pages/services/tv/TV";
 import Moving from "./pages/services/moving/Moving";
 import PrivateRoute from './ PrivateRoute'
@@ -49,7 +50,7 @@ class App extends Component {
 					{/* <Route exact path="/myaccount" component={MyAccount} /> */}
 					<Route exact path="/services/handyman-service" component={HandymanService} />
 					<Route exact path={`/services/cleaning`}>
-						<Cleaning />
+						<HomeCleaning />
 					</Route>
 					<Route exact path="/services/furniture-assembly">
 						<FurnitureAssembly />
