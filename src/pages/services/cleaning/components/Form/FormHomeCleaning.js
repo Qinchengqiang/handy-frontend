@@ -17,7 +17,7 @@ const FormHomeCleaning = () => {
   const [postcode, setPostcode] = useState("2000");
   const [email, setEmail] = useState("");
   const [jobDate, setJobDate] = useState("");
-  const [jobTime, setJobTime] = useState("1100");
+  const [jobTime, setJobTime] = useState("9");
 
   const bedsOptions = populateOptions("beds", 10);
   const bathsOptions = populateOptions("baths", 10);
@@ -97,37 +97,37 @@ const FormHomeCleaning = () => {
             onChange={e => setJobTime(e.target.value)}
             onBlur={event => setJobTime(event.target.value)}
           >
-            <option value="0700">7:00 AM</option>
-            <option value="0730">7:30 AM</option>
-            <option value="0800">8:00 AM</option>
-            <option value="0830">8:30 AM</option>
-            <option value="0900">9:00 AM</option>
-            <option value="0930">9:30 AM</option>
-            <option value="1000">10:00 AM</option>
-            <option value="1030">10:30 AM</option>
-            <option value="1100" selected={true}>
+            <option value={1}>7:00 AM</option>
+            <option value={2}>7:30 AM</option>
+            <option value={3}>8:00 AM</option>
+            <option value={4}>8:30 AM</option>
+            <option value={5}>9:00 AM</option>
+            <option value={6}>9:30 AM</option>
+            <option value={7}>10:00 AM</option>
+            <option value={8}>10:30 AM</option>
+            <option value={9} selected={true}>
               11:00 AM
             </option>
-            <option value="1130">11:30 AM</option>
-            <option value="1200">12:00 PM</option>
-            <option value="1230">12:30 PM</option>
-            <option value="1300">1:00 PM</option>
-            <option value="1330">1:30 PM</option>
-            <option value="1400">2:00 PM</option>
-            <option value="1430">2:30 PM</option>
-            <option value="1500">3:00 PM</option>
-            <option value="1530">3:30 PM</option>
-            <option value="1600">4:00 PM</option>
-            <option value="1630">4:30 PM</option>
-            <option value="1700">5:00 PM</option>
-            <option value="1730">5:30 PM</option>
-            <option value="1800">6:00 PM</option>
-            <option value="1830">6:30 PM</option>
-            <option value="1900">7:00 PM</option>
-            <option value="1930">7:30 PM</option>
-            <option value="2000">8:00 PM</option>
-            <option value="2030">8:30 PM</option>
-            <option value="2100">9:00 PM</option>
+            <option value={10}>11:30 AM</option>
+            <option value={11}>12:00 PM</option>
+            <option value={12}>12:30 PM</option>
+            <option value={13}>1:00 PM</option>
+            <option value={14}>1:30 PM</option>
+            <option value={15}>2:00 PM</option>
+            <option value={16}>2:30 PM</option>
+            <option value={17}>3:00 PM</option>
+            <option value={18}>3:30 PM</option>
+            <option value={19}>4:00 PM</option>
+            <option value={20}>4:30 PM</option>
+            <option value={21}>5:00 PM</option>
+            <option value={22}>5:30 PM</option>
+            <option value={23}>6:00 PM</option>
+            <option value={24}>6:30 PM</option>
+            <option value={25}>7:00 PM</option>
+            <option value={26}>7:30 PM</option>
+            <option value={27}>8:00 PM</option>
+            <option value={28}>8:30 PM</option>
+            <option value={29}>9:00 PM</option>
           </select>
         </div>
         <div className="form__email">

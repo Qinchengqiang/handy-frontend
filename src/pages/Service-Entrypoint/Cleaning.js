@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Cleaning.scss";
 import Container from "react-bootstrap/Container";
-import QuoteForm from "./QuoteForm";
+//import QuoteForm from "./QuoteForm";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Accordion from "react-bootstrap/Accordion";
@@ -73,7 +73,7 @@ const Cleaning = () => {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} lg={8} className="formContainer">
-              <QuoteForm />
+             {/*  <QuoteForm /> */}
             </Col>
           </Row>
         </Container>
