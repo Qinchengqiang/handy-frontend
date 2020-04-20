@@ -3,6 +3,13 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { showUpcoming } from "../../../redux/actions/bookingsActions";
 //import {addNotes} from "../../../redux/actions/bookingsActions";
+/**
+ * TODO construct form to get all matching pros
+ * TODO make a booking with the select pro
+ * TODO show all upcoming bookings of the user
+ * TODO show all upcoming bookings of the pro
+ * TODO update pro's info, availability
+ */
 
 const UpComing = (props) => {
   const [input, setInput] = useState("");
@@ -13,7 +20,7 @@ const UpComing = (props) => {
       <h2>Upcoming bookings</h2>
       <input
         type="text"
-        placeholder={`enter usr001 to test`}
+        placeholder={`user's ObjectId`}
         name={`userId`}
         id={`userId`}
         required={true}
