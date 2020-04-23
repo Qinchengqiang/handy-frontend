@@ -38,8 +38,8 @@ class ShopPage extends Component {
                     </p>
                   </div>
                   <div className="price">
-                    <span className="current-price">{product.cur_price}</span>
-                    <span className="previous-price">{product.pre_price}</span>
+                    <span className="current-price">${product.cur_price}</span>
+                    <span className="previous-price">${product.pre_price}</span>
                   </div>
                   <div className="star">
                     <Rate disabled defaultValue={2} /> ({product.star})
@@ -69,8 +69,8 @@ class ShopPage extends Component {
                     </p>
                   </div>
                   <div className="price">
-                    <span className="current-price">{product.cur_price}</span>
-                    <span className="previous-price">{product.pre_price}</span>
+                    <span className="current-price">${product.cur_price}</span>
+                    <span className="previous-price">${product.pre_price}</span>
                   </div>
                   <div className="star">
                     <Rate disabled defaultValue={2} /> ({product.star})
@@ -100,8 +100,8 @@ class ShopPage extends Component {
                     </p>
                   </div>
                   <div className="price">
-                    <span className="current-price">{product.cur_price}</span>
-                    <span className="previous-price">{product.pre_price}</span>
+                    <span className="current-price">${product.cur_price}</span>
+                    <span className="previous-price">${product.pre_price}</span>
                   </div>
                   <div className="star">
                     <Rate disabled defaultValue={2} /> ({product.star})

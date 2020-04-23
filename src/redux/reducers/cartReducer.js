@@ -6,8 +6,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Corvus-Madonna-Mid-Century-Walnut-and-Black-Finish-Accent-Chair-fa4c44ee-599c-4fe1-830c-c98e5402e80a_2048x2048.jpg?v=1532297208",
         "title": "Mid-Century Walnut and Black Finish Accent Chair",
-        "cur_price": 149,
-        "pre_price": 196,
+        "cur_price": 49,
+        "pre_price": 96,
         "star": "851",
         "id": 1,
         "inventory": 1,
@@ -17,8 +17,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Altea-3-light-Satin-Nickel-Flush-Mount-Chandelier-a1b70dfb-73c1-4e09-9ac0-16732c9d604c_2048x2048.jpg?v=1533142129",
         "title": "Three-Light Satin Nickel Flush Mount Chandelier",
-        "cur_price": 149,
-        "pre_price": 255,
+        "cur_price": 59,
+        "pre_price": 100,
         "star": "308",
         "id": 2,
         "inventory": 2,
@@ -28,8 +28,8 @@ const initState = {
       {
         "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Conrad-Bevel-Mirrored-Frame-Rectangular-Accent-Wall-Mirror-by-iNSPIRE-Q-Bold-3eb26b57-58dd-47dd-b288-4b12fce8f06f_2048x2048.jpg?v=1533141193",
         "title": "Bevel Mirrored Frame Rectangular Accent Wall Mirror",
-        "cur_price": 289,
-        "pre_price": 329,
+        "cur_price": 62,
+        "pre_price": 88,
         "star": "91",
         "id": 3,
         "inventory": 99,
@@ -41,9 +41,9 @@ const initState = {
   {
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/5kbtu_2048x2048.png?v=1525382461",
     "title": "Frigidaire 5,000 BTU Window-Mounted Air Conditioner",
-    "cur_price": "$269.00",
-    "pre_price": "$",
-    "star": "",
+    "cur_price": 88,
+    "pre_price": 99,
+    "star": "55",
     "id": 4,
     "inventory": 99,
     "category": "Air Containers"
@@ -51,8 +51,8 @@ const initState = {
   {
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/10kbtu_2048x2048.png?v=1525382498",
     "title": "Frigidaire 10,000 BTU Window-Mounted Air Conditioner",
-    "cur_price": "$389.00",
-    "pre_price": "$398.00",
+    "cur_price": 120,
+    "pre_price": 217,
     "star": "308",
     "id": 5,
     "inventory": 99,
@@ -61,8 +61,8 @@ const initState = {
   {
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/12kbtu_copy_2048x2048.png?v=1525382481",
     "title": "Frigidaire 12,000 BTU Window-Mounted Air Conditioner",
-    "cur_price": "$479.00",
-    "pre_price": "$.00",
+    "cur_price": 420,
+    "pre_price": 500,
     "star": "91",
     "id": 6,
     "inventory": 99,
@@ -72,9 +72,9 @@ const initState = {
 
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/Priage_Quick_Lock_14-inch_Metal1_2048x2048.png?v=1529603817",
     "title": "Quick Lock 14-inch Metal Platform Bed Frame",
-    "cur_price": "$129.00",
-    "pre_price": "$",
-    "star": "",
+    "cur_price": 129,
+    "pre_price": 300,
+    "star": "22",
     "id": 7,
     "inventory": 99,
     "category": "Beds"
@@ -82,8 +82,8 @@ const initState = {
   {
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard___Footboard_2048x2048.png?v=1529603509",
     "title": "Platform Bed Frame, Box Spring Replacement with Headboard and Footboard",
-    "cur_price": "$129.00",
-    "pre_price": "$.00",
+    "cur_price": 88,
+    "pre_price": 120,
     "star": "308",
     "id": 8,
     "inventory": 99,
@@ -92,8 +92,8 @@ const initState = {
   {
     "image": "https://cdn.shopify.com/s/files/1/2531/4912/products/VECELO_Headboard1_2048x2048.png?v=1529603568",
     "title": "Platform Bed Frame, Box Spring Replacement with Headboard",
-    "cur_price": "$129.00",
-    "pre_price": "$0.00",
+    "cur_price": 47,
+    "pre_price": 55,
     "star": "91",
     "id": 9,
     "inventory": 99,
@@ -182,14 +182,14 @@ export const cart= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 60
+              total: state.total + 12
           }
     }
 
     if(action.type=== 'SUB_SHIPPING'){
         return{
             ...state,
-            total: state.total - 60
+            total: state.total - 12
         }
   }
     

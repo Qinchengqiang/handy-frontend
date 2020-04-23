@@ -13,6 +13,7 @@ function Nav(props) {
   const user = localStorage.getItem("localuser");
   const [sticky, setSticky] = useState(false)
   const { products } = props 
+  
   useEffect(() => {
 	window.addEventListener("scroll", () => {
 		if (window.pageYOffset > 0) {
@@ -45,7 +46,7 @@ function Nav(props) {
 				<NavLink exact to="/" className="navlink">
 					Help
 				</NavLink>
-				<NavLink exact to="/cart" className="navlink">
+				<NavLink exact to="/cart" className="navlink" >
 				<NavCart products={products} />
 			</NavLink>
 				{props.authentication ? (

@@ -9,6 +9,9 @@ import {
 } from "../../redux/actions/cartActions";
 import Recipe from "./Recipe";
 class CartPage extends Component {
+  componentDidMount() {
+    this.node.scrollIntoView();
+  }
   //to remove the item completely
   handleRemove = (id) => {
     this.props.removeItem(id);
@@ -25,7 +28,7 @@ class CartPage extends Component {
     const addedItems = this.props.items;
 
     return (
-      <div className="cartPage">
+      <div className="cartPage" ref={node => this.node = node}>
           <ul className="collection">
             {addedItems.length ? (
               this.props.items.map((item) => {
@@ -38,12 +41,23 @@ class CartPage extends Component {
                       <span className="title">{item.title}</span>
                       <p>{item.desc}</p>
                       <p>
-                        <b>Price: {item.cur_price}$</b>
+                        <b>Price: ${item.cur_price}</b>
                       </p>
                       <p>
                         <b>Quantity: {item.quantity}</b>
                       </p>
                       <div className="add-remove">
+                     
+                      <Link to="/cart">
+                          <i
+                            className="quantity-button"
+                            onClick={() => {
+                              this.handleSubtractQuantity(item.id);
+                            }}
+                          >
+                            Substract
+                          </i>
+                        </Link>
                         <Link to="/cart">
                           <i
                             className="quantity-button"
@@ -54,16 +68,7 @@ class CartPage extends Component {
                             Add
                           </i>
                         </Link>
-                        <Link to="/cart">
-                          <i
-                            className="quantity-button"
-                            onClick={() => {
-                              this.handleSubtractQuantity(item.id);
-                            }}
-                          >
-                            Substract
-                          </i>
-                        </Link>
+                     
                       </div>
                       <button
                         className="remove-button"
@@ -73,12 +78,13 @@ class CartPage extends Component {
                       >
                         Remove
                       </button>
+                   
                     </div>
                   </li>
                 );
               })
             ) : (
-              <p>Nothing.</p>
+              <p>Seems like you havent add anything yet</p>
             )}
           </ul>
         <Recipe />
