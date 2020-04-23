@@ -1,6 +1,8 @@
 import { Menu, Dropdown } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
+// import {Icon} from 'antd'
+import Avatar from './account_icon.svg'
 
 const menu = (
 	<Menu>
@@ -22,15 +24,19 @@ const menu = (
 const loggedIn = () => {
 	const user = localStorage.getItem("localuser");
 	return (
-		<Dropdown overlay={menu}>
+		<>
+		<Dropdown overlay={menu} style={{display: 'inline-flex', justifyContent: 'center', alignItems: 'center'}}>
 			<a
 				className="ant-dropdown-link"
 				onClick={(e) => e.preventDefault()}
-				style={{ fontSize: "20px", color: "darkblue" }}
+				style={{ fontSize: "20px", color: "navyblue" }}
 			>
-				{user}
+				{user.split(" ").reverse()[0]}
+				{/* <Icon type="user" className="assembly-form_prefix" style={{ color: "#BABBBD" , verticalAlign: 'middle'}}/> */}
+				<img src={Avatar} style={{marginLeft: '3px'}}/>
 			</a>
 		</Dropdown>
+		</>
 	);
 };
 
