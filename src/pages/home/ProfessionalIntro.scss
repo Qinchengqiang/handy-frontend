@@ -10,7 +10,7 @@
     .intro__width--override{
         padding-top: 0.5em;
         margin-top: 1em;
-        .intro__subtitle{
+        .intro__subtitle-fix{
             // margin:auto;        
             font-weight: 550;
             font-size: 1.25em;
@@ -37,9 +37,9 @@
     display: flex;
     justify-content: center;
     height:4em;
-    .intro__subtitle{
+    .intro__subtitle-fix{
         // margin:auto;
-        padding-top: 0.4em;
+        // padding-top: 0.4em;
         font-weight: 500;
         font-size: 1.875em;
         overflow: hidden;

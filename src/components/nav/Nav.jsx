@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import LoggedIn from "../../pages/login/loggedIn";
 import NavCart from './navCart'
 
+
 function Nav(props) {
   const user = localStorage.getItem("localuser");
   const { products } = props 
@@ -35,7 +36,10 @@ function Nav(props) {
 					// <NavLink exact to="/" className="navlink">
 					// 	{`Hello ${user}`}
 					// </NavLink> loggedMessage={"user"}
+					
 					<LoggedIn />
+					
+
 				) : (
 					<NavLink exact to="/login" className="navlink">
 						Login

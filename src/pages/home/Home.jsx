@@ -11,9 +11,11 @@ import YouPro from './YouPro'
 import {Link} from 'react-router-dom'
 import {Faq} from '../../globalComponents/Faq/Faq.jsx'
 // import Sidebar from '../../components/sidebar/Sidebar.js'
+import {connect} from 'react-redux'
 
 import HandyExplain from '../../globalComponents/HandyExplain/HandyExplain.jsx'
 import HandyFeatureAssembly from '../../globalComponents/HandyFeature/HandyFeatureAssembly'
+import { userConstants } from "../../redux/constants/userConstants";
 
 
 
@@ -28,6 +30,7 @@ class Home extends Component {
 
   async componentDidMount() {
     //get data from the store when the first render
+    // console.log('userName'+this.props.auth.user.userName)
     
 
   }
@@ -47,11 +50,17 @@ class Home extends Component {
   }
 
   render() {
+    const {login} = this.props
+    const {username} = JSON.parse(localStorage.getItem("user"))||'';
+    var today = new Date()
+    var curHr = today.getHours()
+    // const {user:userName} = this.props.auth;
+ 
     return (
       <div className="home">
         {/* <Nav /> */}
 
-        <h1 className="left_align"><b>The easy, reliable way to take care of your home.</b></h1>
+    <h1 className="left_align" style={{marginTop: '1.5em',marginBottom: '0.7em'}}><b>{!login?"The easy, reliable way to take care of your home.":(curHr<12)?`Good morning, ${username}`:(curHr<18)?`Good afternoon, ${username}`:`good evening, ${username}`}</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
@@ -65,11 +74,11 @@ class Home extends Component {
           <Link to='./shop' className="right-align-jump">See All ></Link>     
         </div>
         <FurnitureList renderTask={this.renderTask} />
-        <ProfessionalIntro/>
+        <HandyExplain/>
         <GurranteePic/>
         <ShopPic/>
         <YouPro/>
-        <HandyExplain/>
+        <ProfessionalIntro/>
         <HandyFeatureAssembly/>
         <Faq/>
       </div>
@@ -81,4 +90,9 @@ class Home extends Component {
 // export default connect((state)=>({
 //   login: state.loginStatus.login,
 // }),)(Home)
-export default Home;
+export default connect(state=>{
+  return {
+    login: state.authentication.loggedIn,
+    // userName: state.authentication.user.userName
+  }
+})(Home);

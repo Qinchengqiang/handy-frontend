@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>14DAE0F3-D7CF-442B-B199-70873EE7CB04</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="8" cy="8" r="8"></circle>
+    </defs>
+    <g id="Navigation-(4/10-launch)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation" transform="translate(-245.000000, -1639.000000)">
+            <g id="Navigation_Services_DropDown" transform="translate(136.000000, 631.000000)">
+                <g id="icon" transform="translate(109.000000, 1008.000000)">
+                    <g id="login" transform="translate(1.000000, 1.000000)">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <circle stroke="#434343" cx="8" cy="8" r="8.5"></circle>
+                            <path d="M6.45496637,9.13027293 C4.42892534,9.78250758 2.96296296,11.6830198 2.96296296,13.9259259 C2.96296296,16.7078047 5.21812126,18.962963 8,18.962963 C10.7818787,18.962963 13.037037,16.7078047 13.037037,13.9259259 C13.037037,11.8311441 11.7583089,10.0350253 9.93885126,9.27556806 C9.82612088,9.22851343 9.71131474,9.18543836 9.59460837,9.14651839 C9.54501468,9.12997957 9.49507784,9.11419107 9.44481134,9.09916635" id="Oval-4" stroke="#434343" mask="url(#mask-2)"></path>
+                            <circle id="Oval-3" stroke="#434343" mask="url(#mask-2)" cx="8" cy="6.81481481" r="2.66666667"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
