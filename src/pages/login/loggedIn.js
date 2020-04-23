@@ -33,7 +33,7 @@ const loggedIn = () => {
 			>
 				{user.split(" ").reverse()[0]}
 				{/* <Icon type="user" className="assembly-form_prefix" style={{ color: "#BABBBD" , verticalAlign: 'middle'}}/> */}
-				<img src={Avatar} style={{marginLeft: '3px'}}/>
+				<img src={Avatar} style={{marginLeft: '3px', marginRight: '20px'}}/>
 			</a>
 		</Dropdown>
 		</>

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect,useState}from "react";
 import "./nav.scss";
 import { NavLink } from "react-router-dom";
 import "antd/dist/antd.css";
@@ -8,16 +8,32 @@ import LoggedIn from "../../pages/login/loggedIn";
 import NavCart from './navCart'
 
 
+
 function Nav(props) {
   const user = localStorage.getItem("localuser");
+  const [sticky, setSticky] = useState(false)
   const { products } = props 
+  useEffect(() => {
+	window.addEventListener("scroll", () => {
+		if (window.pageYOffset > 0) {
+			setSticky(true);
+		} else {
+		  	setSticky(false);
+		}
+	  });
+	return () => {
+		window.removeEventListener('scroll')
+	}
+}, [])
 	return (
-		<div className="navcontainer">
+		// <header className={`nav-bar ${(sticky) ? 'sticky' : ''}`}>
+		<div className={`navcontainer ${(sticky) ? 'sticky' : ''}`}>
 			<NavLink exact to="/" className="navlink">
 				{logo}
 			</NavLink>
 			<NavLink exact to="/services" className="navlink">
 				Services
+				{/* {sticky?"yes":"no"} */}
 			</NavLink>
 			<NavLink exact to="/shop" className="navlink">
 				Shop
@@ -47,6 +63,7 @@ function Nav(props) {
 				)}
 			</div>
 		</div>
+		// </header>
 	);
 }
 
