@@ -182,14 +182,14 @@ export const cart= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 60
+              total: state.total + 12
           }
     }
 
     if(action.type=== 'SUB_SHIPPING'){
         return{
             ...state,
-            total: state.total - 60
+            total: state.total - 12
         }
   }
     
