@@ -31,8 +31,8 @@ class Home extends Component {
   async componentDidMount() {
     //get data from the store when the first render
     // console.log('userName'+this.props.auth.user.userName)
-    
-
+    const localcart = localStorage.getItem('cart')
+   localcart&&this.props.loadcart(JSON.parse(localcart))
   }
 
 
@@ -86,7 +86,7 @@ class Home extends Component {
   }
 }
 
-
+const loadcart = (payload)=>({type:"LOAD_CART",addedItems:payload})
 // export default connect((state)=>({
 //   login: state.loginStatus.login,
 // }),)(Home)
@@ -95,4 +95,4 @@ export default connect(state=>{
     login: state.authentication.loggedIn,
     // userName: state.authentication.user.userName
   }
-})(Home);
+},{loadcart})(Home);

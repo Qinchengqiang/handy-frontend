@@ -190,7 +190,13 @@ export const cart= (state = initState,action)=>{
         return{
             ...state,
             total: state.total - 12
-        }
+        }}
+    if(action.type === "LOAD_CART"){
+      return {
+        ...state,
+        addedItems: action.addedItems
+      }
+    
   }
     
   else{
