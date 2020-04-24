@@ -60,7 +60,7 @@ class AvailProCard extends Component {
     console.log("make a booking with payload: ", JSON.stringify(payload));
   };
   componentDidMount() {
-    const { proId } = this.props.proInfo;
+    const { _id: proId } = this.props.proInfo;
 
     const {
       bookingDate,
@@ -82,7 +82,7 @@ class AvailProCard extends Component {
     });
   }
   render() {
-    const { proId, firstName, serviceType } = this.props.proInfo;
+    const { _id: proId, firstName, serviceType } = this.props.proInfo;
 
     const {
       bookingDate,
