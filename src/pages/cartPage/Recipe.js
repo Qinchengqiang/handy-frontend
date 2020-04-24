@@ -20,8 +20,13 @@ class Recipe extends Component{
     }
 
     handleContinueShopping = ()=>{
+        this.props.saveCart()
         history.push('/shop')
         // this.props.saveCart({Cart:this.props.addedItems})
+    }
+
+    handleCheckout = ()=>{
+        history.push('/')
     }
 
     render(){
@@ -39,7 +44,7 @@ class Recipe extends Component{
                     </div>
                     <div className="checkout">
                         <Button style={{marginLeft: '10px',marginRight: '10px'}} onClick={this.handleContinueShopping}>continue to shopping</Button>
-                        <Button className="checkout-button">Checkout</Button>
+                        <Button className="checkout-button" onClick={this.handleCheckout}>Checkout</Button>
                     </div>
                  </div>
         )
@@ -58,7 +63,7 @@ const mapDispatchToProps = (dispatch)=>{
     return{
         addShipping: ()=>{dispatch({type: 'ADD_SHIPPING'})},
         substractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})},
-        saveCart: (payload)=>{dispatch({type:"SAVING_CART",payload})}
+        saveCart: ()=>{dispatch({type:"SAVING_CART"})}
     }
 }
 
