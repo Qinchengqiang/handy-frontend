@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {Button} from 'antd'
+import {history} from '../../redux/helpers/history'
 //import { addShipping } from './actions/cartActions'
 class Recipe extends Component{
     
@@ -18,20 +19,26 @@ class Recipe extends Component{
         }
     }
 
+    handleContinueShopping = ()=>{
+        history.push('/shop')
+        // this.props.saveCart({Cart:this.props.addedItems})
+    }
+
     render(){
   
         return(
             <div className="container">
                 <div className="collection">
-                    <li className="collection-item">
+                    <span className="collection-item">
                             <label>
                                 <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
                                 <span>Shipping(+$12)</span>
                             </label>
-                        </li>
-                        <li className="collection-item"><b>Total: ${this.props.total} </b></li>
+                        </span>
+                        <span className="collection-item"><b>Total: ${this.props.total} </b></span>
                     </div>
                     <div className="checkout">
+                        <Button style={{marginLeft: '10px',marginRight: '10px'}} onClick={this.handleContinueShopping}>continue to shopping</Button>
                         <Button className="checkout-button">Checkout</Button>
                     </div>
                  </div>
@@ -40,6 +47,7 @@ class Recipe extends Component{
 }
 
 const mapStateToProps = (state)=>{
+    // console.log("addedItems",state.cart.addedItems)
     return{
         addedItems: state.cart.addedItems,
         total: state.cart.total
@@ -49,7 +57,8 @@ const mapStateToProps = (state)=>{
 const mapDispatchToProps = (dispatch)=>{
     return{
         addShipping: ()=>{dispatch({type: 'ADD_SHIPPING'})},
-        substractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})}
+        substractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})},
+        saveCart: (payload)=>{dispatch({type:"SAVING_CART",payload})}
     }
 }
 
