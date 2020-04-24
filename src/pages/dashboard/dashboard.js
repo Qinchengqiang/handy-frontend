@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
         </div>
        
 
-        <div>
+        <div className="dashboard-right_container">
           <Switch>
             <Route path="/users/services" component={UpComing} />
 
