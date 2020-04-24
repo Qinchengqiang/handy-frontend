@@ -138,8 +138,7 @@ export const cart= (state = initState,action)=>{
         let new_items = state.addedItems.filter(item=> action.id !== item.id)
         
         //calculating the total
-        let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity )
-        console.log(itemToRemove)
+        let newTotal = state.total - (itemToRemove.cur_price * itemToRemove.quantity )
         return{
             ...state,
             addedItems: new_items,
@@ -190,7 +189,13 @@ export const cart= (state = initState,action)=>{
         return{
             ...state,
             total: state.total - 12
-        }
+        }}
+    if(action.type === "LOAD_CART"){
+      return {
+        ...state,
+        addedItems: action.addedItems
+      }
+    
   }
     
   else{

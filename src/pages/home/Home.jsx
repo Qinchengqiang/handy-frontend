@@ -31,8 +31,8 @@ class Home extends Component {
   async componentDidMount() {
     //get data from the store when the first render
     // console.log('userName'+this.props.auth.user.userName)
-    
-
+    const localcart = localStorage.getItem('cart')
+   localcart&&this.props.loadcart(JSON.parse(localcart))
   }
 
 
@@ -60,7 +60,7 @@ class Home extends Component {
       <div className="home">
         {/* <Nav /> */}
 
-    <h1 className="left_align" style={{marginTop: '1.5em',marginBottom: '0.7em'}}><b>{!login?"The easy, reliable way to take care of your home.":(curHr<12)?`Good morning, ${username}`:(curHr<18)?`Good afternoon, ${username}`:`good evening, ${username}`}</b></h1>
+    <h1 className="left_align" style={{marginTop: '1.5em',marginBottom: '0.7em'}}><b>{!login?"The easy, reliable way to take care of your home.":(curHr<12)?`Good morning, ${username}`:(curHr<18)?`Good afternoon, ${username}`:`Good evening, ${username}`}</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
@@ -86,7 +86,7 @@ class Home extends Component {
   }
 }
 
-
+const loadcart = (payload)=>({type:"LOAD_CART",addedItems:payload})
 // export default connect((state)=>({
 //   login: state.loginStatus.login,
 // }),)(Home)
@@ -95,4 +95,4 @@ export default connect(state=>{
     login: state.authentication.loggedIn,
     // userName: state.authentication.user.userName
   }
-})(Home);
+},{loadcart})(Home);
