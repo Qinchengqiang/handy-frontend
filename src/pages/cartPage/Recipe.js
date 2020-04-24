@@ -6,6 +6,7 @@ import {history} from '../../redux/helpers/history'
 class Recipe extends Component{
     
     componentWillUnmount() {
+        this.props.saveCart()
          if(this.refs.shipping.checked)
               this.props.substractShipping()
     }
@@ -20,7 +21,7 @@ class Recipe extends Component{
     }
 
     handleContinueShopping = ()=>{
-        this.props.saveCart()
+        // this.props.saveCart()
         history.push('/shop')
         // this.props.saveCart({Cart:this.props.addedItems})
     }
@@ -43,7 +44,7 @@ class Recipe extends Component{
                         <span className="collection-item"><b>Total: ${this.props.total} </b></span>
                     </div>
                     <div className="checkout">
-                        <Button style={{marginLeft: '10px',marginRight: '10px'}} onClick={this.handleContinueShopping}>continue to shopping</Button>
+                        <Button style={{marginLeft: '10px',marginRight: '10px'}} onClick={this.handleContinueShopping}>save cart for later</Button>
                         <Button className="checkout-button" onClick={this.handleCheckout}>Checkout</Button>
                     </div>
                  </div>

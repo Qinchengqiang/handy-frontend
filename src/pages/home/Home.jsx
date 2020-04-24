@@ -60,7 +60,7 @@ class Home extends Component {
       <div className="home">
         {/* <Nav /> */}
 
-    <h1 className="left_align" style={{marginTop: '1.5em',marginBottom: '0.7em'}}><b>{!login?"The easy, reliable way to take care of your home.":(curHr<12)?`Good morning, ${username}`:(curHr<18)?`Good afternoon, ${username}`:`good evening, ${username}`}</b></h1>
+    <h1 className="left_align" style={{marginTop: '1.5em',marginBottom: '0.7em'}}><b>{!login?"The easy, reliable way to take care of your home.":(curHr<12)?`Good morning, ${username}`:(curHr<18)?`Good afternoon, ${username}`:`Good evening, ${username}`}</b></h1>
         <QuickLink />
         <h2 className="left_align">Cleaning & Handyman Tasks</h2>
         <div className="container-description-flex">
