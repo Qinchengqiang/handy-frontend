@@ -2,6 +2,7 @@ import { userConstants } from "../constants/userConstants";
 import { userService } from "../services/userServices";
 import { alertActions } from "../actions/alertActions";
 import { history } from "../helpers/history";
+import Axios from "axios";
 
 export const userActions = {
 	login,
@@ -12,21 +13,26 @@ export const userActions = {
 };
 
 function login(username, password) {
+	const logInfo = {
+		email: username,
+		password: password,
+	};
 	return (dispatch) => {
 		dispatch(request({ username }));
+		Axios.post("http://localhost:4000/api/login", logInfo)
 
-		userService.login(username, password).then(
-			(user) => {
-				dispatch(success(user));
+			.then((res) => {
+				dispatch(success(logInfo));
 				history.push("/");
-			},
-			(error) => {
-				dispatch(failure(error));
-				dispatch(alertActions.error(error));
-			}
-		);
-	};
+				console.log(res.data);
+			})
+			.catch((err) => {
+				dispatch(failure(err));
+				dispatch(alertActions.error(err.response.data.message));
 
+				console.log(err.response.data.message);
+			});
+	};
 	function request(user) {
 		return { type: userConstants.LOGIN_REQUEST, user };
 	}
@@ -39,25 +45,25 @@ function login(username, password) {
 }
 
 function logout() {
-	userService.logout();
+	localStorage.removeItem("user");
 	return { type: userConstants.LOGOUT };
 }
 
 function register(user) {
 	return (dispatch) => {
 		dispatch(request(user));
-
-		userService.register(user).then(
-			(user) => {
+		Axios.post("/api/user", user)
+			.then((res) => {
 				dispatch(success());
 				history.push("/login");
 				dispatch(alertActions.success("Registration successful"));
-			},
-			(error) => {
-				dispatch(failure(error));
-				dispatch(alertActions.error(error));
-			}
-		);
+			})
+
+			.catch((err) => {
+				console.log(err);
+				dispatch(failure(err));
+				dispatch(alertActions.error(err.response.data.message));
+			});
 	};
 
 	function request(user) {
