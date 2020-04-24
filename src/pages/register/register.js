@@ -17,7 +17,7 @@ class RegisterPage extends React.Component {
 			user: {
 				email: "",
 				number: "",
-				username: "",
+
 				password: "",
 				confirmPassword: "",
 			},
@@ -47,7 +47,6 @@ class RegisterPage extends React.Component {
 		if (
 			user.email.includes("@") &&
 			/^[0-9]+$/.test(user.number) &&
-			user.username &&
 			/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(user.password) &&
 			user.confirmPassword == user.password
 		) {
@@ -73,16 +72,18 @@ class RegisterPage extends React.Component {
 								)}
 							</div>
 							<div>
-								<label htmlFor="username">Username:</label>
+								<label htmlFor="email">Email:</label>
 								<input
 									type="text"
 									className="form-control"
-									name="username"
-									value={this.state.user.username}
+									name="email"
+									value={this.state.user.email}
 									onChange={this.handleChange}
 								/>
-								{submitted && !user.username && (
-									<div className="help-block">Username is required</div>
+								{submitted && !user.email.includes("@") && (
+									<div className="help-block">
+										Please input the correct Email!
+									</div>
 								)}
 							</div>
 							<div>
@@ -119,21 +120,7 @@ class RegisterPage extends React.Component {
 									</div>
 								)}
 							</div>
-							<div>
-								<label htmlFor="email">Email:</label>
-								<input
-									type="text"
-									className="form-control"
-									name="email"
-									value={this.state.user.email}
-									onChange={this.handleChange}
-								/>
-								{submitted && !user.email.includes("@") && (
-									<div className="help-block">
-										Please input the correct Email!
-									</div>
-								)}
-							</div>
+
 							<div>
 								<label htmlFor="number">Phone Number:</label>
 								<input
