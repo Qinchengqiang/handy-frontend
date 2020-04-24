@@ -71,6 +71,6 @@ function Nav(props) {
 
 const mapStateToProps = (state) => ({
   authentication: state.authentication.loggedIn,
-  products: state.cart.addedItems
+  products: state.cart.addedItems.map(x=>x.quantity).reduce((x,y)=>(x+y),0)
 })
 export default connect(mapStateToProps)(Nav);
