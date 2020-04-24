@@ -11,15 +11,15 @@ import Footer from "./components/footer/";
 import HandymanService from "./pages/HandymanService/HandymanService";
 import Nomatch from "./components/Nomatch";
 import Cleaning from "./pages/Service-Entrypoint/Cleaning";
-import HomeCleaning from "./pages/services/cleaning/HomeCleaning"
+import HomeCleaning from "./pages/services/cleaning/HomeCleaning";
 import TV from "./pages/services/tv/TV";
 import Moving from "./pages/services/moving/Moving";
-import PrivateRoute from './ PrivateRoute'
-import CartPage from './/pages/cartPage'
+import PrivateRoute from "./ PrivateRoute";
+import CartPage from ".//pages/cartPage";
 
 import {
-	FurnitureAssembly,
-	OfficeAssembly,
+  FurnitureAssembly,
+  OfficeAssembly,
 } from "./pages/services/assembly/FurnitureAssembly";
 import ShopPage from "./pages/shopPage";
 import { RegisterPage } from "./pages/register/register";
@@ -27,52 +27,56 @@ import { LoginPage } from "./pages/login/loginPage";
 import Dashboard from "./pages/dashboard/dashboard";
 
 class App extends Component {
-	render() {
-		return (
-			<Router history={history}>
-				<Nav />
-				<Switch>
-					<Route exact path="/">
-						<Home />
-					</Route>
-					<Route exact path="/services">
-						<ServicePage />
-					</Route>
-					<Route exact path="/shop">
-						<ShopPage />
-					</Route>
-					<Route exact path="/apply">
-						<Apply />
-					</Route>
-					<Route exact path="/cart" component={CartPage} />
-					<Route exact path="/login" component={LoginPage} />
-					<Route exact path="/register" component={RegisterPage} />
-					{/* <Route exact path="/myaccount" component={MyAccount} /> */}
-					<Route exact path="/services/handyman-service" component={HandymanService} />
-					<Route exact path={`/services/cleaning`}>
-						<HomeCleaning />
-					</Route>
-					<Route exact path="/services/furniture-assembly">
-						<FurnitureAssembly />
-					</Route>
-					<Route exact path="/services/office-furniture-assembly">
-						<OfficeAssembly />
-					</Route>
-					<Route exact path="/services/tv">
-						<TV />
-					</Route>
-					<Route exact path="/services/moving">
-						<Moving />
-					</Route>
-					<PrivateRoute path="/users" component={Dashboard} />
-					<Route path="*">
-						<Nomatch />
-					</Route>
-				</Switch>
-				<Footer />
-			</Router>
-		);
-	}
+  render() {
+    return (
+      <Router history={history}>
+        <Nav />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/services">
+            <ServicePage />
+          </Route>
+          <Route exact path="/shop">
+            <ShopPage />
+          </Route>
+          <Route exact path="/apply">
+            <Apply />
+          </Route>
+          <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/register" component={RegisterPage} />
+          {/* <Route exact path="/myaccount" component={MyAccount} /> */}
+          <Route
+            exact
+            path="/services/handyman-service"
+            component={HandymanService}
+          />
+          <Route exact path={`/services/cleaning`}>
+            <HomeCleaning />
+          </Route>
+          <Route exact path="/services/furniture-assembly">
+            <FurnitureAssembly />
+          </Route>
+          <Route exact path="/services/office-furniture-assembly">
+            <OfficeAssembly />
+          </Route>
+          <Route exact path="/services/tv">
+            <TV />
+          </Route>
+          <Route exact path="/services/moving">
+            <Moving />
+          </Route>
+          <PrivateRoute path="/users" component={Dashboard} />
+          <Route path="*">
+            <Nomatch />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    );
+  }
 }
 
 export default App;
