@@ -1,4 +1,13 @@
 .dashboard__container {
     display: flex;
     flex-direction: row;
+    width: 100%;
+}
+
+.dashboard-orders_container{
+    flex:1;
+}
+
+.dashboard-sidebar{
+    flex-basis:30%;
 }
