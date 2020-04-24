@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Modal, Button, Input, Result } from "antd";
+import { placeABooking } from "./api/bookingAPICalls";
 
 class AvailProCard extends Component {
   constructor(props) {
@@ -56,8 +57,9 @@ class AvailProCard extends Component {
       resultVisible: false,
     });
   };
-  handleMakeBooking = (payload) => {
-    console.log("make a booking with payload: ", JSON.stringify(payload));
+  handleMakeBooking = async (payload) => {
+    const res = await placeABooking(payload).then((res) => res);
+    console.log(res);
   };
   componentDidMount() {
     const { _id: proId } = this.props.proInfo;
