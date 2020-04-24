@@ -191,9 +191,14 @@ export const cart= (state = initState,action)=>{
             total: state.total - 12
         }}
     if(action.type === "LOAD_CART"){
+      let number = 0;
+      action.addedItems.forEach(x=>{
+        number += (x.cur_price*x.quantity)
+      })
       return {
         ...state,
-        addedItems: action.addedItems
+        addedItems: action.addedItems,
+        total: number,
       }
     
   }

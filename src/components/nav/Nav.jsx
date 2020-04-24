@@ -43,9 +43,9 @@ function Nav(props) {
 			Become a Pro
 			</NavLink>
 			<div className="rightpart">
-				<NavLink exact to="/" className="navlink">
+				{/* <NavLink exact to="/" className="navlink">
 					Help
-				</NavLink>
+				</NavLink> */}
 				<NavLink exact to="/cart" className="navlink" >
 				<NavCart products={products} />
 			</NavLink>
