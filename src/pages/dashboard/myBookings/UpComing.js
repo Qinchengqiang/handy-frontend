@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { connect } from "react-redux";
 import { showUpcoming } from "../../../redux/actions/bookingsActions";
+import CleaningBookingForm from "./MakeBooking";
 //import {addNotes} from "../../../redux/actions/bookingsActions";
 /**
  * TODO construct form to get all matching pros
@@ -39,6 +40,7 @@ const UpComing = (props) => {
       <pre>
         <code>{JSON.stringify(rawOutput, null, 4)}</code>
       </pre>
+      <CleaningBookingForm />
     </>
   );
 };
