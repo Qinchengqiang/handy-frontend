@@ -7,10 +7,10 @@ import Avatar from './account_icon.svg'
 const menu = (
 	<Menu>
 		<Menu.Item>
-			<Link to="/users/services">My Account</Link>
+			<Link to="/users/services">My Services</Link>
 		</Menu.Item>
 		<Menu.Item>
-			<Link to="/users/edit">My service</Link>
+			<Link to="/users/edit">My Account</Link>
 		</Menu.Item>
 		<Menu.Item>
 			<Link to="/users/orders">My orders</Link>
