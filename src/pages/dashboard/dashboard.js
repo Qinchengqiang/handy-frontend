@@ -20,7 +20,7 @@ export default class Dashboard extends Component {
             <Route path="/users/edit" component={MyAccount} />
             <Route
               path="/users/orders"
-              component={() => <div className="dashboard-orders_container">I am orders </div>}
+              component={() => <div>I am orders </div>}
             />
           </Switch>
         </div>
