@@ -10,7 +10,7 @@ const initState = {
         "pre_price": 96,
         "star": "851",
         "id": 1,
-        "inventory": 1,
+        "inventory": 99,
         "desc": "psum dolor sit amet consectetur adipisicing elit. psum dolor sit amet consectetur adipisicing elit. ",
         "category": "Best Sellers"
       },
@@ -21,7 +21,7 @@ const initState = {
         "pre_price": 100,
         "star": "308",
         "id": 2,
-        "inventory": 2,
+        "inventory": 99,
         "desc": "psum dolor sit amet consectetur adipisicing elit. psum dolor sit amet consectetur adipisicing elit. ",
         "category": "Best Sellers"
       },

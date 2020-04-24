@@ -15,10 +15,12 @@ function* getAllBookings(action) {
   }
 }
 
-function *saveCart({payload}, {put,select}) {
-yield put({type:'add', payload});
-yield select(state => {
-localStorage.setItem('cart', JSON.stringify(state.cart)) })
+function* saveCart({payload}, {put,select}) {
+// yield put({type:'add', payload});
+// yield select(state => {
+// localStorage.setItem('cart', JSON.stringify(state.cart.addedItems)) })
+yield console.log("hello world")
+
 }
 
 
