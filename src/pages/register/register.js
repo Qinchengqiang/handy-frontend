@@ -79,7 +79,7 @@ class RegisterPage extends React.Component {
 								)}
 							</div>
 							<div>
-								<label htmlFor="nickname">Name:</label>
+								<label htmlFor="nicnname">Name:</label>
 								<input
 									type="text"
 									className="form-control"

@@ -18,7 +18,7 @@ class SearchAvailPros extends Component {
     this.state = {
       query: {},
       results: [],
-      chosen: {},
+      isSearched: false,
     };
   }
   handleSubmit = (e) => {
@@ -45,6 +45,7 @@ class SearchAvailPros extends Component {
       if (resolve.data.length > 0) {
         this.setState({
           ...this.state,
+          isSearched: true,
           results: [...resolve.data],
         });
       }
@@ -152,26 +153,19 @@ class SearchAvailPros extends Component {
               </Select>
             )}
           </Form.Item>
-          <Button htmlType="submit" type="primary">
+          <Button htmlType="submit" type="primary" icon="search">
             Search
           </Button>
         </Form>
-        {this.state.results.length > 0 ? (
-          this.state.results.map((pro, index) => {
-            return (
-              <AvailProCard
-                bookingInfo={bookingInfo}
-                proInfo={pro}
-                key={`availPro-${index}`}
-              />
-            );
-          })
-        ) : (
-          <h4>
-            Sorry, We could not find available Pros, please try another desired
-            booking time
-          </h4>
-        )}
+        {this.state.results.map((pro, index) => {
+          return (
+            <AvailProCard
+              bookingInfo={bookingInfo}
+              proInfo={pro}
+              key={`availPro-${index}`}
+            />
+          );
+        })}
       </>
     );
   }

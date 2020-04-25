@@ -6,7 +6,6 @@
 //     }, 100);
 // }
 
-
 // export const buyProducts = (products, callback, errorCallback) => {
 //     setTimeout(() => {
 //         Math.random() > 0.5 ? callback() : errorCallback()
