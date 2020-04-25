@@ -5,7 +5,7 @@ function PrivateRoute({ component: Component, ...rest }) { // 结构props为comp
     // rest is the props being passed onto Route
     return (
         <Route {...rest} render={props=>
-            localStorage.getItem("localuser") ? (
+            localStorage.getItem("token") ? (
                 <Component {...props} />
             ) : (<Redirect
                 to={{
