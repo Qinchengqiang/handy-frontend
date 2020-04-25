@@ -5,7 +5,7 @@ import { showUpcoming } from "../../../redux/actions/bookingsActions";
 import BookingCard from "./BookingCard";
 
 const UpComing = (props) => {
-  const { rawOutput, userId } = props;
+  const { rawOutput,rawOutput:bookings, userId } = props;
 
   return (
     <>
@@ -19,13 +19,14 @@ const UpComing = (props) => {
       </Button>
 
       <hr />
-      {/*{rawOutput
-        ? rawOutput.bookings.map((booking, index) => {
+      {bookings.length>0
+        ? bookings.map((booking, index) => {
             return (
               <BookingCard key={`booking-${index}`} bookingInfo={rawOutput} />
+              
             );
           })
-        : null}*/}
+        : null}
       <pre>
         <code>{JSON.stringify(rawOutput, null, 4)}</code>
       </pre>
