@@ -34,30 +34,30 @@ const sesstionTable = {
 const BookingCard = ({ bookingInfo }) => {
   const proFirstName = bookingInfo.proId.firstName;
   const proPhone = bookingInfo.proId.contactNum;
-  const jobDate = bookingInfo.bookingDate;
+  const jobDate = new Date(bookingInfo.bookingDate);
   const startTime = bookingInfo.startSession;
   const endTime = bookingInfo.endSession;
   const popoverContent = (
     <div>
-      <h6>Job Details</h6>
-      <p>{`Pro: ${proFirstName}`}</p>
+      <p style={{ textTransform: "capitalize" }}>{`Pro: ${proFirstName}`}</p>
       <p>{`Contact Number: ${proPhone}`}</p>
-      <p>{`Job Date: ${jobDate}`}</p>
+      <p>{`Job Date: ${jobDate.toDateString()}`}</p>
       <p>{`Job Starts at: ${sesstionTable[startTime]}`}</p>
       <p>{`Job Finishes at: ${sesstionTable[endTime]}`}</p>
     </div>
   );
   return (
-    <div>
+    <div className="resultsCard">
       <Card
-        title={jobDate}
+        title={jobDate.toDateString()}
         extra={
           <Popover content={popoverContent} title="Job Details">
             <Button type="primary">Job Details</Button>
           </Popover>
         }
+        style={{ width: 300 }}
       >
-        <p>{`Pro: ${proFirstName}`}</p>
+        <p style={{ textTransform: "capitalize" }}>{`Pro: ${proFirstName}`}</p>
         <p>{`Job Time: ${sesstionTable[startTime]}`}</p>
       </Card>
     </div>
