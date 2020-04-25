@@ -42,10 +42,12 @@ class SearchAvailPros extends Component {
     const payload = JSON.stringify(values);
     console.log(payload);
     findMatchingPros(payload).then((resolve) => {
-      this.setState({
-        ...this.state,
-        results: [...resolve.data],
-      });
+      if (resolve.data.length > 0) {
+        this.setState({
+          ...this.state,
+          results: [...resolve.data],
+        });
+      }
     });
   };
 
@@ -155,15 +157,22 @@ class SearchAvailPros extends Component {
             Search
           </Button>
         </Form>
-        {this.state.results.map((pro, index) => {
-          return (
-            <AvailProCard
-              bookingInfo={bookingInfo}
-              proInfo={pro}
-              key={`availPro-${index}`}
-            />
-          );
-        })}
+        {this.state.results.length > 0 ? (
+          this.state.results.map((pro, index) => {
+            return (
+              <AvailProCard
+                bookingInfo={bookingInfo}
+                proInfo={pro}
+                key={`availPro-${index}`}
+              />
+            );
+          })
+        ) : (
+          <h4>
+            Sorry, We could not find available Pros, please try another desired
+            booking time
+          </h4>
+        )}
       </>
     );
   }
