@@ -19,9 +19,9 @@ class RegisterPage extends React.Component {
 				number: "",
 				password: "",
 				confirmPassword: "",
+				nickname: "",
 			},
 			submitted: false,
-			nickname:"",
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -31,24 +31,22 @@ class RegisterPage extends React.Component {
 	handleChange(event) {
 		const { name, value } = event.target;
 		const { user } = this.state;
-		if (name === "nickname"){
-			this.setState({
-				...this.state,
-				nickname: value,
-
-			})
-		} else {
+		
 		this.setState({
 			user: {
 				...user,
 				[name]: value,
 			},
-		});}
+		},()=>{
+			if (name ==="nickname"){
+				console.log("nickname" + this.state.user.nickname)
+			}
+		});
+	
 	}
 
 	handleSubmit(event) {
 		event.preventDefault();
-		localStorage.setItem("localuser",this.state.nickname)
 		this.setState({ submitted: true });
 		const { user } = this.state;
 		if (
@@ -79,7 +77,7 @@ class RegisterPage extends React.Component {
 								)}
 							</div>
 							<div>
-								<label htmlFor="name">name:</label>
+								<label htmlFor="nicnname">Name:</label>
 								<input
 									type="text"
 									className="form-control"

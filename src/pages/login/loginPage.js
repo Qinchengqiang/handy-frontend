@@ -19,6 +19,7 @@ class LoginPage extends React.Component {
 			username: "",
 			password: "",
 			submitted: false,
+			nickname: "",
 		};
 
 		this.handleChange = this.handleChange.bind(this);
@@ -34,11 +35,11 @@ class LoginPage extends React.Component {
 		e.preventDefault();
 
 		this.setState({ submitted: true });
-		const { username, password } = this.state;
+		const { username, password, nickname } = this.state;
 		if (username && password) {
 			this.props.login(username, password);
 			localStorage.setItem("token", true);
-			localStorage.setItem("localuser", username);
+			localStorage.setItem("localuser", nickname);
 		}
 	}
 
