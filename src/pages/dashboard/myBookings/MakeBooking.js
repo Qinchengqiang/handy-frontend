@@ -67,7 +67,6 @@ class SearchAvailPros extends Component {
       bookingDate: this.state.query.bookingDate,
       startSession: this.state.query.startSession,
       endSession: this.state.query.endSession,
-      customerId: "5e956782037eb27bfd6dc998",
     };
     return (
       <>

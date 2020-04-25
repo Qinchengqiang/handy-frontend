@@ -14,7 +14,7 @@ import CleaningBookingForm from "./MakeBooking";
 
 const UpComing = (props) => {
   const [input, setInput] = useState("");
-  const { rawOutput } = props;
+  const { rawOutput, userId } = props;
 
   return (
     <>
@@ -48,7 +48,7 @@ const UpComing = (props) => {
 const mapStateToProps = (state) => {
   return {
     rawOutput: state.bookingReducer,
-    //userId: state.bookingReducer.userId,
+    //userId: state.authentication.user,
     //bookings: state.bookingReducer.bookings
     //bookingIds:state.bookingIds
   };
