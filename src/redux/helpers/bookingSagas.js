@@ -1,6 +1,6 @@
 import { call, put, takeEvery } from "redux-saga/effects";
 import { SHOW_UPCOMING } from "../constants/bookingsConstants";
-import {getAllBookingsById} from '../../pages/dashboard/myBookings/api/userAPICalls'
+import { getAllBookingsById } from "../../pages/dashboard/myBookings/api/userAPICalls";
 function* getAllBookings(action) {
   try {
     const result = yield call(getAllBookingsById, action.payload.userId);

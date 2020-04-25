@@ -1,25 +1,31 @@
-import React, { useState } from "react";
-
+import React, { Component } from "react";
+import { Button } from "antd";
 import { connect } from "react-redux";
 import { showUpcoming } from "../../../redux/actions/bookingsActions";
+import BookingCard from "./BookingCard";
 
 const UpComing = (props) => {
-  const [input, setInput] = useState("");
   const { rawOutput, userId } = props;
 
   return (
     <>
       <h3>Your upcoming bookings</h3>
-
-      <button
-        name={`submitQuery`}
-        id={`submitQuery`}
-        onClick={(e) => props.showUpcoming(userId)}
+      <Button
+        type="primary"
+        icon="reload"
+        onClick={() => props.showUpcoming(userId)}
       >
-        submit
-      </button>
-      <hr />
+        Refresh
+      </Button>
 
+      <hr />
+      {/*{rawOutput
+        ? rawOutput.bookings.map((booking, index) => {
+            return (
+              <BookingCard key={`booking-${index}`} bookingInfo={rawOutput} />
+            );
+          })
+        : null}*/}
       <pre>
         <code>{JSON.stringify(rawOutput, null, 4)}</code>
       </pre>

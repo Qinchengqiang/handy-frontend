@@ -11,8 +11,8 @@ import "./index.css";
 
 // console.log(store.dispatch(getAllProducts()))
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById("root")
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
