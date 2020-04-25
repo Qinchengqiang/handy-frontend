@@ -1,7 +1,10 @@
 import { userConstants } from "../constants/userConstants";
 
-let user = localStorage.getItem("user");
-const initialState = user ? { loggedIn: true, user } : { fail: true };
+// let user = localStorage.getItem("user");
+const initialState = {
+	isAuthenticated: false,
+	user: {},
+};
 
 export function authentication(state = initialState, action) {
 	switch (action.type) {
@@ -19,6 +22,12 @@ export function authentication(state = initialState, action) {
 			return {
 				fail: true,
 				error: "Username or password is incorrect!",
+			};
+		case userConstants.SET_CURRENT_USER:
+			return {
+				...state,
+				isAuthenticated: true,
+				user: action.payload,
 			};
 		case userConstants.LOGOUT:
 			return {
