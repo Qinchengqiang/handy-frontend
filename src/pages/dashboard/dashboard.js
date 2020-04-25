@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Link, Redirect, Switch } from "react-router-dom";
+import PrivateRoute from "../../ PrivateRoute";
 import Sidebar from "../../components/sidebar/Sidebar";
 import MyAccount from "../myAccount/myAccount";
 import "./dashboard.scss";
@@ -16,8 +17,8 @@ export default class Dashboard extends Component {
           <Switch>
             <Route path="/users/services" component={MyBookings} />
 
-            <Route path="/users/edit" component={MyAccount} />
-            <Route
+            <PrivateRoute path="/users/edit" component={MyAccount} />
+            <PrivateRoute
               path="/users/orders"
               component={() => <div>I am orders </div>}
             />

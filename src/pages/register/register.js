@@ -17,9 +17,9 @@ class RegisterPage extends React.Component {
 			user: {
 				email: "",
 				number: "",
-
 				password: "",
 				confirmPassword: "",
+				nickname: "",
 			},
 			submitted: false,
 		};
@@ -31,17 +31,22 @@ class RegisterPage extends React.Component {
 	handleChange(event) {
 		const { name, value } = event.target;
 		const { user } = this.state;
+		
 		this.setState({
 			user: {
 				...user,
 				[name]: value,
 			},
+		},()=>{
+			if (name ==="nickname"){
+				console.log("nickname" + this.state.user.nickname)
+			}
 		});
+	
 	}
 
 	handleSubmit(event) {
 		event.preventDefault();
-
 		this.setState({ submitted: true });
 		const { user } = this.state;
 		if (
@@ -70,6 +75,16 @@ class RegisterPage extends React.Component {
 								{alert.message && (
 									<div className={`alert ${alert.type}`}>{alert.message}</div>
 								)}
+							</div>
+							<div>
+								<label htmlFor="nicnname">Name:</label>
+								<input
+									type="text"
+									className="form-control"
+									name="nickname"
+									value={this.state.user.nickname}
+									onChange={this.handleChange}
+								/>
 							</div>
 							<div>
 								<label htmlFor="email">Email:</label>
