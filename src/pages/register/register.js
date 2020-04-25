@@ -31,18 +31,20 @@ class RegisterPage extends React.Component {
 	handleChange(event) {
 		const { name, value } = event.target;
 		const { user } = this.state;
-		
-		this.setState({
-			user: {
-				...user,
-				[name]: value,
+
+		this.setState(
+			{
+				user: {
+					...user,
+					[name]: value,
+				},
 			},
-		},()=>{
-			if (name ==="nickname"){
-				console.log("nickname" + this.state.user.nickname)
+			() => {
+				if (name === "nickname") {
+					console.log("nickname" + this.state.user.nickname);
+				}
 			}
-		});
-	
+		);
 	}
 
 	handleSubmit(event) {
@@ -77,7 +79,7 @@ class RegisterPage extends React.Component {
 								)}
 							</div>
 							<div>
-								<label htmlFor="nicnname">Name:</label>
+								<label htmlFor="nickname">Name:</label>
 								<input
 									type="text"
 									className="form-control"
