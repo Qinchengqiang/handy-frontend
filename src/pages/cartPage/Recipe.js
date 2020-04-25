@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Button } from "antd";
 import { history } from "../../redux/helpers/history";
+import axios from 'axios'
 //import { addShipping } from './actions/cartActions'
 class Recipe extends Component {
   componentWillUnmount() {
@@ -17,8 +18,9 @@ class Recipe extends Component {
     }
   };
 
-  handleContinueShopping = () => {
+  handleContinueShopping = async () => {
     // this.props.saveCart()
+    // await axios.post()
     history.push("/shop");
     // this.props.saveCart({Cart:this.props.addedItems})
   };
@@ -50,7 +52,7 @@ class Recipe extends Component {
             style={{ marginLeft: "10px", marginRight: "10px" }}
             onClick={this.handleContinueShopping}
           >
-            save cart for later
+            save cart as wishlist
           </Button>
           <Button className="checkout-button" onClick={this.handleCheckout}>
             Checkout

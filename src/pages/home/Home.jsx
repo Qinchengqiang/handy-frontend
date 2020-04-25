@@ -23,6 +23,7 @@ class Home extends Component {
 		this.state = {
 			data: [],
 			locations: [],
+			nickname: ""
 		};
 	}
 
@@ -31,6 +32,23 @@ class Home extends Component {
 		// console.log('userName'+this.props.auth.user.userName)
 		const localcart = localStorage.getItem("cart");
 		localcart && this.props.loadcart(JSON.parse(localcart));
+		const asyncLocalStorage = {
+			setItem: function (key, value) {
+				return Promise.resolve().then(function () {
+					localStorage.setItem(key, value);
+				});
+			},
+			getItem: function (key) {
+				return Promise.resolve().then(function () {
+					return localStorage.getItem(key);
+				});
+			},
+		};
+		asyncLocalStorage.getItem("localuser").then((value) => {
+			// console.log(value);
+			// return value;
+			this.setState({...this.state,nickname:value})
+		});
 	}
 
 	renderTask = (taskImgUrl, taskName, linkTo) => {
@@ -52,7 +70,7 @@ class Home extends Component {
 
 	render() {
 		const { login } = this.props;
-		const { username } = JSON.parse(localStorage.getItem("user")) || "";
+		// const { username } = JSON.parse(localStorage.getItem("user")) || "";
 		var today = new Date();
 		var curHr = today.getHours();
 		// const {user:userName} = this.props.auth;
@@ -69,10 +87,10 @@ class Home extends Component {
 						{!login
 							? "The easy, reliable way to take care of your home."
 							: curHr < 12
-							? `Good morning, ${username}`
+							? `Good morning, ${this.state.nickname}`
 							: curHr < 18
-							? `Good afternoon, ${username}`
-							: `Good evening, ${username}`}
+							? `Good afternoon, ${this.state.nickname}`
+							: `Good evening, ${this.state.nickname}`}
 					</b>
 				</h1>
 				<QuickLink />
