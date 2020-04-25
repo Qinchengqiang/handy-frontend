@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "./myAccount.scss"
+import "./myAccount.scss";
+import Axios from "axios";
 
 // const myAccount = () => {
 // 	return (
@@ -11,30 +12,28 @@ import "./myAccount.scss"
 // 	);
 // };
 
-
 class MyAccount extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
+			firstName: "",
+			lastName: "",
+			email: "",
+			phone: "",
 
-            firstName: '',
-            lastName: '',
-            email: '',
-			phone: '',
+			password: "",
+			currentPwd: "",
+			newPwd: "",
+			renewPwd: "",
 
-			password: '',
-			currentPwd: '',
-			newPwd: '',
-			renewPwd: '',
+			ccNumber: "",
+			ccExpire: "",
+			ccExpireMM: "",
+			ccExpireYY: "",
+			ccSecCode: "",
 
-			ccNumber: '',
-			ccExpire: '',
-			ccExpireMM: '',
-			ccExpireYY: '',
-			ccSecCode: '',
-
-			refEmail: '',
+			refEmail: "",
 		};
 
 		// this.handleFirstName = this.handleFirstName.bind(this);
@@ -51,95 +50,138 @@ class MyAccount extends Component {
 
 	componentDidMount() {
 		//get data from the store when the first render
-
 	}
+	componentWillMount() {}
 
-	
 	handleChange(e) {
 		this.setState({
-            [e.target.name]: e.target.value,
-        })
+			[e.target.name]: e.target.value,
+		});
 	}
 
-	handleSave(e){
-        e.preventDefault();
+	handleSave(e) {
+		e.preventDefault();
 
-		console.log('Account:');
+		console.log("Account:");
 		console.log(this.state);
+		let updateInfo = {
+			id: localStorage.getItem("_id"),
+			firstName: this.state.firstName,
+			lastName: this.state.lastName,
+			number: this.state.phone,
+			email: this.state.email,
+		};
+		Axios.post("http://localhost:4000/api/user/update", updateInfo).then(
+			alert("account information update successfully!")
+		);
 
 		// console.log(this.state.firstName);
 		// console.log(this.state.lastName);
 		// console.log(this.state.email);
 		// console.log(this.state.phone);
 
-        this.setState({
-
-            firstName: '',
-            lastName: '',
-            email: '',
-			phone: '',
-        })
+		this.setState({
+			firstName: "",
+			lastName: "",
+			email: "",
+			phone: "",
+		});
 	}
 
-	handleCCinfo(e){
-        e.preventDefault();
+	handleCCinfo(e) {
+		e.preventDefault();
 
-		if(this.state.ccNumber.slice(0,4) > 1000 && this.state.ccNumber.length === 16){
-
-			if((this.state.ccExpire.length === 4) && (this.state.ccSecCode.length === 3) && (this.state.ccExpire.slice(0,2) >= 1 && this.state.ccExpire.slice(0,2) <= 12) && (this.state.ccExpire.slice(-2)>=20 && this.state.ccExpire.slice(-2) <=25)){
+		if (
+			this.state.ccNumber.slice(0, 4) > 1000 &&
+			this.state.ccNumber.length === 16
+		) {
+			if (
+				this.state.ccExpire.length === 4 &&
+				this.state.ccSecCode.length === 3 &&
+				this.state.ccExpire.slice(0, 2) >= 1 &&
+				this.state.ccExpire.slice(0, 2) <= 12 &&
+				this.state.ccExpire.slice(-2) >= 20 &&
+				this.state.ccExpire.slice(-2) <= 25
+			) {
 				this.setState({
-
 					ccNumber: this.state.ccNumber,
-					ccExpireMM: this.state.ccExpire.slice(0,2),
+					ccExpireMM: this.state.ccExpire.slice(0, 2),
 					ccExpireYY: this.state.ccExpire.slice(-2),
-					ccExpire: '',
+					ccExpire: "",
 					ccSecCode: this.state.ccSecCode,
-
-				})
+				});
+			} else {
+				console.log(`Credit Card details incorrect...`);
 			}
-			else {
-				console.log(`Credit Card details incorrect...`)
-			}
-		}
-		else {
-			console.log(`Credit Card details incorrect...`)
+		} else {
+			console.log(`Credit Card details incorrect...`);
 		}
 	}
 
+	handleChangePwd(e) {
+		e.preventDefault();
 
-	handleChangePwd(e){
-        e.preventDefault();
+		let oldpwd = {
+			id: localStorage.getItem("_id"),
+			password: this.state.currentPwd,
+		};
 
-		if(this.state.password !== this.state.currentPwd){
-			console.log(`Current password is not correct, password change failed...`)
-		} else if(this.state.newPwd !== this.state.renewPwd){
-			console.log(`Repeat New password doesn't match, password change failed...`)
-		}
-		else{
-			console.log(`Password changed successfully..`)
-			this.setState({
-				password: this.state.newPwd,
-				currentPwd: '',
-				newPwd: '',
-				renewPwd: '',
+		Axios.post("http://localhost:4000/api/user/checkpwd", oldpwd)
+			.then(() => {
+				if (
+					/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(this.state.newPwd) &&
+					this.state.newPwd == this.state.renewPwd
+				) {
+					let newpwd = {
+						id: localStorage.getItem("_id"),
+						password: this.state.newPwd,
+					};
+					Axios.post("http://localhost:4000/api/user/updatepwd", newpwd).then(
+						alert("Password update successfully!")
+					);
+				} else if (this.state.newPwd != this.state.renewPwd) {
+					alert("Two passwords that you enter is inconsistent");
+				} else {
+					alert(
+						"New password Should be the combination of numbers & alphabets and more than 8 characters"
+					);
+				}
 			})
-		}
-		// console.log(this.state)	
+			.catch((err) => {
+				console.log(err);
+				alert("Current password is incorrect!");
+			});
+
+		// if (this.state.password !== this.state.currentPwd) {
+		// 	console.log(`Current password is not correct, password change failed...`);
+		// } else if (this.state.newPwd !== this.state.renewPwd) {
+		// 	console.log(
+		// 		`Repeat New password doesn't match, password change failed...`
+		// 	);
+		// } else {
+		// 	console.log(`Password changed successfully..`);
+		// 	this.setState({
+		// 		password: this.state.newPwd,
+		// 		currentPwd: "",
+		// 		newPwd: "",
+		// 		renewPwd: "",
+		// 	});
+		// }
+		// console.log(this.state)
 	}
 
-	handleSend(e){
+	handleSend(e) {
 		e.preventDefault();
 
 		this.setState({
-            refEmail: this.state.refEmail,
-		})
-		
-		console.log(`Refer email will be sent to ${this.state.refEmail}`)
+			refEmail: this.state.refEmail,
+		});
+
+		console.log(`Refer email will be sent to ${this.state.refEmail}`);
 	}
 
 	render() {
 		return (
-
 			<div className="account__page__container">
 				<div className="account__container">
 					<div className="info__container">
@@ -147,62 +189,67 @@ class MyAccount extends Component {
 
 						<div className="info__item short__info">
 							<label htmlFor="firstName">First Name</label>
-							<input className="" type="text"
+							<input
+								className=""
+								type="text"
 								name="firstName"
 								value={this.state.firstName}
 								onChange={this.handleChange}
-                            />
+							/>
 						</div>
 
 						<div className="info__item short__info">
 							<label htmlFor="lastName">Last Name</label>
-							<input className="" type="text"
+							<input
+								className=""
+								type="text"
 								name="lastName"
 								value={this.state.lastName}
 								onChange={this.handleChange}
-                            />
+							/>
 						</div>
 
 						<div className="info__item short__info">
 							<label htmlFor="email">Email</label>
-							<input className="" type="text"
+							<input
+								className=""
+								type="text"
 								name="email"
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                            />
+								value={this.state.email}
+								onChange={this.handleChange}
+							/>
 						</div>
 
 						<div className="info__item short__info">
 							<label htmlFor="phone">Phone Number</label>
-							<input className="" type="text"
+							<input
+								className=""
+								type="text"
 								placeholder={` (02) 9555 4321`}
 								name="phone"
-                                value={this.state.phone}
-                                onChange={this.handleChange}
-                            />
+								value={this.state.phone}
+								onChange={this.handleChange}
+							/>
 						</div>
 
-						<button onClick={this.handleSave}>
-							Save
-                        </button>
-
+						<button onClick={this.handleSave}>Save</button>
 					</div>
-
 
 					<div className="info__container">
 						<h5>Credit Card</h5>
 
 						<button className="button__ccinfo">
 							Update Credit Card Information
-                        </button>
+						</button>
 
 						<div className="ccForm">
 							<h5>Secure Credit Card Form</h5>
 
-
 							<div className="info__item">
 								<label htmlFor="ccNumber">Credit Card Number</label>
-								<input className="" type="number"
+								<input
+									className=""
+									type="number"
 									name="ccNumber"
 									value={this.state.ccNumber}
 									onChange={this.handleChange}
@@ -211,7 +258,9 @@ class MyAccount extends Component {
 
 							<div className="info__item short__info">
 								<label htmlFor="ccExpire">Expiration</label>
-								<input className="" type="number"
+								<input
+									className=""
+									type="number"
 									placeholder={` MM/YY`}
 									name="ccExpire"
 									value={this.state.ccExpire}
@@ -221,14 +270,16 @@ class MyAccount extends Component {
 
 							<div className="info__item short__info">
 								<label htmlFor="ccSecCode">Security Code</label>
-								<input className="" type="number"
+								<input
+									className=""
+									type="number"
 									placeholder={` CVC`}
 									name="ccSecCode"
 									value={this.state.ccSecCode}
 									onChange={this.handleChange}
 								/>
 							</div>
-						
+
 							<button className="button__ccinfo" onClick={this.handleCCinfo}>
 								Update
 							</button>
@@ -238,59 +289,67 @@ class MyAccount extends Component {
 						<h5>Change Password</h5>
 						<div className="info__item">
 							<label htmlFor="currentPwd">Current Password</label>
-							<input className="" type="password"
+							<input
+								className=""
+								type="password"
 								name="currentPwd"
 								value={this.state.currentPwd}
 								onChange={this.handleChange}
-                            />
+							/>
 						</div>
 
 						<div className="info__item">
 							<label htmlFor="newPwd">New Password</label>
-							<input className="" type="password"
+							<input
+								className=""
+								type="password"
 								name="newPwd"
 								value={this.state.newPwd}
 								onChange={this.handleChange}
-                            />
+							/>
 						</div>
 
 						<div className="info__item">
 							<label htmlFor="newPwd">Repeat New Password</label>
-							<input className="" type="password"
+							<input
+								className=""
+								type="password"
 								name="renewPwd"
 								value={this.state.renewPwd}
 								onChange={this.handleChange}
-                            />
+							/>
 						</div>
 
-						<button onClick={this.handleChangePwd}>
-							Change Password
-                        </button>
-
+						<button onClick={this.handleChangePwd}>Change Password</button>
 					</div>
 				</div>
 
 				<div className="payment__container">
 					<div className="info__container">
 						<div className="gift__pic">
-							<img src="https://cache.hbfiles.com/assets/miscellaneous/gift-send-cb2a6957e7866e75331a3ccb88e922f4.png" alt="" />
+							<img
+								src="https://cache.hbfiles.com/assets/miscellaneous/gift-send-cb2a6957e7866e75331a3ccb88e922f4.png"
+								alt=""
+							/>
 						</div>
 						<div className="info__item">
 							<h6>Give $40, Get $25</h6>
 							<p>Your share link:</p>
-							<p><span className="font__blue">handy.com/r/JRAcademy</span></p>
+							<p>
+								<span className="font__blue">handy.com/r/JRAcademy</span>
+							</p>
 						</div>
 
 						<div className="info__refEmail">
 							<label htmlFor="refEmail"></label>
-							<input className="" type="text"
+							<input
+								className=""
+								type="text"
 								name="refEmail"
-                                value={this.state.refEmail}
-                                onChange={this.handleChange}
-                            />
-							<button onClick={this.handleSend}>
-								Send
-                        	</button>
+								value={this.state.refEmail}
+								onChange={this.handleChange}
+							/>
+							<button onClick={this.handleSend}>Send</button>
 						</div>
 					</div>
 
@@ -301,11 +360,10 @@ class MyAccount extends Component {
 								<h4>$0.00</h4>
 							</div>
 							<p>
-								The balance will be automatically applied to your total next time you make a booking.
+								The balance will be automatically applied to your total next
+								time you make a booking.
 							</p>
-							<a href="/">
-								Learn More
-							</a>
+							<a href="/">Learn More</a>
 						</div>
 						<div className="info__payment">
 							<div className="info__savings">
