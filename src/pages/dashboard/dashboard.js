@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Link, Redirect, Switch } from "react-router-dom";
+import PrivateRoute from '../../ PrivateRoute'
 import Sidebar from "../../components/sidebar/Sidebar";
 import MyAccount from "../myAccount/myAccount";
 import "./dashboard.scss";
@@ -15,10 +16,10 @@ export default class Dashboard extends Component {
 
         <div className="dashboard-right_container">
           <Switch>
-            <Route path="/users/services" component={UpComing} />
+            <PrivateRoute path="/users/services" component={UpComing} />
 
-            <Route path="/users/edit" component={MyAccount} />
-            <Route
+            <PrivateRoute path="/users/edit" component={MyAccount} />
+            <PrivateRoute
               path="/users/orders"
               component={() => <div >I am orders </div>}
             />
