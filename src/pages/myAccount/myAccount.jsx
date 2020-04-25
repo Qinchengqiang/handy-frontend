@@ -71,9 +71,18 @@ class MyAccount extends Component {
 			number: this.state.phone,
 			email: this.state.email,
 		};
-		Axios.post("http://localhost:4000/api/user/update", updateInfo).then(
-			alert("account information update successfully!")
-		);
+		if (
+			updateInfo.firstName &&
+			updateInfo.lastName &&
+			updateInfo.number &&
+			updateInfo.email !== null
+		) {
+			Axios.post("http://localhost:4000/api/user/update", updateInfo).then(
+				alert("account information update successfully!")
+			);
+		} else {
+			alert("blanks can not be empty.");
+		}
 
 		// console.log(this.state.firstName);
 		// console.log(this.state.lastName);
