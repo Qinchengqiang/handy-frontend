@@ -147,7 +147,7 @@ export const cart= (state = initState,action)=>{
     }
     //INSIDE CART COMPONENT
     if(action.type=== ADD_QUANTITY){
-        let addedItem = state.items.find(item=> item.id === action.id)
+        let addedItem = state.addedItems.find(item=> item.id === action.id)
           addedItem.quantity += 1 
           let newTotal = state.total + addedItem.cur_price
           return{
@@ -156,7 +156,7 @@ export const cart= (state = initState,action)=>{
           }
     }
     if(action.type=== SUB_QUANTITY){  
-        let addedItem = state.items.find(item=> item.id === action.id) 
+        let addedItem = state.addedItems.find(item=> item.id === action.id) 
         //if the qt == 0 then it should be removed
         if(addedItem.quantity === 1){
             let new_items = state.addedItems.filter(item=>item.id !== action.id)
