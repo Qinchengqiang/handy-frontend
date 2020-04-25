@@ -94,42 +94,44 @@ class AvailProCard extends Component {
     };
 
     return (
-      <Card
-        title={firstName}
-        style={{ width: 300, textTransform: "capitalize" }}
-        extra={
-          <Button type="primary" onClick={this.showModal}>
-            Book Me
-          </Button>
-        }
-      >
-        <Modal
-          title="Title"
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          confirmLoading={this.state.confirmLoading}
-          onCancel={this.handleCancel}
+      <div className="resultsCard">
+        <Card
+          title={firstName}
+          style={{ width: 300, textTransform: "capitalize" }}
+          extra={
+            <Button type="primary" onClick={this.showModal}>
+              Book Me
+            </Button>
+          }
         >
-          <p>{`You are about to book with ${firstName} on ${bookingDate}`}</p>
-        </Modal>
-        <Modal
-          title="Result"
-          visible={this.state.resultVisible}
-          onOk={this.handleCloseResult}
-        >
-          <Result
-            status="success"
-            title={`Successfully Booked with ${firstName}`}
-            /* extra={[
-              <Button type="primary" onClick={this.handleCloseResult}>
-                Close this window
-              </Button>,
-            ]} */
-          />
-        </Modal>
-        <p>{firstName}</p>
-        <p>Service Type: {serviceType}</p>
-      </Card>
+          <Modal
+            title="Title"
+            visible={this.state.visible}
+            onOk={this.handleOk}
+            confirmLoading={this.state.confirmLoading}
+            onCancel={this.handleCancel}
+          >
+            <p>{`You are about to book with ${firstName} on ${bookingDate}`}</p>
+          </Modal>
+          <Modal
+            title="Result"
+            visible={this.state.resultVisible}
+            onOk={this.handleCloseResult}
+          >
+            <Result
+              status="success"
+              title={`Successfully Booked with ${firstName}`}
+              /* extra={[
+                    <Button type="primary" onClick={this.handleCloseResult}>
+                      Close this window
+                    </Button>,
+                  ]} */
+            />
+          </Modal>
+          <p>{firstName}</p>
+          <p>Service Type: {serviceType}</p>
+        </Card>
+      </div>
     );
   }
 }
