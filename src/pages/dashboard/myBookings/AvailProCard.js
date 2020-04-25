@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Modal, Button, Input, Result } from "antd";
 import { placeABooking } from "./api/bookingAPICalls";
+import { connect } from "react-redux";
 
 class AvailProCard extends Component {
   constructor(props) {
@@ -58,20 +59,16 @@ class AvailProCard extends Component {
     });
   };
   handleMakeBooking = async (payload) => {
+    console.log(payload);
     const res = await placeABooking(payload).then((res) => res);
     console.log(res);
   };
   componentDidMount() {
     const { _id: proId } = this.props.proInfo;
 
-    const {
-      bookingDate,
-      startSession,
-      endSession,
-      customerId,
-    } = this.props.bookingInfo;
+    const { bookingDate, startSession, endSession } = this.props.bookingInfo;
     const payload = {
-      customerId,
+      customerId: this.props.userId,
       proId,
       bookingDate,
       startSession,
@@ -86,19 +83,14 @@ class AvailProCard extends Component {
   render() {
     const { _id: proId, firstName, serviceType } = this.props.proInfo;
 
-    const {
-      bookingDate,
-      startSession,
-      endSession,
-      customerId,
-    } = this.props.bookingInfo;
+    const { bookingDate, startSession, endSession } = this.props.bookingInfo;
     const payload = {
-      customerId,
+      customerId: this.props.userId,
       proId,
       bookingDate,
       startSession,
       endSession,
-      notes: this.state.notes,
+      notes: "",
     };
 
     return (
@@ -142,4 +134,13 @@ class AvailProCard extends Component {
   }
 }
 
-export default AvailProCard;
+const mapStateToProps = (state) => {
+  return {
+    //rawOutput: state.bookingReducer,
+    userId: state.authentication.user,
+    //bookings: state.bookingReducer.bookings
+    //bookingIds:state.bookingIds
+  };
+};
+
+export default connect(mapStateToProps)(AvailProCard);
