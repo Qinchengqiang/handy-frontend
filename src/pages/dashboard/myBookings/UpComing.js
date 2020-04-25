@@ -48,7 +48,7 @@ const UpComing = (props) => {
 const mapStateToProps = (state) => {
   return {
     rawOutput: state.bookingReducer,
-    //userId: state.authentication.user,
+    userId: state.authentication.user,
     //bookings: state.bookingReducer.bookings
     //bookingIds:state.bookingIds
   };
