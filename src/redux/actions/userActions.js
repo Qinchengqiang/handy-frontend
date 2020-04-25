@@ -31,9 +31,11 @@ function login(username, password) {
 				localStorage.setItem("jwtToken", token);
 				setAuthToken(token);
 				const decoded = jwt_decode(token);
+				console.log(decoded);
 				dispatch(setCurrentUser(decoded));
 				// localStorage.setItem("token", true);
 				localStorage.setItem("localuser", res.data.nickname);
+				localStorage.setItem("_id", res.data.id);
 			})
 			.catch((err) => {
 				dispatch(failure(err));
@@ -60,6 +62,7 @@ function logout() {
 	localStorage.removeItem("jwtToken");
 	setAuthToken(false);
 	localStorage.removeItem("localuser");
+	localStorage.removeItem("_id");
 	return { type: userConstants.LOGOUT };
 }
 
