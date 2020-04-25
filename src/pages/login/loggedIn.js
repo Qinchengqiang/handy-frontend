@@ -1,5 +1,5 @@
 import { Menu, Dropdown } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import {Icon} from 'antd'
 import Avatar from "./account_icon.svg";
@@ -22,6 +22,7 @@ const menu = (
 );
 
 const loggedIn = () => {
+	const [nickname, setNickname] = useState("");
 	const asyncLocalStorage = {
 		setItem: function (key, value) {
 			return Promise.resolve().then(function () {
@@ -35,8 +36,9 @@ const loggedIn = () => {
 		},
 	};
 	asyncLocalStorage.getItem("localuser").then((value) => {
-		console.log(value);
-		return value;
+		// console.log(value);
+		// return value;
+		setNickname(value);
 	});
 
 	return (
@@ -54,7 +56,7 @@ const loggedIn = () => {
 					onClick={(e) => e.preventDefault()}
 					style={{ fontSize: "20px", color: "navyblue" }}
 				>
-					{/* {nickname.split(" ").reverse()[0]} */}
+					{nickname.split(" ").reverse()[0]}
 					{/* <Icon type="user" className="assembly-form_prefix" style={{ color: "#BABBBD" , verticalAlign: 'middle'}}/> */}
 					<img
 						src={Avatar}
