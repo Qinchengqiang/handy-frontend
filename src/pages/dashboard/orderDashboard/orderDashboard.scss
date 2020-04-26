@@ -1,0 +1,11 @@
+.orders-innercontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.orders-img{
+    object-fit: cover;
+    height: 48px;
+    width: 64px;
+}

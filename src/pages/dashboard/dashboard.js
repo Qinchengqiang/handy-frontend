@@ -5,6 +5,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import MyAccount from "../myAccount/myAccount";
 import "./dashboard.scss";
 import MyBookings from "./myBookings/MyBookings";
+import OrderDashboard from './orderDashboard/OrderDashboard'
 export default class Dashboard extends Component {
   render() {
     return (
@@ -20,7 +21,7 @@ export default class Dashboard extends Component {
             <PrivateRoute path="/users/edit" component={MyAccount} />
             <PrivateRoute
               path="/users/orders"
-              component={() => <div>I am orders </div>}
+              component={OrderDashboard}
             />
           </Switch>
         </div>

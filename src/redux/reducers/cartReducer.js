@@ -201,6 +201,7 @@ export const cart = (state = initState, action) => {
   }
   if (action.type === "LOAD_CART") {
     let number = 0;
+    console.log(action.addedItems)
     action.addedItems.forEach((x) => {
       number += x.cur_price * x.quantity;
     });

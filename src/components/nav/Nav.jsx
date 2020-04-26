@@ -15,15 +15,17 @@ function Nav(props) {
   const { products } = props 
   
   useEffect(() => {
-	window.addEventListener("scroll", () => {
+	//   props.setCart(localStorage.getItem("cart")||[])
+	let listener = () => {
 		if (window.pageYOffset > 0) {
 			setSticky(true);
 		} else {
 		  	setSticky(false);
 		}
-	  });
+	  }
+	window.addEventListener("scroll", listener );
 	return () => {
-		window.removeEventListener('scroll')
+		window.removeEventListener('scroll', listener)
 	}
 }, [])
 	return (
@@ -68,9 +70,14 @@ function Nav(props) {
 	);
 }
 
+const setCart = (addedItems)=>{
+	return ({
+		type:"LOAD_CART",addedItems
+	})
+}
 
 const mapStateToProps = (state) => ({
   authentication: state.authentication.loggedIn,
   products: state.cart.addedItems.map(x=>x.quantity).reduce((x,y)=>(x+y),0)
 })
-export default connect(mapStateToProps)(Nav);
+export default connect(mapStateToProps,{setCart})(Nav);
