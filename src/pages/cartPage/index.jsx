@@ -24,6 +24,9 @@ class CartPage extends Component {
   handleSubtractQuantity = (id) => {
     this.props.subtractQuantity(id);
   };
+  componentWillUnmount(){
+    localStorage.setItem("cart",this.props.items)
+  }
   render() {
     const addedItems = this.props.items;
 

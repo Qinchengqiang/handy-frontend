@@ -18,14 +18,25 @@ class Recipe extends Component {
     }
   };
 
-  handleContinueShopping = async () => {
+  handleContinueShopping =  () => {
     // this.props.saveCart()
     // await axios.post()
+    const id = localStorage.getItem("_id")
+    console.log(this.props.addedItems)
+    const wishlist = this.props.addedItems
+    axios.post(`http://localhost:4000/api/wishlist/${id}`,{wishlist:wishlist})
+    this.props.saveWishlist();
+    localStorage.removeItem("cart")
     history.push("/shop");
     // this.props.saveCart({Cart:this.props.addedItems})
   };
 
   handleCheckout = () => {
+    const id = localStorage.getItem("_id")
+    const orderHistory = this.props.addedItems;
+    axios.post(`http://localhost:4000/api/orderhistory/${id}`,{orderHistory:orderHistory})
+    this.props.saveWishlist();
+    localStorage.removeItem("cart")
     history.push("/");
   };
 
@@ -82,6 +93,9 @@ const mapDispatchToProps = (dispatch) => {
     saveCart: () => {
       dispatch({ type: "SAVING_CART" });
     },
+    saveWishlist: ()=>{
+      dispatch({ type: "SAVING_WISHLIST"})
+    }
   };
 };
 
