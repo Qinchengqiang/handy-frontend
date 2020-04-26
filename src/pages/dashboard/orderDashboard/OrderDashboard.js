@@ -3,10 +3,11 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import './orderDashboard.scss'
 import axios from "axios";
-// import {history} from '../../../redux/helpers/history'
+import {Button} from 'antd'
+import {history} from '../../../redux/helpers/history'
 
 function Ordercontainer (props){
-     const {labelName, data, child, button} = props
+     const {labelName, data, child, button,loadWishlist} = props
     
     return (
         data?(<div>
@@ -50,7 +51,15 @@ function OrderDashboard ({cart}){
         
        
     }, [])
-    const renderWishlist = (data)=>{
+    const renderWishlist = (data,loadWishlist)=>{
+        const handleClick = (data)=>{
+            const id = localStorage.getItem("_id")||""
+            loadWishlist(wishlist);
+            localStorage.setItem("cart",wishlist)
+            axios.post(`http://localhost:4000/api/wishlist/${id}`,[])
+            setWishlist([])
+            history.push('/shop')
+        }
         let sum = 0;
         return data.map((elem,index)=>{
             sum += elem.cur_price * elem.quantity
@@ -58,16 +67,18 @@ function OrderDashboard ({cart}){
                 <li key={index} className="orders-innercontainer">
                     <img src={elem.image||""} className="orders-img"/>
                     <div>{elem.title}</div>
-                    <div>purchased {elem.quantity} units</div>
-                    <div></div>
-                    {(index === data.length -1)?<div>you spent total of {sum}</div>:null}
+                    <div>{elem.quantity} units</div>
+                    <div className="order-flex-veritical">
+                    {(index === data.length -1)?<div>the cost is ${sum}</div>:null}
+                    {(index === data.length -1)?<Button onClick={()=>handleClick(data)}>eager for buying?</Button>:null}
+                    </div>
                 </li>
             )
         })
     }
     return (
         <div >
-            <Ordercontainer labelName="wishlist" data={cart} child={renderWishlist(cart)}>
+            <Ordercontainer labelName="wishlist" data={wishlist.length!==0} child={wishlist.length!==0?renderWishlist(wishlist,loadWishlist):null}>
                
             </Ordercontainer>
             <Ordercontainer labelName="OrderHistory" data={orderHistory}>
@@ -76,10 +87,15 @@ function OrderDashboard ({cart}){
         </div>
     )
 }
-
+const loadWishlist = (wishlist)=>{
+    return ({
+        type:"LOAD_WISHLIST",
+        wishlist
+    })
+}
 export default connect(state=>{
     return {
         cart: state.cart.addedItems
     }
-})(OrderDashboard)
+},{loadWishlist})(OrderDashboard)
 

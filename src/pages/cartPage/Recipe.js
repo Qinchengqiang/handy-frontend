@@ -18,9 +18,15 @@ class Recipe extends Component {
     }
   };
 
-  handleContinueShopping = async () => {
+  handleContinueShopping =  () => {
     // this.props.saveCart()
     // await axios.post()
+    const id = localStorage.getItem("_id")
+    console.log(this.props.addedItems)
+    const wishlist = this.props.addedItems
+    axios.post(`http://localhost:4000/api/wishlist/${id}`,{wishlist:wishlist})
+    this.props.saveWishlist();
+    localStorage.removeItem("cart")
     history.push("/shop");
     // this.props.saveCart({Cart:this.props.addedItems})
   };
@@ -82,6 +88,9 @@ const mapDispatchToProps = (dispatch) => {
     saveCart: () => {
       dispatch({ type: "SAVING_CART" });
     },
+    saveWishlist: ()=>{
+      dispatch({ type: "SAVING_WISHLIST"})
+    }
   };
 };
 

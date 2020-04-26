@@ -210,7 +210,23 @@ export const cart = (state = initState, action) => {
       addedItems: action.addedItems,
       total: number,
     };
-  } else {
+  }
+  if (action.type === "LOAD_WISHLIST"){
+    return {
+      ...state,
+      addedItems: action.wishlist,
+    }
+  }
+
+  if (action.type === "SAVING_WISHLIST"){
+    return {
+      ...state,
+      addedItems:[],
+    }
+  }
+  
+  
+  else {
     return state;
   }
 };
