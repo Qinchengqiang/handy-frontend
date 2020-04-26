@@ -5,8 +5,9 @@ import { showUpcoming } from "../../../redux/actions/bookingsActions";
 import BookingCard from "./BookingCard";
 
 const UpComing = (props) => {
-  const { rawOutput, userId } = props;
+  const { rawOutput} = props;
   const bookings = rawOutput.bookings || [];
+  const userId = window.localStorage.getItem('_id');
   return (
     <>
       <h3>Your upcoming bookings</h3>
@@ -36,7 +37,7 @@ const UpComing = (props) => {
 const mapStateToProps = (state) => {
   return {
     rawOutput: state.bookingReducer,
-    userId: state.authentication.user,
+   // userId: state.authentication.user,
     //bookings: state.bookingReducer.bookings
     //bookingIds:state.bookingIds
   };

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Card, Modal, Button, Input, Result } from "antd";
 import { placeABooking } from "./api/bookingAPICalls";
-import { connect } from "react-redux";
 
 class AvailProCard extends Component {
   constructor(props) {
@@ -68,7 +67,7 @@ class AvailProCard extends Component {
 
     const { bookingDate, startSession, endSession } = this.props.bookingInfo;
     const payload = {
-      customerId: this.props.userId,
+      customerId: window.localStorage.getItem('_id'),
       proId,
       bookingDate,
       startSession,
@@ -84,8 +83,9 @@ class AvailProCard extends Component {
     const { _id: proId, firstName, serviceType } = this.props.proInfo;
 
     const { bookingDate, startSession, endSession } = this.props.bookingInfo;
+    const userId = window.localStorage.getItem('_id');
     const payload = {
-      customerId: this.props.userId,
+      customerId: userId,
       proId,
       bookingDate,
       startSession,
@@ -136,13 +136,6 @@ class AvailProCard extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    //rawOutput: state.bookingReducer,
-    userId: state.authentication.user,
-    //bookings: state.bookingReducer.bookings
-    //bookingIds:state.bookingIds
-  };
-};
 
-export default connect(mapStateToProps)(AvailProCard);
+
+export default AvailProCard;
