@@ -13,7 +13,7 @@ class ShopPage extends Component {
     console.log(product.id);
 }
   render() {
-    console.log(this.props.products)
+    // console.log(this.props.products)
     const { products } = this.props
     return (
       <div className="shoppage">
