@@ -40,10 +40,6 @@ function OrderDashboard ({cart}){
                 setWishlist(wishlist)
                 console.log(wishlist)
             })
-
-    const handleWishlist = ()=>{
-        
-    }
         
         // console.log(apiData)
         // setwishlist(await Axios.post(`http://localhost:4000/api/wishlist/${id}`))
@@ -54,8 +50,8 @@ function OrderDashboard ({cart}){
     const renderWishlist = (data,loadWishlist)=>{
         const handleClick = (data)=>{
             const id = localStorage.getItem("_id")||""
-            loadWishlist(wishlist);
-            localStorage.setItem("cart",wishlist)
+            loadWishlist(wishlist||[]);
+            localStorage.setItem("cart",wishlist||[])
             axios.post(`http://localhost:4000/api/wishlist/${id}`,[])
             setWishlist([])
             history.push('/shop')
@@ -76,12 +72,29 @@ function OrderDashboard ({cart}){
             )
         })
     }
+    const renderOrderHistory = (data)=>{
+        // const id = localStorage.getItem("_id")||""
+        let sum = 0
+        return data.flatMap((elem,index)=>{
+            sum += elem.cur_price * elem.quantity
+            return (
+                <li key={index} className="orders-innercontainer">
+                    <img src={elem.image||""} className="orders-img"/>
+                    <div>{elem.title}</div>
+                    <div>{elem.quantity} units</div>
+                    <div className="order-flex-veritical">
+                    {(index === data.length -1)?<div>you spent total of ${sum}</div>:null}
+                    </div>
+                </li>
+            )
+        })
+    }
     return (
         <div >
             <Ordercontainer labelName="wishlist" data={wishlist.length!==0} child={wishlist.length!==0?renderWishlist(wishlist,loadWishlist):null}>
                
             </Ordercontainer>
-            <Ordercontainer labelName="OrderHistory" data={orderHistory}>
+            <Ordercontainer labelName="OrderHistory" data={orderHistory.length!==0} child={orderHistory.length!==0?renderOrderHistory(orderHistory):null}>
                 
             </Ordercontainer>
         </div>

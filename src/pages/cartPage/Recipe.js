@@ -32,6 +32,11 @@ class Recipe extends Component {
   };
 
   handleCheckout = () => {
+    const id = localStorage.getItem("_id")
+    const orderHistory = this.props.addedItems;
+    axios.post(`http://localhost:4000/api/orderhistory/${id}`,{orderHistory:orderHistory})
+    this.props.saveWishlist();
+    localStorage.removeItem("cart")
     history.push("/");
   };
 
